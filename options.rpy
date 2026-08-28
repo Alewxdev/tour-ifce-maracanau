@@ -12,7 +12,7 @@
 ##
 ## O _() ao redor da string a marca como elegível para tradução.
 
-define config.name = _("alex")
+define config.name = _("Sinais do Maracanaú")
 
 
 ## Determina se o título fornecido acima será mostrado na tela do menu
@@ -23,14 +23,19 @@ define gui.show_name = True
 
 ## A versão do jogo.
 
-define config.version = "1.0"
+define config.version = "2.0"
 
 
 ## Texto que é colocado na tela "Sobre" do jogo. Coloque o texto entre aspas
 ## triplas e deixe uma linha em branco entre os parágrafos.
 
 define gui.about = _p("""
-Projeto educacional inclusivo desenvolvido no IFCE.
+Sinais do Maracanaú é uma visual novel de recepção aos calouros do
+IFCE Campus Maracanaú, com foco em cultura surda e introdução à Libras.
+
+As fotografias exibem espaços reais do campus. Os vídeos WebM mostram
+sinais isolados como apoio pedagógico e não substituem tradução revisada
+por pessoa fluente ou o trabalho de intérprete.
 
 Os vídeos de sinais isolados são provenientes do Signbank da Libras,
 Universidade Federal de Santa Catarina, disponibilizados sob licença
@@ -44,7 +49,7 @@ https://signbank.libras.ufsc.br/pt
 ## construída. Ele deve ser somente ASCII e não deve conter espaços, dois pontos
 ## ou ponto e vírgula.
 
-define build.name = "alex"
+define build.name = "sinais_do_maracanau"
 
 
 ## Sons e música ###############################################################

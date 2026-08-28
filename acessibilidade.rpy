@@ -1,310 +1,168 @@
-## Camada de acessibilidade em Libras.
-##
-## Os vídeos devem conter a tradução da FRASE completa, revisada por uma
-## pessoa fluente em Libras. Não divida o português palavra por palavra.
+## Painel educacional de Libras — funciona integralmente offline.
+## O acervo contém sinais isolados, portanto o painel os apresenta como
+## vocabulário de apoio, nunca como tradução automática palavra por palavra.
 
 default libras_ativo = True
 
 init -1 python:
-    import threading
     import json
-    import os
     import re
-    import ssl
-    import time
     import unicodedata
-    import urllib.parse
-    import urllib.request
 
-    # O Ren'Py usa o sistema de áudio também para decodificar vídeos, mas o
-    # canal precisa ser registrado explicitamente como canal de filme.
     renpy.music.register_channel(
-        "libras",
-        mixer="voice",
-        loop=False,
-        buffer_queue=False,
-        movie=True,
+        "libras", mixer="voice", loop=False,
+        buffer_queue=False, movie=True,
     )
 
-    VLIBRAS_TRADUTOR = "https://traducao2.vlibras.gov.br/translate"
-    # Traduções que o serviço oficial já retornou. Este cache garante que
-    # essas falas funcionem também durante apresentações sem internet.
-    libras_glosas = {
-        "Achei! Escrevi 'media' de duas formas diferentes.": "ACHAR&PENSAR [EXCLAMAÇÃO] ESCREVER&PAPEL MEDIR 2 FORMA DIFERENTE [PONTO]",
-        "Ane terminou o primeiro programa dela.": "ANE TERMINAR PRIMEIRO&ORDINAL PROGRAMA&PROJETO DELE [PONTO]",
-        "Aqui fica a biblioteca. É silenciosa, tem ar-condicionado e salva muita gente na semana de provas.": "AQUI BIBLIOTECA [PONTO] SILENCIOSO CONDICIONADO SALVAR&RESGATAR VÁRIOS GENTE SEMANA PROVA&EVIDÊNCIA [PONTO]",
-        "Boa escolha. O passeio fica para o intervalo.": "BOA ESCOLHA [PONTO] PASSEAR INTERVALO [PONTO]",
-        "Cuidado. Daqui a pouco ele começa a cobrar monitoria em coxinhas.": "CUIDADO [PONTO] AQUI POUCO ELE COMEÇAR COBRAR MONITORIA COXINHA [PONTO]",
-        "Deu erro. A segunda regra já está sendo testada.": "ERRAR [PONTO] REGRA JÁ TESTAR [PONTO]",
-        "Então a pessoa pode acompanhar a legenda e também assistir à tradução de cada fala?": "PESSOA PODER&POSSIBILIDADE ACOMPANHAR LEGENDA TAMBÉM ASSISTIR&TV TRADUÇÃO&AÇÃO CADA FALAR [INTERROGAÇÃO]",
-        "Então temos um motivo de verdade para comemorar.": "TER MOTIVO VERDADE COMEMORAR [PONTO]",
-        "Exatamente. A tecnologia ajuda a exibir os sinais, mas as traduções precisam ser revisadas por alguém fluente.": "EXATAMENTE [PONTO] TECNOLOGIA 1S_AJUDAR_2S EXIBIR SINAL&VESTÍGIO TRADUÇÃO&AÇÃO PRECISAR REVISAR ALGUÉM FLUENTE [PONTO]",
-        "Falando sério, estamos montando uma equipe para a mostra de projetos do campus.": "FALAR SÉRIO MONTAR&ORGANIZAR EQUIPE 1S_MOSTRAR_2S PROJETO&DOCUMENTO CAMPUS [PONTO]",
-        "Funcionou!": "FUNCIONAR [EXCLAMAÇÃO]",
-        "Ler a mensagem de erro antes de entrar em pânico.": "LER MENSAGEM ERRO ANTES&ANTERIOR ENTRAR&DENTRO PÂNICO [PONTO]",
-        "Melhor irmos direto ao laboratório. Não quero perder a primeira aula.": "MELHOR DIRETO LABORATÓRIO [PONTO] NÃO_QUERER PERDER PRIMEIRO&ORDINAL AULA [PONTO]",
-        "O exercício pede um programa que organize as notas dos alunos. Parece simples... eu acho.": "EXERCÍCIO&ATIVIDADE 1S_PEDIR_2S PROGRAMA&PROJETO ORGANIZAR NOTA&AVALIAR ALUNO [PONTO] PARECER&APARÊNCIA SIMPLES&FÁCIL [PONTO] ACHAR&PENSAR [PONTO]",
-        "Parabéns, você conheceu o bug mais comum da humanidade: digitar com pressa.": "PARABÉNS VOCÊ CONHECER BUG COMUM HUMANIDADE DIGITAR PRESSA [PONTO]",
-        "Parece que vocês precisam mesmo de ajuda.": "PARECER&APARÊNCIA VOCÊS PRECISAR 1S_AJUDAR_2S [PONTO]",
-        "Primeira reunião amanhã. Eu levo os salgados científicos.": "PRIMEIRO&ORDINAL REUNIÃO AMANHÃ [PONTO] EU LEVAR SALGADO CIENTÍFICO [PONTO]",
-        "Um jogo educativo sobre a vida universitária, com acessibilidade em Libras.": "JOGO EDUCATIVO SOBRE&ASSUNTO VIDA UNIVERSITÁRIO ACESSIBILIDADE LIBRAS [PONTO]",
-        "Uma aula, um programa funcionando e uma equipe nova... Nada mal para o primeiro dia.": "AULA PROGRAMA&PROJETO FUNCIONAR EQUIPE NOVO&RECENTE [PONTO] NADA MAL PRIMEIRO&ORDINAL DIA [PONTO]",
-        "Você parece estar procurando alguma coisa. Posso ajudar?": "VOCÊ PARECER PROCURAR ALGUMA COISA [PONTO] PODER&POSSIBILIDADE 1S_AJUDAR_2S [INTERROGAÇÃO]",
-        "É assim que todo projeto começa. Bem-vinda à equipe!": "TODO PROJETO&DOCUMENTO COMEÇAR [PONTO] BEM_VINDO EQUIPE [EXCLAMAÇÃO]",
-        "Ótimo conselho para o meu primeiro dia.": "ÓTIMO CONSELHO&GRUPO MEU PRIMEIRO&ORDINAL DIA [PONTO]",
-    }
-    libras_pendentes = set()
-    libras_erros = {}
-
-    # Associe cada fala ao vídeo revisado correspondente.
-    # Exemplo:
-    # libras_videos["Você parece estar procurando alguma coisa. Posso ajudar?"] = \
-    #     "videos/libras/alex_posso_ajudar.webm"
-    libras_videos = {}
-
     try:
-        with renpy.file("videos/libras/sinais/manifesto.json") as arquivo_manifesto:
-            manifesto_sinais = json.load(arquivo_manifesto).get("sinais", {})
+        with renpy.file("videos/libras/sinais/manifesto.json") as arquivo:
+            manifesto_sinais = json.load(arquivo).get("sinais", {})
     except Exception:
         manifesto_sinais = {}
 
-    def _sem_acento_libras(texto):
-        return "".join(
+    def _normalizar_libras(texto):
+        texto = "".join(
             c for c in unicodedata.normalize("NFD", texto)
             if unicodedata.category(c) != "Mn"
-        ).upper()
+        )
+        return re.sub(r"[^A-Z0-9 ]", " ", texto.upper())
 
-    def _token_sinal_libras(token):
-        token = re.sub(r"\[[^]]+\]", "", token).strip()
-        token = token.split("&", 1)[0]
-        token = re.sub(r"^[123][SP]_", "", token)
-        token = re.sub(r"_[123][SP]$", "", token)
-        return token.replace("_", " ").strip(" .,!?;:")
+    _indice_sinais = {
+        _normalizar_libras(nome).strip(): dados
+        for nome, dados in manifesto_sinais.items()
+    }
 
-    def videos_sinais_libras(what):
-        """Monta a sequência dos sinais isolados disponíveis para a glosa."""
-        glosa = libras_glosas.get(what, "")
+    # Glosas pedagógicas revisáveis. Todas usam somente vídeos presentes no
+    # manifesto local. A ordem segue uma aproximação visual de sinais-chave.
+    libras_glosas = {
+        "Campus novo, pessoas novas e muitos corredores. Vamos começar.": "NOVO PESSOA NOVO VAMOS COMEÇAR",
+        "Oi! Eu sou Ane. Estou aprendendo Libras e posso acompanhar você no passeio.": "APRENDER LIBRAS PODER ACOMPANHAR VOCÊ PASSEAR",
+        "Ótimo. Só uma regra: fale de frente para mim e não esconda as mãos.": "ÓTIMO REGRA FALAR PARA MEU NÃO",
+        "Combinado. Se eu errar um sinal, você pode me ajudar.": "ERRAR SINAL VOCÊ PODER AJUDAR",
+        "Certo! Agora eu posso ver você antes da conversa começar.": "AGORA PODER VOCÊ ANTES COMEÇAR",
+        "Isso não funciona. Melhor entrar no campo de visão de Alex.": "NÃO FUNCIONAR MELHOR ENTRAR ALEX",
+        "Agora sim. Comunicação também começa com respeito.": "AGORA TAMBÉM COMEÇAR",
+        "A reunião dos calouros sem coxinha? Isso já virou emergência acadêmica.": "REUNIÃO ALUNO COXINHA ACADÊMICA",
+        "Vamos procurar. Assim conhecemos o campus e salvamos o intervalo.": "VAMOS PROCURAR ASSIM CONHECER SALVAR INTERVALO",
+        "Bem-vindas! Eu sou Davi, monitor da biblioteca e estudante de Ciência da Computação.": "BEM Davi BIBLIOTECA ALUNO CIÊNCIA COMPUTADOR",
+        "Davi, você viu uma coxinha muito importante passar por aqui?": "Davi VOCÊ COXINHA MUITO AQUI",
+        "Vi uma caixa passeando para o lado da biblioteca. Parecia um projeto com fome.": "PASSEAR PARA LADO BIBLIOTECA PARECER PROJETO",
+        "Antes de seguir, ensine aos calouros um sinal útil.": "ANTES ALUNO SINAL",
+        "Este é o sinal de BIBLIOTECA. Veja o vídeo e depois tente fazer.": "SINAL BIBLIOTECA VÍDEO DEPOIS TENTAR FAZER",
+        "Perfeito. Aprender Libras precisa de atenção, prática e repetição.": "APRENDER LIBRAS PRECISAR VEZES",
+        "Pode pedir para repetir. Ninguém precisa disfarçar uma dúvida.": "PODER PEDIR VEZES NENHUM PRECISAR DISFARÇAR",
+        "Vamos à Biblioteca Rachel de Queiroz. Lá temos livros, estudo e jogos.": "VAMOS BIBLIOTECA LER APRENDER",
+        "Aqui também existe uma regra difícil: devolver o livro e não levar a coxinha para a estante.": "AQUI TAMBÉM REGRA LER NÃO LEVAR COXINHA",
+        "Encontrei uma pista: uma nota dizendo LABORATÓRIO CINCO.": "ENCONTRAR NOTA CINCO",
+        "O mistério sabe escrever, mas ainda precisa melhorar a letra.": "HISTÓRIA ESCREVER MAS AINDA PRECISAR MELHOR",
+        "Para estudar aqui, você pode LER e usar o COMPUTADOR.": "PARA AQUI VOCÊ PODER LER COMPUTADOR",
+        "Olá! Eu sou a professora Lia. Bem-vindos à Ciência da Computação do IFCE Maracanaú.": "PROFESSOR Lia BEM CIÊNCIA COMPUTADOR",
+        "Professora, procuramos uma coxinha desaparecida. A investigação agora também é computacional.": "PROFESSOR PROCURAR COXINHA AGORA TAMBÉM COMPUTADOR",
+        "Nossa hipótese aponta para este laboratório e para um computador com uma mensagem aberta.": "PENSAR PARA COMPUTADOR MENSAGEM",
+        "A caixa esteve aqui, mas seguiu para a sala. Antes disso, temos uma missão de Computação e Libras.": "ESTAR AQUI MAS PARA ANTES COMPUTADOR LIBRAS",
+        "Encontramos um bug com fome infinita. Isso é sofisticado ou preocupante?": "ENCONTRAR ERRAR COMPUTADOR",
+        "Na Computação, chamamos isso de laço infinito. Na cantina, chamamos de terça-feira.": "COMPUTADOR PROGRAMA SEMPRE",
+        "Certo. Um algoritmo precisa saber quando continuar e quando parar.": "PROGRAMA PRECISAR PARA PARADA",
+        "Criativo, mas não resolve o programa. Vamos ler a mensagem e revisar o código.": "IDEIA MAS NÃO PROGRAMA VAMOS LER MENSAGEM REVISAR",
+        "Programar é organizar ideias, testar, errar, revisar e tentar outra vez.": "PROGRAMA ORGANIZAR IDEIA TENTAR ERRAR REVISAR VEZES",
+        "Exatamente. Expressões do rosto e movimentos das mãos fazem parte da língua.": "VERDADE PARTE LIBRAS",
+        "Computador no escuro parece cinema, mas impede a comunicação visual.": "COMPUTADOR PARECER MAS NÃO",
+        "Vamos manter a luz e as mãos visíveis.": "VAMOS CLARO",
+        "Libras é uma língua completa, com estrutura própria. Não é português feito palavra por palavra.": "LIBRAS ESTRUTURA NÃO FAZER PALAVRA PARA PALAVRA",
+        "Os vídeos deste jogo mostram sinais isolados para apoiar o aprendizado. Uma tradução deve ser revisada por pessoa fluente.": "VÍDEO MOSTRAR SINAL PARA AJUDAR APRENDER TRADUÇÃO REVISAR PESSOA FLUENTE",
+        "Software acessível começa no planejamento. Legenda, Libras e interface visual não devem ficar para depois.": "PROGRAMA ACESSIBILIDADE COMEÇAR IDEIA LEGENDA LIBRAS NÃO PARA DEPOIS",
+        "A caixa está aqui! O mistério acabou antes da prova.": "ESTAR AQUI HISTÓRIA ANTES PROVA",
+        "Mas ela está vazia. Temos agora o mistério da coxinha invisível.": "MAS ESTAR NADA AGORA HISTÓRIA COXINHA",
+        "Vejam a mensagem: A COXINHA ESTÁ NA REUNIÃO. A caixa era somente a pista.": "MENSAGEM COXINHA ESTAR REUNIÃO",
+        "Parabéns. O passeio era a primeira atividade de recepção dos calouros.": "BOM PASSEAR PRIMEIRO ALUNO",
+        "Vocês conheceram o pátio, a biblioteca, os laboratórios e as salas. Também resolveram o primeiro bug do curso.": "VOCÊS CONHECER BIBLIOTECA TAMBÉM PRIMEIRO ERRAR",
+        "Então ninguém roubou a coxinha?": "ENTÃO NENHUM COXINHA",
+        "Ainda não. Mas a reunião vai começar, então precisamos ir rápido.": "AINDA NÃO MAS REUNIÃO COMEÇAR ENTÃO PRECISAR",
+        "BIBLIOTECA. Um lugar para ler, estudar e encontrar ajuda.": "BIBLIOTECA PARA LER APRENDER ENCONTRAR AJUDAR",
+        "COMPUTADOR. Nosso colega de projetos e fornecedor oficial de mensagens de erro.": "COMPUTADOR PROJETO MENSAGEM ERRAR",
+        "ACESSIBILIDADE. Ela deve estar presente desde o começo de cada projeto.": "ACESSIBILIDADE ESTAR COMEÇAR CADA PROJETO",
+        "Hoje eu conheci o campus. Amanhã começamos nosso primeiro projeto de Computação acessível.": "DIA CONHECER AMANHÃ COMEÇAR PRIMEIRO PROJETO COMPUTADOR ACESSIBILIDADE",
+    }
+
+    def _tokens_glosa(texto):
+        glosa = libras_glosas.get(texto)
+        if glosa:
+            candidatos = _normalizar_libras(glosa).split()
+        else:
+            # Cobertura offline para narração: mostra apenas palavras que
+            # possuem sinal cadastrado; nunca inventa um vídeo inexistente.
+            candidatos = _normalizar_libras(texto).split()
+        vistos = set()
+        resultado = []
+        for token in candidatos:
+            if token in _indice_sinais and token not in vistos:
+                resultado.append(token)
+                vistos.add(token)
+        return resultado or ["LIBRAS"]
+
+    def glosa_exibida_libras(texto):
+        return " • ".join(_tokens_glosa(texto))
+
+    def videos_sinais_libras(texto):
         caminhos = []
-        for bruto in glosa.split():
-            token = _token_sinal_libras(bruto)
-            alvo = _sem_acento_libras(token)
-            item = next(
-                (
-                    dados for nome, dados in manifesto_sinais.items()
-                    if _sem_acento_libras(nome) == alvo
-                ),
-                None,
-            )
-            caminho = item.get("arquivo") if item else None
+        for token in _tokens_glosa(texto):
+            dados = _indice_sinais.get(token, {})
+            caminho = dados.get("arquivo")
             if caminho and renpy.loadable(caminho):
                 caminhos.append(caminho)
         return caminhos
 
-    def video_libras(what):
-        """Retorna apenas vídeos cadastrados e presentes no jogo."""
-        caminho = libras_videos.get(what)
-        if caminho and renpy.loadable(caminho):
-            return caminho
-        return None
-
-    def reproduzir_libras(what):
-        """Reproduz ou repete a tradução da fala atual."""
-        caminho = video_libras(what)
-        if caminho:
-            renpy.music.play(caminho, channel="libras", loop=False)
-            return
-
-        sinais = videos_sinais_libras(what)
-        if sinais:
-            renpy.music.play(sinais, channel="libras", loop=False)
+    def reproduzir_libras(texto):
+        caminhos = videos_sinais_libras(texto)
+        if caminhos:
+            renpy.music.play(caminhos, channel="libras", loop=False)
 
     def parar_libras():
         renpy.music.stop(channel="libras")
 
-    def _finalizar_traducao_libras(texto, glosa=None, erro=None):
-        libras_pendentes.discard(texto)
-        if glosa:
-            libras_glosas[texto] = glosa
-            libras_erros.pop(texto, None)
-            if renpy.store.libras_ativo:
-                reproduzir_libras(texto)
-        elif erro:
-            libras_erros[texto] = erro
-        renpy.restart_interaction()
-
-    def _consultar_vlibras(texto):
-        """Consulta a API sem bloquear a interface do Ren'Py."""
-        try:
-            certificado = os.path.join(config.gamedir, "certs", "cacert.pem")
-            contexto_ssl = ssl.create_default_context(cafile=certificado)
-            dados = urllib.parse.urlencode({"text": texto}).encode("utf-8")
-            requisicao = urllib.request.Request(
-                VLIBRAS_TRADUTOR,
-                data=dados,
-                headers={
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    "User-Agent": "IFCE-Jogo-Libras/1.0",
-                },
-                method="POST",
-            )
-            glosa = None
-            ultimo_erro = None
-            for tentativa in range(3):
-                try:
-                    with urllib.request.urlopen(
-                        requisicao, timeout=12, context=contexto_ssl
-                    ) as resposta:
-                        glosa = resposta.read().decode("utf-8").strip()
-                    if glosa:
-                        break
-                except Exception as erro:
-                    ultimo_erro = erro
-                    if tentativa < 2:
-                        time.sleep(1.0 + tentativa)
-
-            if not glosa:
-                raise ultimo_erro or RuntimeError("Resposta vazia do VLibras")
-
-            renpy.invoke_in_main_thread(
-                _finalizar_traducao_libras, texto, glosa, None
-            )
-        except Exception:
-            renpy.invoke_in_main_thread(
-                _finalizar_traducao_libras,
-                texto,
-                None,
-                "Modo offline ativo: glosa não recebida. A fala completa está exibida acima.",
-            )
-
-    def solicitar_traducao_libras(texto):
-        """Obtém uma glosa uma única vez e mantém o resultado em memória."""
-        if not texto or texto in libras_glosas or texto in libras_pendentes:
-            return
-
-        libras_erros.pop(texto, None)
-        libras_pendentes.add(texto)
-        tarefa = threading.Thread(target=_consultar_vlibras, args=(texto,))
-        tarefa.daemon = True
-        tarefa.start()
-
-    def estado_traducao_libras(texto):
-        if texto in libras_glosas:
-            return libras_glosas[texto]
-        if texto in libras_erros:
-            return libras_erros[texto]
-        return "Traduzindo pela API pública do VLibras..."
-
 image libras_player = Movie(
-    channel="libras",
-    size=(400, 225),
-    loop=False,
-    keep_last_frame=True,
+    channel="libras", size=(400, 225), loop=False, keep_last_frame=True,
 )
 
 screen painel_libras(what):
     zorder 100
-
     if not renpy.variant("small"):
         textbutton ("Libras: ON" if libras_ativo else "Libras: OFF"):
-            xalign 0.985
-            yalign 0.015
+            xalign 0.985 yalign 0.015
             action [ToggleVariable("libras_ativo"), Function(parar_libras)]
 
         if libras_ativo:
-            on "show" action [
-                Function(solicitar_traducao_libras, what),
-                Function(reproduzir_libras, what),
-            ]
-
+            on "show" action Function(reproduzir_libras, what)
             frame:
-                xalign 0.985
-                yalign 0.075
-                xsize 440
-                ysize 620
+                xalign 0.985 yalign 0.075
+                xsize 440 ysize 590
                 padding (18, 14)
                 background Solid("#10251fee")
-
                 vbox:
                     spacing 9
-
-                    text "TRADUÇÃO EM LIBRAS":
-                        color "#7fe0aa"
-                        size 25
-                        bold True
-                        xalign 0.5
-
-                    text "FALA ATUAL":
-                        color "#7fe0aa"
-                        size 17
-                        bold True
-
-                    text what:
-                        color "#ffffff"
-                        size 18
+                    text "APRENDA LIBRAS":
+                        color "#7fe0aa" size 25 bold True xalign 0.5
+                    text "SINAIS-CHAVE DESTA FALA":
+                        color "#7fe0aa" size 17 bold True
+                    text glosa_exibida_libras(what):
+                        substitute False color "#ffffff" size 20
                         xmaximum 400
-
-                    text "GLOSA GERADA PELO VLIBRAS":
-                        color "#7fe0aa"
-                        size 17
-                        bold True
-
-                    text estado_traducao_libras(what):
-                        substitute False
-                        color ("#ffd166" if what in libras_erros else "#ffffff")
-                        size 19
-                        xmaximum 400
-
-                    if what in libras_erros:
-                        textbutton "Tentar tradução novamente":
-                            xalign 0.5
-                            action Function(solicitar_traducao_libras, what)
-
-                    if video_libras(what) or videos_sinais_libras(what):
-                        frame:
-                            xsize 400
-                            ysize 225
-                            xalign 0.5
-                            padding (0, 0)
-                            background Solid("#183b31")
-
-                            add "libras_player"
-
-                        hbox:
-                            spacing 12
-                            xalign 0.5
-                            textbutton "Reproduzir / repetir sinais":
-                                action Function(reproduzir_libras, what)
-                            textbutton "Parar":
-                                action Function(parar_libras)
-                    else:
-                        frame:
-                            xfill True
-                            ysize 150
-                            background Solid("#183b31")
-
-                            vbox:
-                                xalign 0.5
-                                yalign 0.5
-                                spacing 10
-
-                                text "LIBRAS":
-                                    size 40
-                                    bold True
-                                    color "#ffffff"
-                                    xalign 0.5
-                                text "Não há sinal isolado\npara esta fala no acervo":
-                                    size 21
-                                    color "#d8efe3"
-                                    text_align 0.5
-                                    xalign 0.5
-
-                    text "Sinais isolados do Signbank/UFSC — não substituem intérprete.":
-                        size 15
-                        color "#d8efe3"
-                        xalign 0.5
-
+                    frame:
+                        xsize 400 ysize 225 xalign 0.5
+                        padding (0, 0) background Solid("#183b31")
+                        add "libras_player"
+                    hbox:
+                        spacing 12 xalign 0.5
+                        textbutton "Repetir sinais":
+                            action Function(reproduzir_libras, what)
+                        textbutton "Parar":
+                            action Function(parar_libras)
+                    text "Vídeos WebM locais — funciona sem internet.":
+                        size 16 color "#d8efe3" xalign 0.5
+                    text "Sinais isolados do Signbank/UFSC. Apoio educativo; não substitui tradução revisada ou intérprete.":
+                        size 15 color "#ffd166" xalign 0.5
+                        text_align 0.5 xmaximum 400
     else:
         textbutton ("Libras ON" if libras_ativo else "Libras OFF"):
-            xalign 0.98
-            yalign 0.02
+            xalign 0.98 yalign 0.02
             action [ToggleVariable("libras_ativo"), Function(parar_libras)]

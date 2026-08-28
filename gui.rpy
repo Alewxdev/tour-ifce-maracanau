@@ -92,7 +92,11 @@ define gui.title_text_size = 75
 ## Menus principal e de jogos ##################################################
 
 ## As imagens usadas nos menus principal e de jogo.
-define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = Transform(
+    "images/campus/anime_frente_ifce.png",
+    xysize=(1920, 1080),
+    fit="cover",
+)
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -140,7 +144,7 @@ define gui.dialogue_xpos = 402
 define gui.dialogue_ypos = 75
 
 ## A largura máxima do texto da caixa de diálogo, em pixels.
-define gui.dialogue_width = 1116
+define gui.dialogue_width = 1020
 
 ## O alinhamento horizontal do texto da caixa de diálogo. Pode ser 0,0 para
 ## alinhado à esquerda, 0,5 para centralizado e 1,0 para alinhado à direita.
