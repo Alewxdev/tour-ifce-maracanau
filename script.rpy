@@ -17,6 +17,7 @@ image bg patio = Transform("campus/anime_corredor.png", xysize=(1920, 1080), fit
 image bg laboratorio = Transform("campus/anime_sala_aula.png", xysize=(1920, 1080), fit="cover")
 image bg biblioteca = Transform("campus/anime_biblioteca.png", xysize=(1920, 1080), fit="cover")
 image bg biblioteca frente = Transform("campus/anime_frente_biblioteca.png", xysize=(1920, 1080), fit="cover")
+image bg sala estudo = Transform("campus/anime_sala_estudo.png", xysize=(1920, 1080), fit="cover")
 image bg sala = Transform("campus/anime_sala_aula.png", xysize=(1920, 1080), fit="cover")
 image bg cantina real = Transform("campus/anime_cantina.png", xysize=(1920, 1080), fit="cover")
 image bg catraca = Transform("campus/anime_catraca_acesso.png", xysize=(1920, 1080), fit="cover")
@@ -49,21 +50,21 @@ image lia aprovando = Transform(Crop((1182, 0, 592, 887), "personagens/expressoe
 image fabio explicando = Transform(Crop((0, 0, 512, 1024), "personagens/expressoes_fabio_transparente.png"), ysize=1024, fit="contain")
 image fabio surpreso = Transform(Crop((512, 0, 512, 1024), "personagens/expressoes_fabio_transparente.png"), ysize=1024, fit="contain")
 image fabio feliz = Transform(Crop((1024, 0, 512, 1024), "personagens/expressoes_fabio_transparente.png"), ysize=1024, fit="contain")
-image edson explicando = Transform(Crop((0, 0, 512, 1024), "personagens/expressoes_edson_transparente.png"), ysize=1024, fit="contain")
-image edson pensando = Transform(Crop((512, 0, 512, 1024), "personagens/expressoes_edson_transparente.png"), ysize=1024, fit="contain")
-image edson feliz = Transform(Crop((1024, 0, 512, 1024), "personagens/expressoes_edson_transparente.png"), ysize=1024, fit="contain")
+image edson explicando = Transform(Crop((0, 0, 512, 1024), "personagens/expressoes_edson_transparente.png"), ysize=940, fit="contain")
+image edson pensando = Transform(Crop((512, 0, 512, 1024), "personagens/expressoes_edson_transparente.png"), ysize=940, fit="contain")
+image edson feliz = Transform(Crop((1024, 0, 512, 1024), "personagens/expressoes_edson_transparente.png"), ysize=940, fit="contain")
 image cicero explicando = Transform(Crop((0, 0, 591, 887), "personagens/expressoes_cicero_transparente.png"), ysize=1024, fit="contain")
 image cicero desconfiado = Transform(Crop((591, 0, 591, 887), "personagens/expressoes_cicero_transparente.png"), ysize=1024, fit="contain")
 image cicero feliz = Transform(Crop((1182, 0, 592, 887), "personagens/expressoes_cicero_transparente.png"), ysize=1024, fit="contain")
 image otavio explicando = Transform(Crop((0, 0, 724, 724), "personagens/expressoes_otavio_transparente.png"), ysize=1024, fit="contain")
 image otavio surpreso = Transform(Crop((724, 0, 724, 724), "personagens/expressoes_otavio_transparente.png"), ysize=1024, fit="contain")
 image otavio feliz = Transform(Crop((1448, 0, 724, 724), "personagens/expressoes_otavio_transparente.png"), ysize=1024, fit="contain")
-image camila explicando = Transform(Crop((0, 0, 591, 887), "personagens/expressoes_camila_transparente.png"), ysize=1024, fit="contain")
-image camila preocupada = Transform(Crop((591, 0, 591, 887), "personagens/expressoes_camila_transparente.png"), ysize=1024, fit="contain")
-image camila feliz = Transform(Crop((1182, 0, 592, 887), "personagens/expressoes_camila_transparente.png"), ysize=1024, fit="contain")
-image helena explicando = Transform(Crop((0, 0, 591, 887), "personagens/expressoes_helena_transparente.png"), ysize=1024, fit="contain")
-image helena surpresa = Transform(Crop((591, 0, 591, 887), "personagens/expressoes_helena_transparente.png"), ysize=1024, fit="contain")
-image helena feliz = Transform(Crop((1182, 0, 592, 887), "personagens/expressoes_helena_transparente.png"), ysize=1024, fit="contain")
+image camila explicando = Transform(Crop((0, 0, 512, 1024), "personagens/expressoes_camila_transparente.png"), ysize=1024, fit="contain")
+image camila preocupada = Transform(Crop((512, 0, 512, 1024), "personagens/expressoes_camila_transparente.png"), ysize=1024, fit="contain")
+image camila feliz = Transform(Crop((1024, 0, 512, 1024), "personagens/expressoes_camila_transparente.png"), ysize=1024, fit="contain")
+image helena explicando = Transform(Crop((0, 0, 512, 1024), "personagens/expressoes_helena_transparente.png"), ysize=1024, fit="contain")
+image helena surpresa = Transform(Crop((512, 0, 512, 1024), "personagens/expressoes_helena_transparente.png"), ysize=1024, fit="contain")
+image helena feliz = Transform(Crop((1024, 0, 512, 1024), "personagens/expressoes_helena_transparente.png"), ysize=1024, fit="contain")
 
 default pontos_libras = 0
 default lugares_visitados = []
@@ -232,6 +233,26 @@ label biblioteca:
     n "Antes de sair, Júlia apresenta mais dois sinais disponíveis no jogo."
     julia "Para estudar aqui, você pode LER e usar o COMPUTADOR."
     $ renpy.notify("Sinais aprendidos: LER e COMPUTADOR")
+    jump sala_estudo
+
+label sala_estudo:
+    $ lugares_visitados.append("Sala de estudos da biblioteca")
+    scene bg sala estudo:
+        size (1920, 1080)
+        zoom 1.03
+        ease 2.0 zoom 1.0
+    with pushleft
+    n "No segundo andar da biblioteca, Alex, Ane e Júlia conheceram a sala de estudos, um espaço reservado para leitura, pesquisa e trabalhos em grupo."
+    show julia retrato at entrar_esquerda:
+        zoom 0.42
+    show ane feliz at entrar_direita:
+        zoom 0.40
+    julia "Aqui no segundo andar, podemos estudar com mais tranquilidade. Para conversar, é importante respeitar quem precisa de silêncio e manter Alex no campo de visão."
+    ane "Então nada de chamar alguém de costas ou esconder as mãos atrás de uma pilha de livros."
+    show alex feliz at entrar_centro:
+        zoom 0.40
+    alex "Exato. Podemos organizar as cadeiras para que todas as pessoas se vejam durante um trabalho em grupo."
+    n "Depois de conhecer o espaço, o grupo desceu da biblioteca e seguiu a pista até o laboratório."
     jump laboratorio
 
 label laboratorio:
@@ -365,6 +386,24 @@ label piscina:
     julia "Sem touca e sem autorização? Seria a pista mais indisciplinada do campus."
     ane "Então continuamos secos e seguimos para a reunião. Meu caderno agradece."
     n "O grupo retomou o caminho sabendo onde acontecem as atividades aquáticas e como participar delas com responsabilidade."
+    jump cantina
+
+label cantina:
+    $ lugares_visitados.append("Cantina")
+    scene bg cantina real:
+        size (1920, 1080)
+        zoom 1.03
+        ease 2.0 zoom 1.0
+    with Fade(0.55, 0.15, 0.65, color="#ffd166")
+    n "Antes da reunião, o grupo atravessou a cantina, um dos pontos mais movimentados do campus nos intervalos."
+    show alex feliz at entrar_esquerda:
+        zoom 0.41
+    show ane feliz at entrar_direita:
+        zoom 0.40
+    ane "Agora entendi por que a cantina é o vértice mais visitado do nosso mapa."
+    alex "Com tanta gente conversando, o contato visual ajuda muito. Também podemos escolher uma mesa bem iluminada para usar Libras."
+    ane "E finalmente confirmar se a coxinha chegou à reunião antes de nós."
+    n "Entre mesas cheias e o movimento dos estudantes, as duas seguiram para o refeitório e para o encerramento da recepção."
     jump final
 
 label final:
