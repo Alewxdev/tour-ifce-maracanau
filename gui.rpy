@@ -27,18 +27,18 @@ define config.check_conflicting_properties = True
 
 ## Uma cor de destaque usada em toda a interface para rotular e destacar o
 ## texto.
-define gui.accent_color = '#0099cc'
+define gui.accent_color = '#21d6a0'
 
 ## A cor usada para um botão de texto quando ele não está selecionado nem passa
 ## o mouse.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#c6d8d2'
 
 ## A cor pequena é usada para texto pequeno, que precisa ser mais claro/escuro
 ## para obter o mesmo efeito.
 define gui.idle_small_color = '#aaaaaa'
 
 ## A cor que é usada para botões e barras que passam pelo mouse.
-define gui.hover_color = '#66c1e0'
+define gui.hover_color = '#6ce6bd'
 
 ## A cor usada em um botão de texto quando ele está selecionado, mas não
 ## focalizado. Um botão estará selecionado se for a tela atual ou o valor de
@@ -51,8 +51,8 @@ define gui.insensitive_color = '#8888887f'
 ## Cores usadas para as partes das barras que não estão preenchidas. Elas não
 ## são usadas diretamente, mas são usadas ao gerar novamente os arquivos de
 ## imagem de barra.
-define gui.muted_color = '#003d51'
-define gui.hover_muted_color = '#005b7a'
+define gui.muted_color = '#164b3e'
+define gui.hover_muted_color = '#1d7059'
 
 ## As cores usadas para o diálogo e o texto da opção de menu.
 define gui.text_color = '#ffffff'
@@ -93,7 +93,7 @@ define gui.title_text_size = 75
 
 ## As imagens usadas nos menus principal e de jogo.
 define gui.main_menu_background = Transform(
-    "images/campus/anime_frente_ifce.png",
+    "images/menu/elenco_campus.png",
     xysize=(1920, 1080),
     fit="cover",
 )

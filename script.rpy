@@ -3,11 +3,13 @@
 define alex = Character("Alex", color="#ff9fbd")
 define ane = Character("Ane", color="#ffd166")
 define lia = Character("Professora Lia", color="#7fe0aa")
-define davi = Character("Davi", color="#8ed1fc")
+define julia = Character("Júlia", color="#ff8fab")
 define fabio = Character("Professor Fábio", color="#7fe0aa")
 define edson = Character("Professor Edson", color="#8ed1fc")
 define cicero = Character("Professor Cícero", color="#ffd166")
 define otavio = Character("Professor Otávio", color="#b8a1ff")
+define camila = Character("Professora Camila", color="#f2b84b")
+define helena = Character("Professora Helena", color="#61d4c5")
 define n = Character(None)
 
 image bg entrada = Transform("campus/anime_frente_ifce.png", xysize=(1920, 1080), fit="cover")
@@ -20,29 +22,64 @@ image bg cantina real = Transform("campus/anime_cantina.png", xysize=(1920, 1080
 image bg catraca = Transform("campus/anime_catraca_acesso.png", xysize=(1920, 1080), fit="cover")
 image bg sagui = Transform("campus/anime_sagui_refeitorio.png", xysize=(1920, 1080), fit="cover")
 image bg refeitorio = Transform("campus/anime_refeitorio.png", xysize=(1920, 1080), fit="cover")
+image bg piscina = Transform("campus/anime_piscina.png", xysize=(1920, 1080), fit="cover")
 image alex feliz = "personagens/alex_anime_v3_tatuagem.png"
 image ane feliz = "Ane.png"
 image lia feliz = "personagens/professora_lia.png"
-image davi feliz = "personagens/davi.png"
 image fabio aula = "personagens/professor_fabio.png"
 image edson aula = "personagens/professor_edson.png"
 image cicero aula = "personagens/professor_cicero.png"
 image otavio aula = "personagens/professor_otavio.png"
+
+# Cada folha possui três retratos: padrão/explicando, reação e feliz.
+image alex retrato = Crop((0, 0, 512, 1024), "personagens/expressoes_alex_transparente.png")
+image alex surpreso = Crop((512, 0, 512, 1024), "personagens/expressoes_alex_transparente.png")
+image alex pensando = Crop((1024, 0, 512, 1024), "personagens/expressoes_alex_transparente.png")
+# As folhas abaixo foram exportadas em resolucoes diferentes. Cada recorte usa
+# exatamente um terco do arquivo e e normalizado para a mesma altura de palco.
+image ane retrato = Transform(Crop((0, 0, 512, 1024), "personagens/expressoes_ane_transparente.png"), ysize=1024, fit="contain")
+image ane surpresa = Transform(Crop((512, 0, 512, 1024), "personagens/expressoes_ane_transparente.png"), ysize=1024, fit="contain")
+image ane rindo = Transform(Crop((1024, 0, 512, 1024), "personagens/expressoes_ane_transparente.png"), ysize=1024, fit="contain")
+image julia retrato = "personagens/julia_retrato.png"
+image julia preocupada = "personagens/julia_preocupada.png"
+image julia rindo = "personagens/julia_rindo.png"
+image lia explicando = Transform(Crop((0, 0, 591, 887), "personagens/expressoes_lia_transparente.png"), ysize=1024, fit="contain")
+image lia seria = Transform(Crop((591, 0, 591, 887), "personagens/expressoes_lia_transparente.png"), ysize=1024, fit="contain")
+image lia aprovando = Transform(Crop((1182, 0, 592, 887), "personagens/expressoes_lia_transparente.png"), ysize=1024, fit="contain")
+image fabio explicando = Transform(Crop((0, 0, 512, 1024), "personagens/expressoes_fabio_transparente.png"), ysize=1024, fit="contain")
+image fabio surpreso = Transform(Crop((512, 0, 512, 1024), "personagens/expressoes_fabio_transparente.png"), ysize=1024, fit="contain")
+image fabio feliz = Transform(Crop((1024, 0, 512, 1024), "personagens/expressoes_fabio_transparente.png"), ysize=1024, fit="contain")
+image edson explicando = Transform(Crop((0, 0, 512, 1024), "personagens/expressoes_edson_transparente.png"), ysize=1024, fit="contain")
+image edson pensando = Transform(Crop((512, 0, 512, 1024), "personagens/expressoes_edson_transparente.png"), ysize=1024, fit="contain")
+image edson feliz = Transform(Crop((1024, 0, 512, 1024), "personagens/expressoes_edson_transparente.png"), ysize=1024, fit="contain")
+image cicero explicando = Transform(Crop((0, 0, 591, 887), "personagens/expressoes_cicero_transparente.png"), ysize=1024, fit="contain")
+image cicero desconfiado = Transform(Crop((591, 0, 591, 887), "personagens/expressoes_cicero_transparente.png"), ysize=1024, fit="contain")
+image cicero feliz = Transform(Crop((1182, 0, 592, 887), "personagens/expressoes_cicero_transparente.png"), ysize=1024, fit="contain")
+image otavio explicando = Transform(Crop((0, 0, 724, 724), "personagens/expressoes_otavio_transparente.png"), ysize=1024, fit="contain")
+image otavio surpreso = Transform(Crop((724, 0, 724, 724), "personagens/expressoes_otavio_transparente.png"), ysize=1024, fit="contain")
+image otavio feliz = Transform(Crop((1448, 0, 724, 724), "personagens/expressoes_otavio_transparente.png"), ysize=1024, fit="contain")
+image camila explicando = Transform(Crop((0, 0, 591, 887), "personagens/expressoes_camila_transparente.png"), ysize=1024, fit="contain")
+image camila preocupada = Transform(Crop((591, 0, 591, 887), "personagens/expressoes_camila_transparente.png"), ysize=1024, fit="contain")
+image camila feliz = Transform(Crop((1182, 0, 592, 887), "personagens/expressoes_camila_transparente.png"), ysize=1024, fit="contain")
+image helena explicando = Transform(Crop((0, 0, 591, 887), "personagens/expressoes_helena_transparente.png"), ysize=1024, fit="contain")
+image helena surpresa = Transform(Crop((591, 0, 591, 887), "personagens/expressoes_helena_transparente.png"), ysize=1024, fit="contain")
+image helena feliz = Transform(Crop((1182, 0, 592, 887), "personagens/expressoes_helena_transparente.png"), ysize=1024, fit="contain")
 
 default pontos_libras = 0
 default lugares_visitados = []
 
 transform entrar_esquerda:
     xalign -0.25 yalign 1.0 alpha 0.0
-    easeout 0.55 xalign 0.12 alpha 1.0
+    easeout 0.55 xalign 0.28 alpha 1.0
 
 transform entrar_centro:
-    xalign 0.42 yalign 1.0 alpha 0.0 zoom 0.92
+    xalign 0.5 yalign 1.0 alpha 0.0 zoom 0.92
     easeout_back 0.55 alpha 1.0 zoom 1.0
 
 transform entrar_direita:
     xalign 0.88 yalign 1.0 alpha 0.0
-    easeout 0.55 xalign 0.68 alpha 1.0
+    # Mantem a personagem fora do painel fixo de Libras no lado direito.
+    easeout 0.55 xalign 0.64 alpha 1.0
 
 transform flutuar:
     yoffset 0
@@ -69,8 +106,12 @@ transform reagir_pensando:
     repeat 2
 
 transform destaque_professor:
-    xalign 0.72 yalign 0.96 alpha 0.0 zoom 0.46
-    easeout_back 0.55 alpha 1.0 zoom 0.50
+    xalign 0.5 yalign 1.0 alpha 0.0 zoom 0.72
+    easeout_back 0.55 alpha 1.0 zoom 0.78
+
+transform retrato_centro:
+    xalign 0.5 yalign 1.0 alpha 0.0 zoom 0.72
+    easeout 0.30 alpha 1.0 zoom 0.78
 
 label start:
     $ pontos_libras = 0
@@ -148,24 +189,26 @@ label patio:
     n "O pátio liga diferentes áreas do campus e é ponto de encontro, descanso e atividades acadêmicas."
     show ane feliz at entrar_esquerda:
         zoom 0.43
-    show davi feliz at entrar_direita:
-        zoom 0.47
-    davi "Bem-vindas! Eu sou Davi, monitor da biblioteca e estudante de Ciência da Computação."
-    ane "Davi, você viu uma coxinha muito importante passar por aqui?"
-    davi "Vi uma caixa passeando para o lado da biblioteca. Parecia um projeto com fome."
+    show julia retrato at entrar_direita:
+        zoom 0.44
+    julia "Bem-vindas! Eu sou Júlia, monitora da biblioteca e estudante de Ciência da Computação."
+    ane "Júlia, você viu uma coxinha muito importante passar por aqui?"
+    show julia rindo at entrar_direita:
+        zoom 0.44
+    julia "Vi uma caixa passeando para o lado da biblioteca. Parecia um projeto com fome."
     alex "Antes de seguir, ensine aos calouros um sinal útil."
-    davi "Este é o sinal de BIBLIOTECA. Veja o vídeo e depois tente fazer."
+    julia "Este é o sinal de BIBLIOTECA. Veja o vídeo e depois tente fazer."
     $ renpy.notify("Novo sinal aprendido: BIBLIOTECA")
 
     menu:
         "O vídeo passou rápido. O que fazer?"
         "Usar o botão para repetir o sinal":
             $ pontos_libras += 1
-            davi "Perfeito. Aprender Libras precisa de atenção, prática e repetição."
+            julia "Perfeito. Aprender Libras precisa de atenção, prática e repetição."
         "Fingir que entendeu":
             alex "Pode pedir para repetir. Ninguém precisa disfarçar uma dúvida."
 
-    davi "Vamos à Biblioteca Rachel de Queiroz. Lá temos livros, estudo e jogos."
+    julia "Vamos à Biblioteca Rachel de Queiroz. Lá temos livros, estudo e jogos."
     jump biblioteca
 
 label biblioteca:
@@ -177,15 +220,17 @@ label biblioteca:
     scene bg biblioteca:
         size (1920, 1080)
     with pushleft
-    show davi feliz at entrar_esquerda:
-        zoom 0.46
+    show julia retrato at entrar_esquerda:
+        zoom 0.44
     show alex feliz at entrar_direita:
         zoom 0.43
-    davi "Aqui também existe uma regra difícil: devolver o livro e não levar a coxinha para a estante."
+    julia "Aqui também existe uma regra difícil: devolver o livro e não levar a coxinha para a estante."
+    show julia preocupada at entrar_esquerda:
+        zoom 0.44
     alex "Encontrei uma pista: uma nota dizendo LABORATÓRIO CINCO."
-    davi "O mistério sabe escrever, mas ainda precisa melhorar a letra."
-    n "Antes de sair, Davi apresenta mais dois sinais disponíveis no jogo."
-    davi "Para estudar aqui, você pode LER e usar o COMPUTADOR."
+    julia "O mistério sabe escrever, mas ainda precisa melhorar a letra."
+    n "Antes de sair, Júlia apresenta mais dois sinais disponíveis no jogo."
+    julia "Para estudar aqui, você pode LER e usar o COMPUTADOR."
     $ renpy.notify("Sinais aprendidos: LER e COMPUTADOR")
     jump laboratorio
 
@@ -196,23 +241,21 @@ label laboratorio:
         alpha 0.0
         linear 0.6 alpha 1.0
     n "Os laboratórios de informática apoiam aulas práticas, programação e projetos de Ciência da Computação."
-    show lia feliz at entrar_centro:
-        zoom 0.54
+    show lia explicando at retrato_centro
     lia "Olá! Eu sou a professora Lia. Bem-vindos à Ciência da Computação do IFCE Maracanaú."
-    hide lia feliz with dissolve
+    hide lia with dissolve
     show alex feliz at entrar_esquerda:
         zoom 0.43
     show ane feliz at entrar_direita:
         zoom 0.43
     ane "Professora, procuramos uma coxinha desaparecida. A investigação agora também é computacional."
     alex "Nossa hipótese aponta para este laboratório e para um computador com uma mensagem aberta."
-    show lia feliz at entrar_centro:
-        zoom 0.48
+    show lia explicando at retrato_centro
     lia "A caixa esteve aqui, mas seguiu para a sala. Antes disso, temos uma missão de Computação e Libras."
 
     n "Na tela havia um pequeno programa: ele deveria mostrar a próxima pista, mas repetia a palavra COXINHA para sempre."
     ane "Encontramos um bug com fome infinita. Isso é sofisticado ou preocupante?"
-    davi "Na Computação, chamamos isso de laço infinito. Na cantina, chamamos de terça-feira."
+    julia "Na Computação, chamamos isso de laço infinito. Na cantina, chamamos de terça-feira."
 
     menu:
         "Como corrigir o programa?"
@@ -220,6 +263,7 @@ label laboratorio:
             $ pontos_libras += 1
             alex "Certo. Um algoritmo precisa saber quando continuar e quando parar."
         "Desligar o computador e dizer que foi mistério":
+            show lia seria at retrato_centro
             lia "Criativo, mas não resolve o programa. Vamos ler a mensagem e revisar o código."
 
     n "Alex corrigiu a condição. O programa mostrou: PROCURE NA SALA DE AULA."
@@ -237,6 +281,7 @@ label laboratorio:
     lia "Libras é uma língua completa, com estrutura própria. Não é português feito palavra por palavra."
     lia "Os vídeos deste jogo mostram sinais isolados para apoiar o aprendizado. Uma tradução deve ser revisada por pessoa fluente."
     lia "Software acessível começa no planejamento. Legenda, Libras e interface visual não devem ficar para depois."
+    show lia aprovando at retrato_centro
     $ renpy.notify("Sinal aprendido: ACESSIBILIDADE")
     jump sala
 
@@ -246,11 +291,11 @@ label sala:
         size (1920, 1080)
     with Fade(0.45, 0.15, 0.55, color="#ffffff")
     n "As salas de aula são espaços de teoria, debate e trabalho em equipe. A última pista estava sobre a mesa."
-    show davi feliz at entrar_esquerda:
-        zoom 0.43
+    show julia rindo at entrar_esquerda:
+        zoom 0.44
     show ane feliz at entrar_direita:
         zoom 0.42
-    davi "A caixa está aqui! O mistério acabou antes da prova."
+    julia "A caixa está aqui! O mistério acabou antes da prova."
     ane "Mas ela está vazia. Temos agora o mistério da coxinha invisível."
     show alex feliz at entrar_centro:
         zoom 0.42
@@ -261,19 +306,65 @@ label sala:
     lia "Parabéns. O passeio era a primeira atividade de recepção dos calouros."
     lia "Vocês conheceram o pátio, a biblioteca, os laboratórios e as salas. Também resolveram o primeiro bug do curso."
     ane "Então ninguém roubou a coxinha?"
-    davi "Ainda não. Mas a reunião vai começar, então precisamos ir rápido."
+    julia "Ainda não. Mas a reunião vai começar, então precisamos ir rápido."
 
     menu:
         "Antes da reunião, qual sinal você quer repetir?"
         "BIBLIOTECA":
             $ pontos_libras += 1
-            davi "BIBLIOTECA. Um lugar para ler, estudar e encontrar ajuda."
+            julia "BIBLIOTECA. Um lugar para ler, estudar e encontrar ajuda."
         "COMPUTADOR":
             $ pontos_libras += 1
             ane "COMPUTADOR. Nosso colega de projetos e fornecedor oficial de mensagens de erro."
         "ACESSIBILIDADE":
             $ pontos_libras += 1
             lia "ACESSIBILIDADE. Ela deve estar presente desde o começo de cada projeto."
+    jump piscina
+
+label piscina:
+    $ lugares_visitados.append("Piscina e complexo esportivo")
+    scene bg piscina:
+        size (1920, 1080)
+        zoom 1.03
+        ease 2.0 zoom 1.0
+    with Fade(0.55, 0.15, 0.65, color="#63d7ee")
+
+    n "A caminho da reunião, Júlia indicou um atalho pelo complexo esportivo. Foi assim que o grupo encontrou a piscina do campus."
+    n "O espaço recebe atividades de Educação Física e aulas de natação, sempre com planejamento, orientação profissional e regras de segurança."
+
+    show julia rindo at entrar_esquerda:
+        zoom 0.42
+    show ane feliz at entrar_direita:
+        zoom 0.40
+    julia "Aqui acontecem as aulas de natação. Hoje é só visita: uniforme, mochila e caderno não contam como equipamento aquático."
+    ane "Ainda bem. Se eu entrar assim, a disciplina vira Natação Aplicada à Lavagem de Mochila."
+    julia "Com prática obrigatória de resgate do caderno."
+
+    hide julia with dissolve
+    hide ane with dissolve
+    show alex feliz at entrar_centro:
+        zoom 0.43
+    alex "Na piscina, atenção visual também é segurança. As instruções devem ser apresentadas antes da entrada na água e confirmadas por toda a turma."
+    n "Em uma aula acessível, o professor combina sinais visuais, mantém contato de frente com os estudantes e explica previamente os avisos e procedimentos de emergência."
+
+    menu:
+        "Qual é a atitude correta antes de uma aula de natação?"
+        "Aguardar a orientação, observar a sinalização e não correr no deck":
+            $ pontos_libras += 1
+            alex "Perfeito. Primeiro vêm a orientação e a segurança; depois, a atividade na água."
+            $ renpy.notify("Boa prática aprendida: segurança na piscina")
+        "Correr até a borda e mergulhar antes da explicação":
+            alex "O piso pode estar molhado e nem todo ponto permite mergulho. É preciso aguardar o professor e conhecer as regras do espaço."
+
+    hide alex with dissolve
+    show julia retrato at entrar_esquerda:
+        zoom 0.42
+    show ane feliz at entrar_direita:
+        zoom 0.40
+    ane "E a coxinha? Será que ela tentou atravessar a piscina?"
+    julia "Sem touca e sem autorização? Seria a pista mais indisciplinada do campus."
+    ane "Então continuamos secos e seguimos para a reunião. Meu caderno agradece."
+    n "O grupo retomou o caminho sabendo onde acontecem as atividades aquáticas e como participar delas com responsabilidade."
     jump final
 
 label final:
@@ -290,7 +381,7 @@ label final:
         size (1920, 1080)
     with Fade(0.7, 0.2, 1.0, color="#0b2b21")
     n "No refeitório, o cartão recarregado permite comprar a refeição. Na reunião, também havia coxinha para todos e informações sobre o curso."
-    show alex feliz at entrar_centro, flutuar:
+    show alex feliz at entrar_centro:
         zoom 0.48
     alex "Hoje eu conheci o campus. Amanhã começam as primeiras aulas da nossa semana."
     if pontos_libras >= 3:
@@ -308,15 +399,22 @@ label dia_2_programacao:
     with Fade(0.7, 0.2, 0.7, color="#10251f")
     centered "{size=60}{color=#7fe0aa}TERÇA-FEIRA{/color}{/size}\n{size=34}Fundamentos de Programação{/size}"
 
-    show alex feliz at entrar_esquerda:
-        zoom 0.41
-    show ane feliz at entrar_direita, reagir_surpresa:
-        zoom 0.40
+    show ane surpresa at retrato_centro
     ane "A lousa já tem fluxogramas. A aula nem começou e as setas parecem saber aonde vão."
+    hide ane surpresa with dissolve
+    show alex retrato at retrato_centro
     alex "Tomara que elas expliquem o caminho para nós também."
+    hide alex retrato with dissolve
 
-    hide ane feliz with dissolve
-    show fabio aula at destaque_professor
+    show camila explicando at destaque_professor
+    camila "Antes da primeira aula, quero dar as boas-vindas. Eu sou a professora Camila e acompanho os projetos dos estudantes."
+    show camila preocupada at retrato_centro
+    camila "Não esperem saber tudo na primeira semana. Procurem monitoria, formem grupos e registrem as dúvidas."
+    show camila feliz at retrato_centro
+    camila "Computação é construída em equipe. Ideias diferentes tornam os projetos mais fortes e acessíveis."
+    hide camila feliz with dissolve
+
+    show fabio explicando at destaque_professor
     fabio "Bom dia! Eu sou o professor Fábio e esta é a disciplina de Fundamentos de Programação."
     fabio "Um algoritmo é uma sequência organizada de passos para resolver um problema. Antes da linguagem de programação, precisamos aprender a pensar na solução."
     fabio "Vamos trabalhar com variáveis, entrada e saída, decisões, repetições, funções e testes. Esses conceitos aparecem em quase todas as áreas do curso."
@@ -326,15 +424,19 @@ label dia_2_programacao:
         "O programa precisa escolher entre aprovado e reprovado. Qual conceito usar?"
         "Uma condição, como se/senão":
             $ pontos_libras += 1
+            show fabio feliz at retrato_centro
             fabio "Exatamente. A condição permite que o programa tome caminhos diferentes conforme os dados."
         "Um laço infinito":
+            show fabio surpreso at retrato_centro
             fabio "O laço repete instruções. Para escolher entre dois caminhos, começamos com uma condição."
 
-    hide fabio aula with dissolve
-    show ane feliz at entrar_direita, reagir_riso:
-        zoom 0.40
+    hide fabio with dissolve
+    show ane rindo at retrato_centro
     ane "Então o caso da coxinha sumida era um algoritmo: procurar, perguntar e repetir até o intervalo."
+    hide ane rindo with dissolve
+    show alex retrato at retrato_centro
     alex "Com uma condição de parada muito importante: encontrar a coxinha."
+    hide alex retrato with dissolve
     centered "{size=38}{color=#7fe0aa}Conceitos do dia{/color}{/size}\nAlgoritmos • variáveis • condições • repetições • funções"
     jump dia_3_calculo
 
@@ -345,29 +447,38 @@ label dia_3_calculo:
     with pushleft
     centered "{size=60}{color=#8ed1fc}QUARTA-FEIRA{/color}{/size}\n{size=34}Cálculo I{/size}"
 
-    show edson aula at destaque_professor
+    show edson explicando at destaque_professor
     edson "Olá! Eu sou o professor Edson. Em Cálculo I estudaremos funções, limites, derivadas e, mais adiante, integrais."
     edson "Uma função descreve como uma quantidade depende de outra. O limite ajuda a entender o comportamento quando nos aproximamos de um ponto."
     edson "A derivada mede taxa de mudança: velocidade, crescimento ou inclinação. Na Computação, isso aparece em gráficos, simulações, otimização e aprendizado de máquina."
     edson "O objetivo não é decorar símbolos. É aprender a modelar problemas e interpretar o resultado."
 
-    hide edson aula with dissolve
-    show alex feliz at entrar_esquerda, reagir_pensando:
-        zoom 0.41
-    show ane feliz at entrar_direita:
-        zoom 0.40
+    hide edson with dissolve
+    show ane retrato at retrato_centro
     ane "Se a quantidade de exercícios cresce e meu tempo livre diminui, isso já conta como função?"
+    hide ane retrato with dissolve
+    show alex pensando at retrato_centro
     alex "Conta como uma função assustadoramente realista."
-    show ane feliz at entrar_direita, reagir_surpresa:
-        zoom 0.40
+    hide alex pensando with dissolve
 
     menu:
         "Qual ideia representa melhor uma derivada?"
         "A taxa de mudança de uma quantidade":
             $ pontos_libras += 1
+            show edson feliz at retrato_centro
             edson "Muito bem. Ela mostra como algo varia naquele instante."
         "Uma lista de passos de um algoritmo":
+            show edson pensando at retrato_centro
             edson "Isso pertence à programação. Em Cálculo, a derivada está ligada à variação."
+
+    hide edson with dissolve
+    show helena explicando at destaque_professor
+    helena "Sou a professora Helena. Nas pesquisas do curso, um resultado precisa vir acompanhado de fonte, método e evidência."
+    show helena surpresa at retrato_centro
+    helena "Copiar uma informação sem verificar a origem pode transformar um erro pequeno em uma conclusão inteira."
+    show helena feliz at retrato_centro
+    helena "Na biblioteca, vocês aprenderão a buscar artigos, citar autores e apresentar projetos com clareza."
+    hide helena with dissolve
 
     centered "{size=38}{color=#8ed1fc}Conceitos do dia{/color}{/size}\nFunções • limites • derivadas • modelagem"
     jump dia_4_discreta
@@ -380,26 +491,28 @@ label dia_4_discreta:
     with Fade(0.5, 0.1, 0.6, color="#5a3218")
     centered "{size=60}{color=#ffd166}QUINTA-FEIRA{/color}{/size}\n{size=34}Matemática Discreta{/size}"
 
-    show cicero aula at destaque_professor
+    show cicero explicando at destaque_professor
     cicero "Eu sou o professor Cícero. Matemática Discreta estuda estruturas formadas por elementos separados, muito próximas do funcionamento da Computação."
     cicero "Começaremos com lógica, proposições, conjuntos, relações, funções, técnicas de contagem e grafos."
     cicero "A lógica ajuda a escrever condições corretas. Grafos representam redes, rotas, amizades, dependências e conexões entre computadores."
     cicero "Vocês usarão esse raciocínio em algoritmos, bancos de dados, redes, segurança e análise de problemas."
 
-    hide cicero aula with dissolve
-    show ane feliz at entrar_direita, reagir_surpresa:
-        zoom 0.40
+    hide cicero with dissolve
+    show ane surpresa at retrato_centro
     ane "Então um mapa do campus pode virar um grafo?"
-    show alex feliz at entrar_esquerda:
-        zoom 0.41
+    hide ane surpresa with dissolve
+    show alex retrato at retrato_centro
     alex "Sim. Os lugares são vértices e os caminhos viram arestas. A cantina provavelmente é o vértice mais visitado."
+    hide alex retrato with dissolve
 
     menu:
         "Em um mapa representado por grafo, o que são os caminhos entre lugares?"
         "Arestas":
             $ pontos_libras += 1
+            show cicero feliz at retrato_centro
             cicero "Correto. Os lugares podem ser vértices e as ligações entre eles são arestas."
         "Variáveis de texto":
+            show cicero desconfiado at retrato_centro
             cicero "Variáveis guardam dados. No grafo, usamos arestas para representar as conexões."
 
     centered "{size=38}{color=#ffd166}Conceitos do dia{/color}{/size}\nLógica • conjuntos • contagem • grafos"
@@ -412,26 +525,28 @@ label dia_5_circuitos:
     with pushleft
     centered "{size=60}{color=#b8a1ff}SEXTA-FEIRA{/color}{/size}\n{size=34}Circuitos Digitais — Eletrônica Digital{/size}"
 
-    show otavio aula at destaque_professor
+    show otavio explicando at destaque_professor
     otavio "Bem-vindos! Eu sou o professor Otávio. Em Circuitos Digitais veremos como informações são representadas eletronicamente."
     otavio "Começamos com os valores binários zero e um, tabelas-verdade e portas lógicas como AND, OR e NOT."
     otavio "Depois combinamos esses blocos para criar somadores, memórias e circuitos capazes de tomar decisões simples."
     otavio "Essa disciplina liga software e hardware. Ela ajuda a entender processadores, sistemas embarcados, robótica e a arquitetura dos computadores."
 
-    hide otavio aula with dissolve
-    show alex feliz at entrar_esquerda, reagir_surpresa:
-        zoom 0.41
+    hide otavio with dissolve
+    show alex surpreso at retrato_centro
     alex "Então, por baixo dos programas, existem milhões de decisões feitas com zero e um."
-    show ane feliz at entrar_direita, reagir_riso:
-        zoom 0.40
+    hide alex surpreso with dissolve
+    show ane rindo at retrato_centro
     ane "E eu levei quatro dias para decidir entre suco e refrigerante. O processador está na frente."
+    hide ane rindo with dissolve
 
     menu:
         "Qual porta inverte um valor lógico?"
         "NOT":
             $ pontos_libras += 1
+            show otavio feliz at retrato_centro
             otavio "Exato. Se a entrada é um, a saída vira zero; se é zero, vira um."
         "AND":
+            show otavio surpreso at retrato_centro
             otavio "A AND combina entradas. Quem realiza a inversão é a porta NOT."
 
     centered "{size=38}{color=#b8a1ff}Conceitos do dia{/color}{/size}\nBinário • portas lógicas • circuitos • hardware"
@@ -443,7 +558,7 @@ label encerramento_semana:
     with Fade(0.7, 0.2, 0.8, color="#10251f")
     show alex feliz at entrar_esquerda:
         zoom 0.41
-    show ane feliz at entrar_direita, flutuar:
+    show ane feliz at entrar_direita:
         zoom 0.40
     ane "Sobrevivemos à primeira semana: algoritmo, derivada, grafo e porta lógica."
     alex "E aprendemos como cada disciplina se conecta. Programação dá instruções, a matemática modela e prova, e os circuitos executam."

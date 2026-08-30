@@ -228,9 +228,21 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
+    xsize 1120
+    yminimum 78
+    padding (30, 18, 30, 18)
+    background Solid("#061b1aeb")
+    hover_background Solid("#0fa77ff2")
+    selected_background Solid("#0fa77fff")
+    focus_mask True
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
+    color "#eef7f4"
+    hover_color "#ffffff"
+    selected_color "#ffffff"
+    size 30
+    xalign 0.5
 
 
 ## Tela do menu rápido #########################################################
@@ -273,12 +285,20 @@ style quick_button_text is button_text
 style quick_menu:
     xalign 0.5
     yalign 1.0
+    spacing 6
+    background Solid("#041513cc")
+    padding (14, 7, 14, 7)
 
 style quick_button:
     properties gui.button_properties("quick_button")
+    background Solid("#ffffff00")
+    hover_background Solid("#19b88b99")
+    padding (15, 8, 15, 8)
 
 style quick_button_text:
     properties gui.text_properties("quick_button")
+    color "#c8d8d3"
+    hover_color "#ffffff"
 
 
 ################################################################################
@@ -342,9 +362,105 @@ style navigation_button_text is gui_button_text
 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
+    xsize 330
+    ysize 58
+    left_padding 22
+    right_padding 22
+    background Solid("#071f1dcc")
+    hover_background Solid("#087f63ee")
+    selected_background Solid("#0fa77fff")
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    size 28
+    color "#dce9e5"
+    hover_color "#ffffff"
+    selected_color "#ffffff"
+    xalign 0.0
+
+
+## Navegacao exclusiva da capa. Mantem os alvos grandes para mouse, toque,
+## teclado e controle, com uma descricao contextual para cada acao.
+
+transform main_menu_item_appear(delay=0.0):
+    alpha 0.0
+    xoffset -28
+    pause delay
+    easeout 0.35 alpha 1.0 xoffset 0
+
+screen main_menu_navigation():
+
+    default menu_hint = _("Comece uma nova jornada pelo campus.")
+
+    frame:
+        style "main_menu_panel"
+
+        vbox:
+            style "main_menu_content"
+
+            text _("IFCE  •  MARACANAÚ"):
+                style "main_menu_eyebrow"
+
+            text _("Sinais do\nMaracanaú"):
+                style "main_menu_brand"
+
+            text _("UMA RECEPÇÃO ACESSÍVEL"):
+                style "main_menu_subtitle"
+
+            null height 38
+
+            textbutton _("Começar"):
+                style "main_menu_primary_button"
+                action Start()
+                hovered SetScreenVariable("menu_hint", _("Inicie a história e conheça o campus."))
+                unhovered SetScreenVariable("menu_hint", _("Comece uma nova jornada pelo campus."))
+                at main_menu_item_appear(0.05)
+
+            textbutton _("Continuar"):
+                style "main_menu_action_button"
+                action ShowMenu("load")
+                hovered SetScreenVariable("menu_hint", _("Continue a partir de um progresso salvo."))
+                unhovered SetScreenVariable("menu_hint", _("Comece uma nova jornada pelo campus."))
+                at main_menu_item_appear(0.10)
+
+            textbutton _("Preferências"):
+                style "main_menu_action_button"
+                action ShowMenu("preferences")
+                hovered SetScreenVariable("menu_hint", _("Ajuste áudio, texto, tela e acessibilidade."))
+                unhovered SetScreenVariable("menu_hint", _("Comece uma nova jornada pelo campus."))
+                at main_menu_item_appear(0.15)
+
+            hbox:
+                spacing 12
+                at main_menu_item_appear(0.20)
+
+                textbutton _("Sobre"):
+                    style "main_menu_compact_button"
+                    action ShowMenu("about")
+                    hovered SetScreenVariable("menu_hint", _("Conheça o projeto e seus créditos."))
+                    unhovered SetScreenVariable("menu_hint", _("Comece uma nova jornada pelo campus."))
+
+                if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                    textbutton _("Ajuda"):
+                        style "main_menu_compact_button"
+                        action ShowMenu("help")
+                        hovered SetScreenVariable("menu_hint", _("Veja os controles e atalhos disponíveis."))
+                        unhovered SetScreenVariable("menu_hint", _("Comece uma nova jornada pelo campus."))
+
+                if renpy.variant("pc"):
+                    textbutton _("Sair"):
+                        style "main_menu_compact_button"
+                        action Quit(confirm=False)
+                        hovered SetScreenVariable("menu_hint", _("Feche o jogo com segurança."))
+                        unhovered SetScreenVariable("menu_hint", _("Comece uma nova jornada pelo campus."))
+
+            null height 24
+
+            frame:
+                style "main_menu_hint_frame"
+
+                text menu_hint:
+                    style "main_menu_hint_text"
 
 
 ## Tela do menu principal ######################################################
@@ -360,24 +476,13 @@ screen main_menu():
 
     add gui.main_menu_background
 
-    ## Esse quadro vazio escurece o menu principal.
-    frame:
-        style "main_menu_frame"
+    add Solid("#00161230")
 
-    ## A instrução de uso inclui outra tela dentro desta. O conteúdo real do
-    ## menu principal está na tela de navegação.
-    use navigation
+    use main_menu_navigation
 
     if gui.show_name:
-
-        vbox:
-            style "main_menu_vbox"
-
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
+        text "v[config.version]":
+            style "main_menu_version_badge"
 
 
 style main_menu_frame is empty
@@ -387,10 +492,9 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 420
+    xsize 520
     yfill True
-
-    background "gui/overlay/main_menu.png"
+    background Solid("#061b1aed")
 
 style main_menu_vbox:
     xalign 1.0
@@ -398,6 +502,95 @@ style main_menu_vbox:
     xmaximum 1200
     yalign 1.0
     yoffset -30
+
+style main_menu_panel is frame:
+    xsize 520
+    yfill True
+    background Solid("#061b1af2")
+    padding (58, 66, 52, 54)
+
+style main_menu_content is vbox:
+    xfill True
+    yalign 0.5
+    spacing 12
+
+style main_menu_eyebrow is text:
+    color "#6ce6bd"
+    size 22
+    bold True
+    kerning 2
+
+style main_menu_brand is text:
+    color "#ffffff"
+    size 58
+    bold True
+    line_spacing -8
+
+style main_menu_subtitle is text:
+    color "#a9c8bf"
+    size 20
+    kerning 3
+
+style main_menu_primary_button is button:
+    xfill True
+    ysize 76
+    padding (25, 16, 25, 16)
+    background Solid("#10a97fff")
+    hover_background Solid("#18d09cff")
+    insensitive_background Solid("#29433dcc")
+    focus_mask True
+
+style main_menu_primary_button_text is button_text:
+    color "#ffffff"
+    hover_color "#ffffff"
+    insensitive_color "#82978f"
+    size 31
+    bold True
+    xalign 0.0
+    yalign 0.5
+
+style main_menu_action_button is button:
+    xfill True
+    ysize 66
+    padding (25, 13, 25, 13)
+    background Solid("#ffffff12")
+    hover_background Solid("#ffffff26")
+    selected_background Solid("#10a97f80")
+    focus_mask True
+
+style main_menu_action_button_text is button_text:
+    color "#e7f1ed"
+    hover_color "#ffffff"
+    selected_color "#ffffff"
+    size 28
+    xalign 0.0
+    yalign 0.5
+
+style main_menu_compact_button is button:
+    xminimum 116
+    ysize 52
+    padding (18, 10, 18, 10)
+    background Solid("#ffffff0c")
+    hover_background Solid("#10a97f80")
+    focus_mask True
+
+style main_menu_compact_button_text is button_text:
+    color "#bcd0c9"
+    hover_color "#ffffff"
+    size 22
+    xalign 0.5
+    yalign 0.5
+
+style main_menu_hint_frame is frame:
+    xfill True
+    yminimum 72
+    padding (18, 14, 18, 14)
+    background Solid("#0000002e")
+
+style main_menu_hint_text is text:
+    color "#b9cdc6"
+    size 20
+    line_spacing 3
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
@@ -407,6 +600,13 @@ style main_menu_title:
 
 style main_menu_version:
     properties gui.text_properties("version")
+
+style main_menu_version_badge is text:
+    xalign 0.975
+    yalign 0.965
+    color "#ffffffb0"
+    outlines [(2, "#001713aa", 0, 0)]
+    size 20
 
 
 ## Tela do menu do jogo ########################################################
