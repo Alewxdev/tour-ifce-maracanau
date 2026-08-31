@@ -44,7 +44,7 @@ init -1 python:
         "Agora sim. Comunicação também começa com respeito.": "AGORA TAMBÉM COMEÇAR",
         "A reunião dos calouros sem coxinha? Isso já virou emergência acadêmica.": "REUNIÃO ALUNO COXINHA ACADÊMICA",
         "Vamos procurar. Assim conhecemos o campus e salvamos o intervalo.": "VAMOS PROCURAR ASSIM CONHECER SALVAR INTERVALO",
-        "Bem-vindas! Eu sou Júlia, monitora da biblioteca e estudante de Ciência da Computação.": "BEM BIBLIOTECA ALUNO CIÊNCIA COMPUTADOR",
+        "Bem-vindos! Eu sou Júlia, monitora da biblioteca e estudante de Ciência da Computação.": "BEM BIBLIOTECA ALUNO CIÊNCIA COMPUTADOR",
         "Júlia, você viu uma coxinha muito importante passar por aqui?": "COXINHA MUITO",
         "Vi uma caixa passeando para o lado da biblioteca. Parecia um projeto com fome.": "PASSEAR PARA LADO BIBLIOTECA PARECER PROJETO",
         "Antes de seguir, ensine aos calouros um sinal útil.": "ANTES ALUNO SINAL",
@@ -90,7 +90,7 @@ init -1 python:
         "O pátio liga diferentes áreas do campus e é ponto de encontro, descanso e atividades acadêmicas.": "ENCONTRAR ACADÊMICA",
         "As salas de aula são espaços de teoria, debate e trabalho em equipe. A última pista estava sobre a mesa.": "SALA PROJETO",
         "Com prática obrigatória de resgate do caderno.": "FAZER",
-        "No caminho do refeitório, um sagui observava o movimento entre as árvores do campus.": "PASSEAR",
+        "No caminho do refeitório, um sagui observava o movimento entre as árvores do campus com a serenidade de quem sabe mais do que conta.": "PASSEAR",
         "A lousa já tem fluxogramas. A aula nem começou e as setas parecem saber aonde vão.": "COMEÇAR PARECER",
         "Eles serão usados em sistemas, aplicativos, jogos, inteligência artificial, bancos de dados e nos projetos das próximas disciplinas.": "SISTEMA PROJETO",
         "A derivada mede taxa de mudança: velocidade, crescimento ou inclinação. Na Computação, isso aparece em gráficos, simulações, otimização e aprendizado de máquina.": "VARIAÇÃO COMPUTADOR APRENDER",
@@ -101,6 +101,23 @@ init -1 python:
         "Correto. Os lugares podem ser vértices e as ligações entre eles são arestas.": "VERDADE",
         "Exato. Se a entrada é um, a saída vira zero; se é zero, vira um.": "ENTRAR ZERO",
         "A AND combina entradas. Quem realiza a inversão é a porta NOT.": "PORTA NÃO",
+        "Aqui a comunicação precisa alcançar quem está longe. O professor pode combinar bandeiras, luzes e gestos visuais antes da atividade.": "COMUNICAÇÃO PROFESSOR ANTES",
+        "E deve garantir que a pessoa surda viu o aviso. Apitar com mais vontade não transforma som em legenda.": "PESSOA SURDO LEGENDA",
+        "Perfeito. O combinado visual precisa ser conhecido antes do jogo e visível no momento certo.": "ANTES CONHECER",
+        "O volume só sobe o drama. Para incluir, precisamos de um aviso visual previamente combinado.": "PRECISAR ANTES",
+        "Hora da revisão visual: ao observar um sinal, note configuração das mãos, movimento, localização, orientação e expressão facial.": "REVISAR SINAL MÃO MOVIMENTO EXPRESSÃO",
+        "Esses cinco parâmetros ajudam a distinguir sinais em Libras. Aprender não é copiar apenas um movimento: é observar o sinal completo e praticar com respeito.": "CINCO AJUDAR SINAL LIBRAS APRENDER MOVIMENTO",
+        "ACHEI! A relíquia dourada estava protegida por uma tecnologia ancestral: uma tampa de plástico.": "ENCONTRAR",
+        "Espera. Guardanapo na biblioteca, migalha no teclado, caudas listradas em três lugares... Não era UM suspeito.": "BIBLIOTECA TRÊS NÃO",
+        "EU SABIA! Quer dizer... eu suspeitava academicamente. Eram vários saguis trabalhando em equipe.": "ACADÊMICA VÁRIOS PROJETO",
+        "Também aprendemos outra coisa: informação importante precisa estar visível e clara. Uma etiqueta fechada dentro da caixa não informa ninguém — especialmente saguis oportunistas.": "TAMBÉM APRENDER COISA IMPORTANTE PRECISAR CLARO DENTRO NENHUM",
+        "Mistério resolvido. Eu encontrei a caixa seguindo pistas visuais; agora vamos revisar o sinal de COXINHA antes que a prova desapareça de novo.": "ENCONTRAR AGORA VAMOS REVISAR SINAL COXINHA ANTES PROVA NOVO",
+        "Primeiro o sinal, depois a divisão. Acessibilidade e coxinha ficam melhores quando ninguém é deixado de fora.": "PRIMEIRO SINAL DEPOIS ACESSIBILIDADE COXINHA NENHUM",
+        "Hoje eu conheci o campus, pratiquei Libras e salvei o intervalo. Amanhã começam as primeiras aulas da nossa semana.": "DIA CONHECER LIBRAS AMANHÃ COMEÇAR PRIMEIRO SEMANA",
+        "Reconhecer cinco sinais é apenas o começo. Libras é uma língua completa, viva e ligada à cultura e à comunidade surda.": "CONHECER CINCO SINAL COMEÇAR LIBRAS LÍNGUA SURDO",
+        "Aprender exige atenção visual, prática, convivência e coragem para pedir que alguém repita quando for necessário.": "APRENDER PEDIR VEZES PRECISAR",
+        "A Ciência da Computação precisa de pessoas diferentes pensando juntas. Acessibilidade não é um detalhe colocado no final: faz parte de um bom projeto desde a primeira ideia.": "CIÊNCIA COMPUTADOR PRECISAR PESSOA DIFERENTE PENSAR ACESSIBILIDADE NÃO FINAL PARTE BOM PROJETO PRIMEIRO IDEIA",
+        "Aos calouros de Ciência da Computação do IFCE Campus Maracanaú: sejam bem-vindos. Procurem ajuda, participem, compartilhem conhecimento e construam uma turma em que todas as pessoas possam se comunicar e aprender.": "ALUNO CIÊNCIA COMPUTADOR BEM PROCURAR AJUDAR PARTICIPAR CONHECER PESSOA PODER APRENDER",
     }
 
     def _tokens_glosa(texto):
@@ -173,7 +190,7 @@ screen painel_libras(what):
                     hbox:
                         spacing 12 xalign 0.5
                         textbutton "Repetir sinais":
-                            action Function(reproduzir_libras, what)
+                            action Function(repetir_libras_pedagogico, what)
                         textbutton "Parar":
                             action Function(parar_libras)
                     text "Vídeos WebM locais — funciona sem internet.":

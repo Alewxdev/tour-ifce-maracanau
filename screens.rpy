@@ -268,6 +268,9 @@ screen quick_menu():
             textbutton _("Salvar") action ShowMenu('save')
             textbutton _("Q.Salvar") action QuickSave()
             textbutton _("Q. Carga") action QuickLoad()
+            textbutton _("Caderno") action Show("caderno_libras")
+            textbutton _("Mapa") action Show("mapa_campus")
+            textbutton _("Conquistas") action Show("painel_conquistas")
             textbutton _("Prefs") action ShowMenu('preferences')
 
 

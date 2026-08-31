@@ -14,16 +14,20 @@ define n = Character(None)
 
 image bg entrada = Transform("campus/anime_frente_ifce.png", xysize=(1920, 1080), fit="cover")
 image bg patio = Transform("campus/anime_corredor.png", xysize=(1920, 1080), fit="cover")
-image bg laboratorio = Transform("campus/anime_sala_aula.png", xysize=(1920, 1080), fit="cover")
+image bg laboratorio = Transform("campus/anime_laboratorio_informatica.png", xysize=(1920, 1080), fit="cover")
 image bg biblioteca = Transform("campus/anime_biblioteca.png", xysize=(1920, 1080), fit="cover")
 image bg biblioteca frente = Transform("campus/anime_frente_biblioteca.png", xysize=(1920, 1080), fit="cover")
 image bg sala estudo = Transform("campus/anime_sala_estudo.png", xysize=(1920, 1080), fit="cover")
 image bg sala = Transform("campus/anime_sala_aula.png", xysize=(1920, 1080), fit="cover")
-image bg cantina real = Transform("campus/anime_cantina.png", xysize=(1920, 1080), fit="cover")
+image bg cantina real = Transform("campus/anime_cantina_easter_eggs.png", xysize=(1920, 1080), fit="cover")
 image bg catraca = Transform("campus/anime_catraca_acesso.png", xysize=(1920, 1080), fit="cover")
 image bg sagui = Transform("campus/anime_sagui_refeitorio.png", xysize=(1920, 1080), fit="cover")
 image bg refeitorio = Transform("campus/anime_refeitorio.png", xysize=(1920, 1080), fit="cover")
 image bg piscina = Transform("campus/anime_piscina.png", xysize=(1920, 1080), fit="cover")
+image bg ginasio = Transform("campus/anime_ginasio.png", xysize=(1920, 1080), fit="cover")
+image coxinha premio = "objetos/coxinha_magica.png"
+image sagui suspeito = "objetos/sagui_suspeito.png"
+image saguis coxinhas = "objetos/saguis_caixa_coxinhas.png"
 image alex feliz = "personagens/alex_anime_v3_tatuagem.png"
 image ane feliz = "Ane.png"
 image lia feliz = "personagens/professora_lia.png"
@@ -114,9 +118,95 @@ transform retrato_centro:
     xalign 0.5 yalign 1.0 alpha 0.0 zoom 0.72
     easeout 0.30 alpha 1.0 zoom 0.78
 
+# Entra junto da mão de Ane e continua viva em cena, como um pequeno troféu.
+transform coxinha_na_mao:
+    xpos 0.405 ypos 0.64 anchor (0.5, 0.5)
+    alpha 0.0 zoom 0.04 rotate -18
+    parallel:
+        easeout_back 0.85 alpha 1.0 zoom 0.16 rotate 5
+    parallel:
+        pause 0.85
+        ease 0.75 yoffset -12
+        ease 0.75 yoffset 0
+        repeat
+
+transform coxinha_comemora:
+    xpos 0.5 ypos 0.48 anchor (0.5, 0.5)
+    alpha 0.0 zoom 0.08 rotate -12
+    easeout_back 0.75 alpha 1.0 zoom 0.27 rotate 8
+    ease 0.18 yoffset -35 rotate -5
+    easeout_bounce 0.40 yoffset 0 rotate 0
+    ease 0.9 zoom 0.25
+    ease 0.9 zoom 0.27
+    repeat
+
+transform sagui_espiando:
+    xpos 0.075 ypos 0.56 anchor (0.5, 0.5)
+    alpha 0.0 zoom 0.12 xoffset -90
+    easeout_back 0.7 alpha 1.0 xoffset 0
+    ease 1.1 rotate -2
+    ease 1.1 rotate 2
+    repeat
+
+transform saguis_revelacao:
+    xpos 0.50 ypos 0.58 anchor (0.5, 0.5)
+    alpha 0.0 zoom 0.16 yoffset 120
+    easeout_back 1.0 alpha 1.0 zoom 0.52 yoffset 0
+    ease 1.2 yoffset -7
+    ease 1.2 yoffset 0
+    repeat
+
+transform reacao_extrema_esquerda:
+    xpos 0.08 ypos 1.0 anchor (0.5, 1.0)
+    alpha 0.0 zoom 0.34
+    easeout_back 0.55 alpha 1.0
+
+transform reacao_esquerda:
+    xpos 0.25 ypos 1.0 anchor (0.5, 1.0)
+    alpha 0.0 zoom 0.34
+    pause 0.12
+    easeout_back 0.55 alpha 1.0
+
+transform reacao_direita:
+    xpos 0.79 ypos 1.0 anchor (0.5, 1.0)
+    alpha 0.0 zoom 0.34
+    pause 0.24
+    easeout_back 0.55 alpha 1.0
+
 label start:
+    play music "audio/musica_tema_ambiente.mp3" fadein 1.5 volume 0.70
     $ pontos_libras = 0
     $ lugares_visitados = []
+    $ sinais_desbloqueados = []
+    $ conquistas = []
+    $ pistas_encontradas = []
+    $ respostas_corretas = 0
+    $ respostas_totais = 0
+    $ repeticoes_libras = 0
+    $ glossario_sinal = "LIBRAS"
+    $ teste_final_acertos = 0
+    $ tentativas_teste_final = 0
+    $ desbloquear_sinal("LIBRAS")
+    $ desbloquear_sinal("ALUNO")
+
+    window hide
+    scene bg entrada:
+        size (1920, 1080)
+        zoom 1.08
+        linear 1.4 zoom 1.0
+    with Fade(0.6, 0.1, 0.5, color="#071c19")
+    pause 0.7
+    scene bg laboratorio:
+        size (1920, 1080)
+        alpha 0.25
+        linear 0.7 alpha 1.0
+    with dissolve
+    pause 0.55
+    scene bg ginasio:
+        size (1920, 1080)
+        xalign 0.5
+    with dissolve
+    pause 0.55
     scene bg entrada:
         size (1920, 1080)
         zoom 1.04
@@ -125,7 +215,7 @@ label start:
 
     centered "{size=64}{color=#7fe0aa}SINAIS DO MARACANAÚ{/color}{/size}\n{size=32}Uma recepção aos calouros do IFCE{/size}"
     n "No primeiro dia, Alex chegou ao IFCE Campus Maracanaú com uma missão: conhecer o campus e não perder a reunião dos calouros."
-    n "Alex é surda, sua primeira língua é Libras e ela percebe o mundo principalmente com os olhos."
+    n "Alex é surdo, sua primeira língua é Libras e ele percebe o mundo principalmente com os olhos."
 
     show alex feliz at entrar_esquerda:
         zoom 0.48
@@ -135,17 +225,21 @@ label start:
     ane "Oi! Eu sou Ane. Estou aprendendo Libras e posso acompanhar você no passeio."
     alex "Ótimo. Só uma regra: fale de frente para mim e não esconda as mãos."
     ane "Combinado. Se eu errar um sinal, você pode me ajudar."
+    $ desbloquear_sinal("AJUDAR")
 
     menu:
         "Como Ane deve chamar a atenção de Alex?"
         "Tocar levemente no ombro e entrar no campo de visão":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
+            $ conceder_conquista("Mãos à vista")
             alex "Certo! Agora eu posso ver você antes da conversa começar."
         "Gritar do outro lado do pátio":
+            $ registrar_resposta(False)
             ane "Isso não funciona. Melhor entrar no campo de visão de Alex."
             alex "Agora sim. Comunicação também começa com respeito."
 
-    n "A primeira parada seria a recepção. Mas um cartaz chamou a atenção das duas."
+    n "A primeira parada seria a recepção. Mas um cartaz chamou a atenção dos dois."
     centered "{size=48}{color=#ffd166}MISTÉRIO DO DIA{/color}{/size}\nA coxinha de boas-vindas desapareceu!"
     ane "A reunião dos calouros sem coxinha? Isso já virou emergência acadêmica."
     alex "Vamos procurar. Assim conhecemos o campus e salvamos o intervalo."
@@ -173,8 +267,10 @@ label catraca_acesso:
         "Como usar o cartão na catraca?"
         "Aproximar o cartão do leitor e aguardar a confirmação":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
             alex "Certo. O leitor confirma o acesso e a catraca é liberada."
         "Forçar a barra da catraca":
+            $ registrar_resposta(False)
             ane "Melhor não. Se o cartão falhar, devemos procurar a recepção para receber ajuda."
 
     ane "Cartão guardado. Agora podemos continuar o passeio."
@@ -192,22 +288,36 @@ label patio:
         zoom 0.43
     show julia retrato at entrar_direita:
         zoom 0.44
-    julia "Bem-vindas! Eu sou Júlia, monitora da biblioteca e estudante de Ciência da Computação."
+    julia "Bem-vindos! Eu sou Júlia, monitora da biblioteca e estudante de Ciência da Computação."
     ane "Júlia, você viu uma coxinha muito importante passar por aqui?"
     show julia rindo at entrar_direita:
         zoom 0.44
     julia "Vi uma caixa passeando para o lado da biblioteca. Parecia um projeto com fome."
     alex "Antes de seguir, ensine aos calouros um sinal útil."
     julia "Este é o sinal de BIBLIOTECA. Veja o vídeo e depois tente fazer."
+    $ desbloquear_sinal("BIBLIOTECA")
     $ renpy.notify("Novo sinal aprendido: BIBLIOTECA")
 
     menu:
         "O vídeo passou rápido. O que fazer?"
         "Usar o botão para repetir o sinal":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
+            $ desbloquear_sinal("VEZES")
             julia "Perfeito. Aprender Libras precisa de atenção, prática e repetição."
         "Fingir que entendeu":
+            $ registrar_resposta(False)
             alex "Pode pedir para repetir. Ninguém precisa disfarçar uma dúvida."
+
+    n "Júlia propôs um teste rápido: reconhecer o sinal sem usar a legenda como cola acadêmica."
+    $ resposta_quiz = renpy.call_screen("quiz_libras", "BIBLIOTECA", "Qual lugar foi apresentado no vídeo?", ["Biblioteca", "Cantina", "Piscina"])
+    if resposta_quiz == "Biblioteca":
+        $ pontos_libras += 1
+        $ registrar_resposta(True)
+        julia "Acertou! O olhar atento passou no teste sem precisar de recuperação."
+    else:
+        $ registrar_resposta(False)
+        julia "Era BIBLIOTECA. Revise o vídeo no Caderno de Libras; repetir faz parte do aprendizado."
 
     julia "Vamos à Biblioteca Rachel de Queiroz. Lá temos livros, estudo e jogos."
     jump biblioteca
@@ -228,10 +338,16 @@ label biblioteca:
     julia "Aqui também existe uma regra difícil: devolver o livro e não levar a coxinha para a estante."
     show julia preocupada at entrar_esquerda:
         zoom 0.44
+    ane "Tem um guardanapo dobrado no marcador deste livro. Ou é pista, ou alguém levou o conceito de leitura com lanche longe demais."
+    show sagui suspeito at sagui_espiando
+    n "Por uma fração de segundo, uma cauda listrada apareceu junto à janela. Quando Júlia olhou, restava apenas um silêncio extremamente suspeito."
+    hide sagui suspeito with dissolve
     alex "Encontrei uma pista: uma nota dizendo LABORATÓRIO CINCO."
+    $ registrar_pista("Bilhete: LABORATÓRIO CINCO")
     julia "O mistério sabe escrever, mas ainda precisa melhorar a letra."
     n "Antes de sair, Júlia apresenta mais dois sinais disponíveis no jogo."
     julia "Para estudar aqui, você pode LER e usar o COMPUTADOR."
+    $ desbloquear_sinal("COMPUTADOR")
     $ renpy.notify("Sinais aprendidos: LER e COMPUTADOR")
     jump sala_estudo
 
@@ -264,6 +380,7 @@ label laboratorio:
     n "Os laboratórios de informática apoiam aulas práticas, programação e projetos de Ciência da Computação."
     show lia explicando at retrato_centro
     lia "Olá! Eu sou a professora Lia. Bem-vindos à Ciência da Computação do IFCE Maracanaú."
+    $ desbloquear_sinal("PROFESSOR")
     hide lia with dissolve
     show alex feliz at entrar_esquerda:
         zoom 0.43
@@ -275,6 +392,10 @@ label laboratorio:
     lia "A caixa esteve aqui, mas seguiu para a sala. Antes disso, temos uma missão de Computação e Libras."
 
     n "Na tela havia um pequeno programa: ele deveria mostrar a próxima pista, mas repetia a palavra COXINHA para sempre."
+    alex "E existe uma migalha entre as teclas C e X. O culpado escreve COXINHA com dedicação prática."
+    show sagui suspeito at sagui_espiando
+    ane "Mais alguém viu um estagiário muito peludo auditando o laboratório?"
+    hide sagui suspeito with dissolve
     ane "Encontramos um bug com fome infinita. Isso é sofisticado ou preocupante?"
     julia "Na Computação, chamamos isso de laço infinito. Na cantina, chamamos de terça-feira."
 
@@ -282,20 +403,26 @@ label laboratorio:
         "Como corrigir o programa?"
         "Revisar a condição de parada do laço":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
+            $ conceder_conquista("Caçador de bugs")
             alex "Certo. Um algoritmo precisa saber quando continuar e quando parar."
         "Desligar o computador e dizer que foi mistério":
+            $ registrar_resposta(False)
             show lia seria at retrato_centro
             lia "Criativo, mas não resolve o programa. Vamos ler a mensagem e revisar o código."
 
     n "Alex corrigiu a condição. O programa mostrou: PROCURE NA SALA DE AULA."
+    $ registrar_pista("Programa: PROCURE NA SALA DE AULA")
     lia "Programar é organizar ideias, testar, errar, revisar e tentar outra vez."
 
     menu:
         "Qual atitude facilita uma conversa em Libras?"
         "Manter boa iluminação e as mãos visíveis":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
             lia "Exatamente. Expressões do rosto e movimentos das mãos fazem parte da língua."
         "Apagar a luz para ver apenas o computador":
+            $ registrar_resposta(False)
             lia "Computador no escuro parece cinema, mas impede a comunicação visual."
             alex "Vamos manter a luz e as mãos visíveis."
 
@@ -304,6 +431,8 @@ label laboratorio:
     lia "Software acessível começa no planejamento. Legenda, Libras e interface visual não devem ficar para depois."
     show lia aprovando at retrato_centro
     $ renpy.notify("Sinal aprendido: ACESSIBILIDADE")
+    $ desbloquear_sinal("ACESSIBILIDADE")
+    $ desbloquear_sinal("APRENDER")
     jump sala
 
 label sala:
@@ -318,6 +447,7 @@ label sala:
         zoom 0.42
     julia "A caixa está aqui! O mistério acabou antes da prova."
     ane "Mas ela está vazia. Temos agora o mistério da coxinha invisível."
+    $ registrar_pista("Caixa vazia com a mensagem: A COXINHA ESTÁ NA REUNIÃO")
     show alex feliz at entrar_centro:
         zoom 0.42
     alex "Vejam a mensagem: A COXINHA ESTÁ NA REUNIÃO. A caixa era somente a pista."
@@ -333,13 +463,49 @@ label sala:
         "Antes da reunião, qual sinal você quer repetir?"
         "BIBLIOTECA":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
             julia "BIBLIOTECA. Um lugar para ler, estudar e encontrar ajuda."
         "COMPUTADOR":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
             ane "COMPUTADOR. Nosso colega de projetos e fornecedor oficial de mensagens de erro."
         "ACESSIBILIDADE":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
             lia "ACESSIBILIDADE. Ela deve estar presente desde o começo de cada projeto."
+
+    n "Antes do próximo corredor, Lia abriu o Desafio de Memória Visual: três associações entre sinais e situações do campus."
+    $ memoria_acertos = 0
+    menu:
+        "Qual sinal combina com pesquisar livros e estudar?"
+        "BIBLIOTECA":
+            $ memoria_acertos += 1
+            $ registrar_resposta(True)
+        "COXINHA":
+            $ registrar_resposta(False)
+            ane "Só se o livro for um raro Tratado Geral dos Salgados."
+    menu:
+        "Qual sinal combina com programar no laboratório?"
+        "COMPUTADOR":
+            $ memoria_acertos += 1
+            $ registrar_resposta(True)
+        "PISCINA":
+            $ registrar_resposta(False)
+            julia "Computador e água formam um projeto com banca de avaliação e bombeiros."
+    menu:
+        "Qual conceito deve existir desde o planejamento de um projeto?"
+        "ACESSIBILIDADE":
+            $ memoria_acertos += 1
+            $ registrar_resposta(True)
+        "MISTÉRIO":
+            $ registrar_resposta(False)
+            lia "Mistério pode ficar para o roteiro. Acessibilidade começa no planejamento."
+    if memoria_acertos == 3:
+        $ pontos_libras += 2
+        $ conceder_conquista("Memória visual")
+        lia "Três acertos! A memória visual de vocês está mais organizada que a fila da cantina."
+    else:
+        lia "Bom começo. Os vídeos ficaram no Caderno de Libras para revisão sem pressa."
     jump piscina
 
 label piscina:
@@ -372,9 +538,12 @@ label piscina:
         "Qual é a atitude correta antes de uma aula de natação?"
         "Aguardar a orientação, observar a sinalização e não correr no deck":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
+            $ desbloquear_sinal("CUIDADO")
             alex "Perfeito. Primeiro vêm a orientação e a segurança; depois, a atividade na água."
             $ renpy.notify("Boa prática aprendida: segurança na piscina")
         "Correr até a borda e mergulhar antes da explicação":
+            $ registrar_resposta(False)
             alex "O piso pode estar molhado e nem todo ponto permite mergulho. É preciso aguardar o professor e conhecer as regras do espaço."
 
     hide alex with dissolve
@@ -386,10 +555,47 @@ label piscina:
     julia "Sem touca e sem autorização? Seria a pista mais indisciplinada do campus."
     ane "Então continuamos secos e seguimos para a reunião. Meu caderno agradece."
     n "O grupo retomou o caminho sabendo onde acontecem as atividades aquáticas e como participar delas com responsabilidade."
+    jump ginasio
+
+label ginasio:
+    $ lugares_visitados.append("Ginásio e quadra poliesportiva")
+    scene bg ginasio:
+        size (1920, 1080)
+        zoom 1.04
+        ease 2.4 zoom 1.0
+    with pushleft
+
+    n "Ao lado do complexo aquático, a quadra e as arquibancadas recebem aulas, jogos, eventos e aquela torcida que descobre um talento súbito para ser narrador esportivo."
+    show ane rindo at entrar_esquerda
+    show alex retrato at entrar_direita
+    ane "Aqui a comunicação precisa alcançar quem está longe. O professor pode combinar bandeiras, luzes e gestos visuais antes da atividade."
+    alex "E deve garantir que a pessoa surda viu o aviso. Apitar com mais vontade não transforma som em legenda."
+    ane "Anotado: menos pulmão de juiz, mais planejamento acessível."
+
+    menu:
+        "Durante um jogo, como tornar uma instrução urgente acessível?"
+        "Combinar antes um sinal visual e confirmar que todos entenderam":
+            $ pontos_libras += 1
+            $ registrar_resposta(True)
+            $ desbloquear_sinal("ENTENDER")
+            alex "Perfeito. O combinado visual precisa ser conhecido antes do jogo e visível no momento certo."
+            $ renpy.notify("Boa prática aprendida: avisos visuais")
+        "Gritar a mesma instrução cada vez mais alto":
+            $ registrar_resposta(False)
+            ane "O volume só sobe o drama. Para incluir, precisamos de um aviso visual previamente combinado."
+
+    alex "Hora da revisão visual: ao observar um sinal, note configuração das mãos, movimento, localização, orientação e expressão facial."
+    show sagui suspeito at sagui_espiando
+    ane "Até o sagui está prestando atenção. Ou está esperando a parte sobre localização da coxinha."
+    hide sagui suspeito with dissolve
+    n "Esses cinco parâmetros ajudam a distinguir sinais em Libras. Aprender não é copiar apenas um movimento: é observar o sinal completo e praticar com respeito."
+    ane "Cinco parâmetros? Minha coxinha tem só um: desaparecimento. Melhor seguirmos para a cantina."
     jump cantina
 
 label cantina:
     $ lugares_visitados.append("Cantina")
+    if len(lugares_visitados) >= len(locais_mapa):
+        $ conceder_conquista("Guia do campus")
     scene bg cantina real:
         size (1920, 1080)
         zoom 1.03
@@ -403,7 +609,7 @@ label cantina:
     ane "Agora entendi por que a cantina é o vértice mais visitado do nosso mapa."
     alex "Com tanta gente conversando, o contato visual ajuda muito. Também podemos escolher uma mesa bem iluminada para usar Libras."
     ane "E finalmente confirmar se a coxinha chegou à reunião antes de nós."
-    n "Entre mesas cheias e o movimento dos estudantes, as duas seguiram para o refeitório e para o encerramento da recepção."
+    n "Entre mesas cheias e o movimento dos estudantes, os dois seguiram para o refeitório e para o encerramento da recepção."
     jump final
 
 label final:
@@ -412,22 +618,79 @@ label final:
         xalign 0.5
         yalign 0.5
     with dissolve
-    n "No caminho do refeitório, um sagui observava o movimento entre as árvores do campus."
+    n "No caminho do refeitório, um sagui observava o movimento entre as árvores do campus com a serenidade de quem sabe mais do que conta."
     ane "Ele está fiscalizando quem ainda tem saldo para o almoço."
-    alex "Ou investigando o desaparecimento da coxinha. Temos um novo suspeito, mas nenhuma prova."
+    show alex pensando at entrar_centro
+    alex "Espera. Guardanapo na biblioteca, migalha no teclado, caudas listradas em três lugares... Não era UM suspeito."
+    hide alex pensando with dissolve
+    ane "Alex, por que o mato está fazendo barulho de caixa de papelão?"
+
+    window hide
+    show alex surpreso at reacao_extrema_esquerda
+    show ane surpresa at reacao_esquerda
+    show julia preocupada at reacao_direita
+    show saguis coxinhas at saguis_revelacao
+    with hpunch
+    pause 0.8
+    centered "{size=62}{color=#ffd166}PLOT TWIST CROCANTE!{/color}{/size}\n{size=34}A quadrilha dos saguis estava com a caixa inteira!{/size}"
+    window auto
+
+    alex "EU SABIA! Quer dizer... eu suspeitava academicamente. Eram vários saguis trabalhando em equipe."
+    ane "Cinco saguis, uma caixa e zero autorização da cantina. Isso já é um projeto interdisciplinar."
+    julia "O da esquerda está escondendo a prova atrás das costas. Finalmente um mistério com flagrante e farofa."
+    $ registrar_pista("Flagrante: cinco saguis com a caixa inteira de coxinhas")
+
+    n "Os saguis não queriam destruir a recepção. Viram uma caixa sem identificação perto de uma janela aberta e decidiram organizar o próprio intervalo."
+    alex "Também aprendemos outra coisa: informação importante precisa estar visível e clara. Uma etiqueta fechada dentro da caixa não informa ninguém — especialmente saguis oportunistas."
+    ane "Nova regra do campus: identificar o lanche e jamais subestimar uma equipe com cinco caudas."
+
+    hide saguis coxinhas
+    hide julia
+    hide ane
+    hide alex
+    with dissolve
 
     scene bg refeitorio:
         size (1920, 1080)
     with Fade(0.7, 0.2, 1.0, color="#0b2b21")
-    n "No refeitório, o cartão recarregado permite comprar a refeição. Na reunião, também havia coxinha para todos e informações sobre o curso."
+    n "A caixa foi recuperada e levada ao refeitório. O cartão recarregado permite comprar a refeição, e a reunião apresentou informações sobre o curso."
+    show alex feliz at entrar_esquerda:
+        zoom 0.43
+    show ane feliz at entrar_direita:
+        zoom 0.42
+    ane "Caso encerrado. Os suspeitos devolveram a caixa em troca de uma retirada estratégica até as árvores."
+    $ desbloquear_sinal("COXINHA")
+    $ conceder_conquista("Coxinha bilíngue")
+    if len(pistas_encontradas) >= 4:
+        $ conceder_conquista("Detetive crocante")
+    show coxinha premio at coxinha_na_mao
+    alex "Mistério resolvido. Eu encontrei a caixa seguindo pistas visuais; agora vamos revisar o sinal de COXINHA antes que a prova desapareça de novo."
+    ane "Primeiro o sinal, depois a divisão. Acessibilidade e coxinha ficam melhores quando ninguém é deixado de fora."
+    $ renpy.notify("Sinal final aprendido: COXINHA")
+    if percentual_acertos() >= 75:
+        alex "Nossas escolhas facilitaram a comunicação durante todo o caminho. Investigação aprovada com acessibilidade e uma força-tarefa de cinco saguis."
+    else:
+        alex "Nem toda escolha funcionou de primeira, mas corrigimos o caminho. Aprender também é perceber o problema, pedir ajuda e tentar novamente."
+
+    hide ane
+    hide alex
+    hide coxinha premio
+    with dissolve
+    show coxinha premio at coxinha_comemora
+    centered "{size=58}{color=#ffd166}COXINHA ENCONTRADA!{/color}{/size}\n{size=30}Missão crocante concluída{/size}"
+    hide coxinha premio with dissolve
+
     show alex feliz at entrar_centro:
         zoom 0.48
-    alex "Hoje eu conheci o campus. Amanhã começam as primeiras aulas da nossa semana."
+    alex "Hoje eu conheci o campus, pratiquei Libras e salvei o intervalo. Amanhã começam as primeiras aulas da nossa semana."
     if pontos_libras >= 3:
         centered "{size=54}{color=#7fe0aa}EXCELENTE RECEPÇÃO!{/color}{/size}\nVocê praticou comunicação visual em [pontos_libras] momentos."
     else:
         centered "{size=54}{color=#ffd166}MISSÃO CONCLUÍDA!{/color}{/size}\nUse o botão de repetir e continue praticando Libras."
     centered "{size=34}Lugares visitados{/size}\n[join_lista(lugares_visitados)]\n\n{color=#7fe0aa}Fim da segunda-feira{/color}"
+    if percentual_acertos() >= 75:
+        $ conceder_conquista("Acessibilidade desde o começo")
+    call screen relatorio_final
     jump dia_2_programacao
 
 label dia_2_programacao:
@@ -463,9 +726,11 @@ label dia_2_programacao:
         "O programa precisa escolher entre aprovado e reprovado. Qual conceito usar?"
         "Uma condição, como se/senão":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
             show fabio feliz at retrato_centro
             fabio "Exatamente. A condição permite que o programa tome caminhos diferentes conforme os dados."
         "Um laço infinito":
+            $ registrar_resposta(False)
             show fabio surpreso at retrato_centro
             fabio "O laço repete instruções. Para escolher entre dois caminhos, começamos com uma condição."
 
@@ -504,9 +769,11 @@ label dia_3_calculo:
         "Qual ideia representa melhor uma derivada?"
         "A taxa de mudança de uma quantidade":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
             show edson feliz at retrato_centro
             edson "Muito bem. Ela mostra como algo varia naquele instante."
         "Uma lista de passos de um algoritmo":
+            $ registrar_resposta(False)
             show edson pensando at retrato_centro
             edson "Isso pertence à programação. Em Cálculo, a derivada está ligada à variação."
 
@@ -548,9 +815,11 @@ label dia_4_discreta:
         "Em um mapa representado por grafo, o que são os caminhos entre lugares?"
         "Arestas":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
             show cicero feliz at retrato_centro
             cicero "Correto. Os lugares podem ser vértices e as ligações entre eles são arestas."
         "Variáveis de texto":
+            $ registrar_resposta(False)
             show cicero desconfiado at retrato_centro
             cicero "Variáveis guardam dados. No grafo, usamos arestas para representar as conexões."
 
@@ -582,9 +851,11 @@ label dia_5_circuitos:
         "Qual porta inverte um valor lógico?"
         "NOT":
             $ pontos_libras += 1
+            $ registrar_resposta(True)
             show otavio feliz at retrato_centro
             otavio "Exato. Se a entrada é um, a saída vira zero; se é zero, vira um."
         "AND":
+            $ registrar_resposta(False)
             show otavio surpreso at retrato_centro
             otavio "A AND combina entradas. Quem realiza a inversão é a porta NOT."
 
@@ -602,11 +873,82 @@ label encerramento_semana:
     ane "Sobrevivemos à primeira semana: algoritmo, derivada, grafo e porta lógica."
     alex "E aprendemos como cada disciplina se conecta. Programação dá instruções, a matemática modela e prova, e os circuitos executam."
     ane "A coxinha também sobreviveu, mas por pouco."
+    alex "Antes de terminar, falta a missão final: reconhecer cinco sinais que apareceram durante nossa jornada."
+    ane "Uma prova com vídeo, botão de repetir e nenhuma questão sobre a ficha criminal dos saguis. Podemos começar."
+    jump teste_final_libras
+
+label teste_final_libras:
+    $ teste_final_acertos = 0
+    $ tentativas_teste_final += 1
+    window hide
+    centered "{size=58}{color=#7fe0aa}TESTE FINAL DE LIBRAS{/color}{/size}\n{size=30}Observe cada vídeo e marque a palavra correta.\nVocê precisa acertar pelo menos 3 de 5.{/size}\n\n{size=21}{color=#ffd166}Os vídeos apresentam sinais isolados para reconhecimento visual.{/color}{/size}"
+
+    $ resposta_teste = renpy.call_screen("quiz_libras", "LIBRAS", "Questão 1 de 5 — Qual palavra corresponde ao sinal?", ["Libras", "Computador", "Coxinha"])
+    if resposta_teste == "Libras":
+        $ teste_final_acertos += 1
+
+    $ resposta_teste = renpy.call_screen("quiz_libras", "BIBLIOTECA", "Questão 2 de 5 — Qual palavra corresponde ao sinal?", ["Professor", "Biblioteca", "Ajudar"])
+    if resposta_teste == "Biblioteca":
+        $ teste_final_acertos += 1
+
+    $ resposta_teste = renpy.call_screen("quiz_libras", "COMPUTADOR", "Questão 3 de 5 — Qual palavra corresponde ao sinal?", ["Computador", "Acessibilidade", "Aluno"])
+    if resposta_teste == "Computador":
+        $ teste_final_acertos += 1
+
+    $ resposta_teste = renpy.call_screen("quiz_libras", "COXINHA", "Questão 4 de 5 — Qual palavra corresponde ao sinal?", ["Cuidado", "Aprender", "Coxinha"])
+    if resposta_teste == "Coxinha":
+        $ teste_final_acertos += 1
+
+    $ resposta_teste = renpy.call_screen("quiz_libras", "ACESSIBILIDADE", "Questão 5 de 5 — Qual palavra corresponde ao sinal?", ["Entender", "Acessibilidade", "Vezes"])
+    if resposta_teste == "Acessibilidade":
+        $ teste_final_acertos += 1
+
+    if teste_final_acertos >= 3:
+        centered "{size=64}{color=#7fe0aa}APROVADO!{/color}{/size}\n{size=36}Você reconheceu [teste_final_acertos] de 5 sinais.{/size}\n{size=24}Tentativa: [tentativas_teste_final]{/size}"
+        $ conceder_conquista("Aprovado em Libras")
+        jump acolhimento_final
+    else:
+        centered "{size=58}{color=#ffd166}VAMOS PRATICAR MAIS UM POUCO{/color}{/size}\n{size=34}Você reconheceu [teste_final_acertos] de 5 sinais.\nSão necessários pelo menos 3 acertos.{/size}"
+        scene bg refeitorio:
+            size (1920, 1080)
+        show ane rindo at entrar_esquerda
+        show alex retrato at entrar_direita
+        ane "Quase! Até algoritmo entra em repetição quando ainda não chegou à condição de parada."
+        alex "Reveja com calma, observe o sinal completo e use o botão de repetir. Errar aqui não encerra a aprendizagem; só indica o próximo passo."
+        menu:
+            "Preparado para tentar novamente?"
+            "Repetir o teste final":
+                jump teste_final_libras
+
+label acolhimento_final:
+    scene bg entrada:
+        size (1920, 1080)
+        zoom 1.03
+        ease 2.0 zoom 1.0
+    with Fade(0.7, 0.2, 0.8, color="#10251f")
+
+    show alex retrato at entrar_esquerda
+    alex "Reconhecer cinco sinais é apenas o começo. Libras é uma língua completa, viva e ligada à cultura e à comunidade surda."
+    show ane feliz at entrar_direita:
+        zoom 0.40
+    ane "Aprender exige atenção visual, prática, convivência e coragem para pedir que alguém repita quando for necessário."
+    hide alex with dissolve
+    show lia aprovando at retrato_centro
+    lia "A Ciência da Computação precisa de pessoas diferentes pensando juntas. Acessibilidade não é um detalhe colocado no final: faz parte de um bom projeto desde a primeira ideia."
+    lia "Aos calouros de Ciência da Computação do IFCE Campus Maracanaú: sejam bem-vindos. Procurem ajuda, participem, compartilhem conhecimento e construam uma turma em que todas as pessoas possam se comunicar e aprender."
+    hide lia with dissolve
+    show alex feliz at entrar_esquerda:
+        zoom 0.42
+    show ane rindo at entrar_direita
+    alex "Nos vemos pelos corredores. Se aparecer outro mistério, primeiro buscamos evidências."
+    ane "E depois fechamos as janelas. Os saguis já demonstraram domínio avançado de logística."
 
     if pontos_libras >= 7:
         centered "{size=58}{color=#7fe0aa}SEMANA EXCELENTE!{/color}{/size}\nVocê acertou [pontos_libras] decisões e começou a conectar as disciplinas."
     else:
         centered "{size=58}{color=#ffd166}PRIMEIRA SEMANA CONCLUÍDA!{/color}{/size}\nVocê tomou [pontos_libras] boas decisões. Revise as aulas e tente novamente."
+    centered "{size=34}{color=#7fe0aa}CERTIFICADO SIMBÓLICO{/color}{/size}\nRecepção acessível e teste final concluídos!\nResultado: [teste_final_acertos] de 5 sinais reconhecidos.\n\n{size=22}Este certificado celebra a participação no jogo e não substitui formação em Libras.{/size}"
+    call screen relatorio_final
     centered "{size=34}A jornada de Alex e Ane continua...{/size}"
     return
 

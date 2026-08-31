@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## A versão do jogo.
 
-define config.version = "2.0"
+define config.version = "3.0"
 
 
 ## Texto que é colocado na tela "Sobre" do jogo. Coloque o texto entre aspas
@@ -76,7 +76,7 @@ define config.has_voice = True
 ## continuará sendo reproduzido no jogo até que seja interrompido ou outro
 ## arquivo seja reproduzido.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/musica_tema_ambiente.mp3"
 
 
 ## Transições ##################################################################
