@@ -37,7 +37,9 @@ def limpar_token(token):
 
 def tokens_do_cache():
     conteudo = SOURCE.read_text(encoding="utf-8")
-    glosas = re.findall(r'^\s+".*?":\s*"([A-ZÁÉÍÓÚÂÊÔÃÕÇ0-9_& \[\]]+)",$', conteudo, re.M)
+    # Leia o valor inteiro: nomes próprios ou futuras anotações podem conter
+    # minúsculas. A normalização para busca acontece depois.
+    glosas = re.findall(r'^\s+".*?":\s*"([^"]+)",$', conteudo, re.M)
     tokens = {
         limpar_token(alternativa)
         for glosa in glosas

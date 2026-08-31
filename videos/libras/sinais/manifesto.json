@@ -860,13 +860,37 @@
       "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/PENSAR.mp4",
       "id": 2196,
       "glosa": "PENSAR"
+    },
+    "SALA": {
+      "arquivo": "videos/libras/sinais/sala.webm",
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SALA.mp4",
+      "id": 2533,
+      "glosa": "SALA"
+    },
+    "SISTEMA": {
+      "arquivo": "videos/libras/sinais/sistema.webm",
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SISTEMA.mp4",
+      "id": 2652,
+      "glosa": "SISTEMA"
+    },
+    "VARIAÇÃO": {
+      "arquivo": "videos/libras/sinais/variacao.webm",
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/VARIAÇÃO.mp4",
+      "id": 2941,
+      "glosa": "VARIAÇÃO"
+    },
+    "ZERO": {
+      "arquivo": "videos/libras/sinais/zero.webm",
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ZERO.mp4",
+      "id": 3075,
+      "glosa": "ZERO"
+    },
+    "PORTA": {
+      "arquivo": "videos/libras/sinais/porta.webm",
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/PORTA.mp4",
+      "id": 2287,
+      "glosa": "PORTA"
     }
   },
-  "ausentes": [
-    "ALEX",
-    "ANE",
-    "EU",
-    "MAPA",
-    "PRAZER"
-  ]
+  "ausentes": []
 }
