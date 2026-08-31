@@ -1,0 +1,18 @@
+# Arquivos gerados pelo Ren'Py
+cache/
+saves/
+*.rpyc
+*.rpymc
+
+# Arquivos temporários e relatórios locais
+*.log
+traceback.txt
+errors.txt
+log.txt
+.DS_Store
+
+# Arquivos de editores
+.vscode/
+.idea/
+*.swp
+*~

@@ -1,0 +1,29 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/options.rpy", line 234, in script
+    define config.mixer_db = { "music" : 40.0, "sfx" : 40.0, "voice" : 40.0 }
+Exception: config.mixer_db is not a known configuration variable.
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "game/options.rpy", line 234, in script
+    define config.mixer_db = { "music" : 40.0, "sfx" : 40.0, "voice" : 40.0 }
+  File "renpy/ast.py", line 2473, in execute
+    self.set()
+    ~~~~~~~~^^
+  File "renpy/ast.py", line 2489, in set
+    ns.set(self.varname, value)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/000namespaces.rpy", line 34, in set
+    setattr(self.nso, name, value)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/defaultstore.py", line 100, in __setattr__
+    raise Exception("config.%s is not a known configuration variable." % (name))
+Exception: config.mixer_db is not a known configuration variable.
+
+Windows-11-10.0.26200-SP0 AMD64
+Ren'Py 8.5.3.26051504
+Sinais do Maracanaú 2.0
+Sun Aug 30 20:04:54 2026

@@ -1,0 +1,24 @@
+VÍDEOS DE LIBRAS
+================
+
+Formato recomendado para computador: WebM (VP8 ou VP9), sem canal alfa.
+Resolução sugerida: 640x360 ou 800x450, com fundo liso e boa iluminação.
+
+Cada vídeo deve traduzir uma frase completa e ser revisado por uma pessoa
+fluente em Libras. Libras possui gramática própria; não monte traduções apenas
+concatenando um sinal para cada palavra do português.
+
+Para cadastrar um vídeo, abra acessibilidade.rpy e adicione ao dicionário
+libras_videos uma entrada com o texto EXATO da fala e o caminho do arquivo.
+
+Exemplo:
+
+libras_videos["Você parece estar procurando alguma coisa. Posso ajudar?"] = \
+    "videos/libras/alex_posso_ajudar.webm"
+
+O painel detectará o arquivo automaticamente. O botão “Reproduzir / repetir”
+ficará disponível quando o vídeo cadastrado estiver presente nesta pasta.
+
+Enquanto não houver vídeo, o painel consulta automaticamente o tradutor público
+do VLibras em https://traducao2.vlibras.gov.br/translate e mostra a glosa
+retornada. Essa consulta precisa de internet e não substitui revisão humana.
