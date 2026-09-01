@@ -16,3 +16,6 @@ log.txt
 .idea/
 *.swp
 *~
+
+# Arquivos pessoais que não devem ser publicados com o jogo
+/Portfolio_Sinais_do_Maracanau.pdf
