@@ -27,6 +27,7 @@ image bg refeitorio = Transform("campus/anime_refeitorio.png", xysize=(1920, 108
 image bg refeitorio interno = Transform("campus/anime_refeitorio_interno.png", xysize=(1920, 1080), fit="cover")
 image bg piscina = Transform("campus/anime_piscina.png", xysize=(1920, 1080), fit="cover")
 image bg ginasio = Transform("campus/anime_ginasio.png", xysize=(1920, 1080), fit="cover")
+image bg pos creditos ane = Transform("campus/anime_pos_creditos_ane_jardineira.png", xysize=(1920, 1080), fit="cover")
 image coxinha premio = "objetos/coxinha_magica.png"
 image sagui suspeito = "objetos/sagui_suspeito.png"
 image saguis coxinhas = "objetos/saguis_caixa_coxinhas.png"
@@ -111,6 +112,17 @@ transform reagir_pensando:
     ease 0.45 yoffset -14
     ease 0.45 yoffset 0
     repeat 2
+
+# Enquadramento acelerado para a gag anime depois dos creditos.
+transform corrida_pos_creditos:
+    size (1920, 1080)
+    zoom 1.08 xalign 0.58 yalign 0.5 xoffset 0
+    parallel:
+        ease 1.8 zoom 1.0 xalign 0.5
+    parallel:
+        linear 0.055 xoffset -7
+        linear 0.055 xoffset 7
+        repeat 16
 
 # Movimentos mais vivos para cenas de passeio e apresentação do campus.
 transform chegar_saltando_esquerda:
@@ -1085,6 +1097,31 @@ label acolhimento_final:
     centered "{size=34}{color=#7fe0aa}CERTIFICADO SIMBÓLICO{/color}{/size}\nRecepção acessível e teste final concluídos!\nResultado: [teste_final_acertos] de 5 sinais reconhecidos.\n\n{size=22}Este certificado celebra a participação no jogo e não substitui formação em Libras.{/size}"
     call screen relatorio_final
     centered "{size=34}A jornada de Alex e Ane continua...{/size}"
+    call cena_pos_creditos
+    return
+
+label cena_pos_creditos:
+    $ _libras_antes_pos_creditos = libras_ativo
+    $ libras_ativo = False
+    $ parar_libras()
+    scene black
+    with Fade(0.8, 0.4, 0.8)
+    centered "{size=28}{color=#a9b8ad}CENA PÓS-CRÉDITOS{/color}{/size}"
+    pause 0.5
+
+    centered "{size=92}{color=#ffd166}11:59{/color}{/size}\n{size=27}Jardineira do meio-dia{/size}"
+
+    scene bg pos creditos ane at corrida_pos_creditos
+    with vpunch
+    n "Ane descobriu tarde demais que concluir a primeira semana não suspende as leis do transporte estudantil."
+    ane "Mmf! MMMMMF!"
+    n "Mesmo com a torrada na boca, o recado era bem claro: \"SEGURA A JARDINEIRA!\""
+
+    with hpunch
+    centered "{size=64}{color=#ffd166}12:00{/color}{/size}\n{size=31}Continua... se ela conseguir alcançar.{/size}"
+    pause 0.8
+    scene black with Fade(0.25, 0.15, 0.6)
+    $ libras_ativo = _libras_antes_pos_creditos
     return
 
 init python:
