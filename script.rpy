@@ -13,6 +13,7 @@ define helena = Character("Professora Helena", color="#61d4c5")
 define n = Character(None)
 
 image bg entrada = Transform("campus/anime_frente_ifce.png", xysize=(1920, 1080), fit="cover")
+image bg jardineira = Transform("campus/anime_jardineira.png", xysize=(1920, 1080), fit="cover")
 image bg patio = Transform("campus/anime_corredor.png", xysize=(1920, 1080), fit="cover")
 image bg laboratorio = Transform("campus/anime_laboratorio_informatica.png", xysize=(1920, 1080), fit="cover")
 image bg biblioteca = Transform("campus/anime_biblioteca.png", xysize=(1920, 1080), fit="cover")
@@ -23,6 +24,7 @@ image bg cantina real = Transform("campus/anime_cantina_easter_eggs.png", xysize
 image bg catraca = Transform("campus/anime_catraca_acesso.png", xysize=(1920, 1080), fit="cover")
 image bg sagui = Transform("campus/anime_sagui_refeitorio.png", xysize=(1920, 1080), fit="cover")
 image bg refeitorio = Transform("campus/anime_refeitorio.png", xysize=(1920, 1080), fit="cover")
+image bg refeitorio interno = Transform("campus/anime_refeitorio_interno.png", xysize=(1920, 1080), fit="cover")
 image bg piscina = Transform("campus/anime_piscina.png", xysize=(1920, 1080), fit="cover")
 image bg ginasio = Transform("campus/anime_ginasio.png", xysize=(1920, 1080), fit="cover")
 image coxinha premio = "objetos/coxinha_magica.png"
@@ -109,6 +111,43 @@ transform reagir_pensando:
     ease 0.45 yoffset -14
     ease 0.45 yoffset 0
     repeat 2
+
+# Movimentos mais vivos para cenas de passeio e apresentação do campus.
+transform chegar_saltando_esquerda:
+    xalign -0.22 yalign 1.0 alpha 0.0 yoffset 35 rotate -3
+    parallel:
+        easeout_back 0.75 xalign 0.27 alpha 1.0 rotate 0
+    parallel:
+        pause 0.20
+        ease 0.16 yoffset -22
+        easeout_bounce 0.32 yoffset 0
+
+transform chegar_saltando_direita:
+    xalign 1.18 yalign 1.0 alpha 0.0 yoffset 35 rotate 3
+    parallel:
+        easeout_back 0.82 xalign 0.64 alpha 1.0 rotate 0
+    parallel:
+        pause 0.27
+        ease 0.16 yoffset -20
+        easeout_bounce 0.32 yoffset 0
+
+transform conversar_esquerda:
+    xalign 0.27 yalign 1.0
+    ease 0.42 yoffset -9 rotate -1
+    ease 0.42 yoffset 0 rotate 0
+    repeat
+
+transform conversar_direita:
+    xalign 0.64 yalign 1.0
+    ease 0.42 yoffset -9 rotate 1
+    ease 0.42 yoffset 0 rotate 0
+    repeat
+
+transform confirmar_animado_direita:
+    xalign 0.64 yalign 1.0
+    ease 0.16 yoffset 12
+    easeout_back 0.24 yoffset -8
+    easeout_bounce 0.34 yoffset 0
 
 transform destaque_professor:
     xalign 0.5 yalign 1.0 alpha 0.0 zoom 0.72
@@ -238,6 +277,48 @@ label start:
             $ registrar_resposta(False)
             ane "Isso não funciona. Melhor entrar no campo de visão de Alex."
             alex "Agora sim. Comunicação também começa com respeito."
+
+    hide ane
+    hide alex
+    with dissolve
+    jump apresentacao_jardineira
+
+label apresentacao_jardineira:
+    scene bg jardineira:
+        size (1920, 1080)
+        xalign 0.5
+        yalign 0.5
+        zoom 1.06
+        ease 3.2 zoom 1.0
+    with Fade(0.65, 0.15, 0.75, color="#d9f2df")
+
+    n "Ainda em frente ao campus, Alex e Ane encontraram a jardineira do IFCE estacionada perto da entrada."
+    show alex feliz at chegar_saltando_esquerda:
+        zoom 0.43
+    show ane feliz at chegar_saltando_direita:
+        zoom 0.42
+    pause 0.35
+
+    show ane feliz at conversar_direita:
+        zoom 0.42
+    ane "Esta é a jardineira. Ela busca estudantes no metrô e os traz até o IFCE Campus Maracanaú."
+    show alex feliz at conversar_esquerda:
+        zoom 0.43
+    alex "E no sentido de volta ela leva estudantes do campus até o metrô. Isso ajuda bastante no deslocamento."
+    show ane feliz at confirmar_animado_direita:
+        zoom 0.42
+    ane "Os horários podem mudar. Antes de usar o transporte, confiram os horários disponíveis nos avisos oficiais do campus."
+    alex "Também é importante chegar com antecedência, organizar a fila e avisar a equipe quando alguém precisar de apoio de acessibilidade."
+    n "Com a orientação anotada, os dois seguiram da frente do campus para a recepção."
+
+    hide ane
+    hide alex
+    with dissolve
+    scene bg entrada:
+        size (1920, 1080)
+        zoom 1.03
+        ease 1.8 zoom 1.0
+    with pushleft
 
     n "A primeira parada seria a recepção. Mas um cartaz chamou a atenção dos dois."
     centered "{size=48}{color=#ffd166}MISTÉRIO DO DIA{/color}{/size}\nA coxinha de boas-vindas desapareceu!"
@@ -566,6 +647,23 @@ label ginasio:
     with pushleft
 
     n "Ao lado do complexo aquático, a quadra e as arquibancadas recebem aulas, jogos, eventos e aquela torcida que descobre um talento súbito para ser narrador esportivo."
+
+    window hide
+    $ segredo_quadra = renpy.call_screen("easter_egg_quadra")
+    window auto
+    if segredo_quadra == "jinx":
+        with hpunch
+        centered "{size=62}{color=#31dfff}EASTER EGG ENCONTRADO!{/color}{/size}\n{size=31}{color=#ff68c5}As tranças azuis causaram uma pequena interferência no placar...{/color}{/size}"
+        $ conceder_conquista("Caos na arquibancada")
+        show ane surpresa at entrar_esquerda
+        ane "Alex... aquela garota de tranças azuis acabou de olhar para o placar e ele começou a piscar."
+        show alex surpreso at entrar_direita
+        alex "E a lutadora de azul ao lado dela nem parece surpresa. Melhor classificarmos isso como intercâmbio cultural não autorizado."
+        ane "Conquista secreta registrada. E, por segurança, ninguém entrega uma chave de fenda para a arquibancada."
+        hide ane
+        hide alex
+        with dissolve
+
     show ane rindo at entrar_esquerda
     show alex retrato at entrar_direita
     ane "Aqui a comunicação precisa alcançar quem está longe. O professor pode combinar bandeiras, luzes e gestos visuais antes da atividade."
@@ -609,7 +707,44 @@ label cantina:
     ane "Agora entendi por que a cantina é o vértice mais visitado do nosso mapa."
     alex "Com tanta gente conversando, o contato visual ajuda muito. Também podemos escolher uma mesa bem iluminada para usar Libras."
     ane "E finalmente confirmar se a coxinha chegou à reunião antes de nós."
-    n "Entre mesas cheias e o movimento dos estudantes, os dois seguiram para o refeitório e para o encerramento da recepção."
+    n "Entre mesas cheias e o movimento dos estudantes, os dois seguiram para conhecer a parte interna do refeitório."
+    jump refeitorio_interno
+
+label refeitorio_interno:
+    scene bg refeitorio interno:
+        size (1920, 1080)
+        zoom 1.03
+        ease 2.0 zoom 1.0
+    with Fade(0.6, 0.15, 0.7, color="#dce7d2")
+
+    n "No interior do refeitório, uma fila avançava junto ao balcão enquanto os estudantes conversavam nas mesas."
+    show alex feliz at entrar_esquerda:
+        zoom 0.41
+    show ane feliz at entrar_direita:
+        zoom 0.40
+    ane "Aqui tem espaço para almoçar com a turma e recuperar a energia entre uma aula e outra."
+    alex "E também para praticar convivência: organizar a fila, deixar a passagem livre e recolher a bandeja depois da refeição."
+    ane "Olha aquele aluno de chapéu de palha sentado de costas. Pelo tamanho do prato, ele levou a parte da energia muito a sério."
+    n "Antes de saírem, Ane apontou para o salão e propôs uma rápida revisão de vocabulário."
+
+    menu:
+        "Qual palavra dá nome ao local onde os estudantes fazem suas refeições?"
+        "Refeitório":
+            $ pontos_libras += 1
+            $ registrar_resposta(True)
+            alex "Correto! Este espaço é o refeitório."
+            $ renpy.notify("Resposta correta: REFEITÓRIO")
+        "Biblioteca":
+            $ registrar_resposta(False)
+            alex "Biblioteca é o espaço de livros e estudos. Aqui, a palavra correta é REFEITÓRIO."
+        "Laboratório":
+            $ registrar_resposta(False)
+            alex "Laboratório é o espaço de aulas práticas. Aqui, a palavra correta é REFEITÓRIO."
+
+    ane "Vocabulário revisado e almoço localizado. Agora podemos continuar a missão."
+    hide ane
+    hide alex
+    with dissolve
     jump final
 
 label final:

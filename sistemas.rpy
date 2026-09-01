@@ -52,6 +52,7 @@ init -1 python:
         "Repetir é aprender": "Usou a repetição de vídeos para praticar.",
         "Aprovado em Libras": "Reconheceu pelo menos três dos cinco sinais do teste final.",
         "Acessibilidade desde o começo": "Acertou as principais decisões inclusivas.",
+        "Caos na arquibancada": "Encontrou a espectadora de tranças azuis escondida na quadra.",
     }
 
     def desbloquear_sinal(nome):
@@ -103,6 +104,38 @@ init -1 python:
 image glossario_player = Movie(
     channel="glossario", size=(640, 360), loop=False, keep_last_frame=True,
 )
+
+screen easter_egg_quadra():
+    zorder 250
+    modal True
+
+    frame:
+        xalign 0.5
+        ypos 26
+        padding (24, 14)
+        background Solid("#071c19dc")
+        text "Há duas visitantes conhecidas na arquibancada. Encontre a de tranças azuis ou continue." size 25 color "#e9fff8"
+
+    # Jinx ocupa esta região na arte de 1920x1080. A área maior também
+    # facilita o toque em telas pequenas e o foco por teclado.
+    button:
+        xpos 1160
+        ypos 535
+        xsize 150
+        ysize 235
+        background Solid("#00000000")
+        hover_background Solid("#31dfff38")
+        tooltip "Uma espectadora de longas tranças azuis..."
+        action Return("jinx")
+
+    textbutton "Continuar a visita":
+        xalign 0.5
+        yalign 0.94
+        padding (28, 14)
+        text_size 26
+        background Solid("#147a60ee")
+        hover_background Solid("#1ca982")
+        action Return("continuar")
 
 screen caderno_libras():
     zorder 300
