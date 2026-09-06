@@ -1,0 +1,362 @@
+{
+  "ACONTECER": [
+    {
+      "glosa": "ACONTECER",
+      "id": 42,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ACONTECER.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "acontecer"
+    },
+    {
+      "glosa": "ACONTECER-2",
+      "id": 43,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ACONTECER2.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "acontecer"
+    }
+  ],
+  "ENSINAR": [
+    {
+      "glosa": "ENSINAR",
+      "id": 1091,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ENSINAR.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "ensinar, ensino, educação"
+    },
+    {
+      "glosa": "ENSINAR",
+      "id": 2158,
+      "fonte": "https://dicionario.ines.gov.br/public/media/palavras/videos/ensinarSm_Prog001.mp4",
+      "credito": "Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença UFSC",
+      "acepcao": "Transmitir conhecimentos; proporcionar aprendizagem a outra pessoa."
+    }
+  ],
+  "ENTREGAR": [
+    {
+      "glosa": "ENTREGAR",
+      "id": 1098,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ENTREGAR.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "entregar, dar"
+    },
+    {
+      "glosa": "ENTREGAR",
+      "id": 2170,
+      "fonte": "https://dicionario.ines.gov.br/public/media/palavras/videos/entregarSm_Prog001.mp4",
+      "credito": "Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença UFSC",
+      "acepcao": "Passar às mãos de alguém; transferir."
+    }
+  ],
+  "TER": [
+    {
+      "glosa": "TER",
+      "id": 2784,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/TER.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "ter"
+    },
+    {
+      "glosa": "TER",
+      "id": 5309,
+      "fonte": "https://dicionario.ines.gov.br/public/media/palavras/videos/terSm_Prog001.mp4",
+      "credito": "Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença UFSC",
+      "acepcao": "Possuir; manter a propriedade."
+    }
+  ],
+  "ABRIR": [
+    {
+      "glosa": "ABRIR",
+      "id": 3120,
+      "fonte": "https://levantelab.storage.googleapis.com/libras/gerais/GIPQ5FwLKp0k9XdAk5ajTtR13qVuxYdqzfsg83xV.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "abrir"
+    }
+  ],
+  "PARAMETROS": [
+    {
+      "glosa": "PARAMETROS",
+      "id": 222,
+      "fonte": "https://glossario.libras.ufsc.br/media/sinal_videos/222-sinal-2019-09-14-08-36-42.mp4",
+      "pagina": "https://glossario.libras.ufsc.br/sinal/222",
+      "credito": "Glossário Letras Libras — UFSC",
+      "licenca": "Não informada na página consultada; não abrangida automaticamente pela licença Signbank",
+      "acepcao": "Verbete público do glossário; vídeo do sinal isolado."
+    },
+    {
+      "glosa": "PARÂMETROS",
+      "id": 3155,
+      "fonte": "https://levantelab.storage.googleapis.com/libras/gerais/Jv36xUAYYBflF1byaCEjRK7svECtRAnQnv4GuTuE.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "parâmetro"
+    }
+  ],
+  "CAUDA": [
+    {
+      "glosa": "CAUDA1",
+      "id": 1205,
+      "fonte": "https://dicionario.ines.gov.br/public/media/palavras/videos/caudaSm_Prog001.mp4",
+      "credito": "Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença UFSC",
+      "acepcao": "Prolongamento posterior do corpo de alguns animais; rabo."
+    }
+  ],
+  "DEMONSTRAR": [
+    {
+      "glosa": "DEMONSTRAR",
+      "id": 1785,
+      "fonte": "https://dicionario.ines.gov.br/public/media/palavras/videos/demonstrarSm_Prog001.mp4",
+      "credito": "Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença UFSC",
+      "acepcao": "Descrever e explicar; provar com um raciocínio convincente."
+    }
+  ],
+  "DISPONIVEL": [
+    {
+      "glosa": "DISPONÍVEL",
+      "id": 1969,
+      "fonte": "https://dicionario.ines.gov.br/public/media/palavras/videos/disponivelSm_Prog001.mp4",
+      "credito": "Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença UFSC",
+      "acepcao": "Aquilo de que se pode dispor; o que não está ocupado; livre; desimpedido."
+    }
+  ],
+  "FACILITAR": [
+    {
+      "glosa": "FACILITAR",
+      "id": 2418,
+      "fonte": "https://dicionario.ines.gov.br/public/media/palavras/videos/facilitar1Sm_Prog001.mp4",
+      "credito": "Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença UFSC",
+      "acepcao": "Fazer com que fique fácil; tornar acessível."
+    }
+  ],
+  "INTEIRO": [
+    {
+      "glosa": "INTEIRO",
+      "id": 3023,
+      "fonte": "https://dicionario.ines.gov.br/public/media/palavras/videos/inteiroSm_Prog001.mp4",
+      "credito": "Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença UFSC",
+      "acepcao": "Completo; com todas as partes."
+    }
+  ],
+  "FORNECEDOR": [
+    {
+      "glosa": "Fornecedor",
+      "id": 409,
+      "fonte": "https://api-senai-libras.azureedge.net/media/5e/84/90/5e8490f52b337144164048.mp4",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "Fornecedor é toda pessoa física ou jurídica, pública ou privada, nacional ou estrangeira, bem como os entes despersonalizados, que desenvolvem atividades de produção montagem, criação, construção, transformação, importação, exportação, distribuição ou comercialização de produtos ou prestação de serviços.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "FLUXOGRAMA": [
+    {
+      "glosa": "Fluxograma",
+      "id": 410,
+      "fonte": "https://api-senai-libras.azureedge.net/media/5e/84/92/5e8492243b399452223594.mp4",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "O fluxograma também conhecido como diagrama de fluxo, é a mostra visual de um passo a passo de ações que envolvem um determinado processo.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "LOGISTICA": [
+    {
+      "glosa": "Logística",
+      "id": 624,
+      "fonte": "https://api-senai-libras.azureedge.net/media/5e/94/57/5e945729792b6069982095.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "É o conjunto de métodos utilizados para a condução da organização empresarial. A logística empresarial trata do processo de planejar, implementar e controlar, de forma eficiente e eficaz o fluxo de informações, financeiro, além do fluxo e armazenagem de materiais durante a produção e produtos acabados, e as informações relativas a estas atividades, desde o ponto de origem até o ponto de consumo, visando atender aos requisitos do cliente (qualidade, custo, prazo, etc).",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "APROVAR": [
+    {
+      "glosa": "Aprovar",
+      "id": 716,
+      "fonte": "https://api-senai-libras.azureedge.net/media/5f/89/85/5f8985db6875f727976771.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "Dar aprovação. Considerar bom, julgar(aluno) habilitado em exame, ou (candidato) em concurso, Autorizar, Ratificar, sancionar a qualidade ou adequação de algo.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "AUTORIZACAO": [
+    {
+      "glosa": "Autorização",
+      "id": 719,
+      "fonte": "https://api-senai-libras.azureedge.net/media/5f/89/87/5f89874acb9cd599443842.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "conceder permissão para que alguém faça alguma coisa; concessão.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "ROBOTICA": [
+    {
+      "glosa": "Robótica",
+      "id": 1863,
+      "fonte": "https://api-senai-libras.azureedge.net/media/63/59/1f/63591fa7f2ff0693443272.mp4",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "É um ramo educacional e tecnológico que trata de sistemas compostos por partes mecânicas automáticas em conjunto com circuitos integrados, tornando sistemas mecânicos motorizados controlados por circuitos elétricos e inteligência computacional.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "PROGRAMACAO": [
+    {
+      "glosa": "Programação",
+      "id": 1908,
+      "fonte": "https://api-senai-libras.azureedge.net/media/63/59/48/635948e900626608528664.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "É o processo de escrita, teste e manutenção de um programa de computador. O programa é escrito em uma linguagem de programação, embora seja possível, com alguma dificuldade, o escrever diretamente em linguagem de máquina.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    },
+    {
+      "glosa": "PROGRAMACAO",
+      "id": 475,
+      "fonte": "https://glossario.libras.ufsc.br/media/sinal_videos/475-sinal-2019-09-16-18-03-05.mp4",
+      "pagina": "https://glossario.libras.ufsc.br/sinal/475",
+      "credito": "Glossário Letras Libras — UFSC",
+      "licenca": "Não informada na página consultada; não abrangida automaticamente pela licença Signbank",
+      "acepcao": "Verbete público do glossário; vídeo do sinal isolado."
+    }
+  ],
+  "ALGORITMO": [
+    {
+      "glosa": "Algoritmo",
+      "id": 2400,
+      "fonte": "https://api-senai-libras.azureedge.net/media/65/67/46/656746e618ce4914738121.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "sequência de instruções bem definidas, normalmente usadas para resolver problemas de matemática específicos, executar tarefas, ou para realizar cálculos e equações. A",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    },
+    {
+      "glosa": "ALGORITMO",
+      "id": 485,
+      "fonte": "https://glossario.libras.ufsc.br/media/sinal_videos/485-sinal-2019-09-16-20-28-13.mp4",
+      "pagina": "https://glossario.libras.ufsc.br/sinal/485",
+      "credito": "Glossário Letras Libras — UFSC",
+      "licenca": "Não informada na página consultada; não abrangida automaticamente pela licença Signbank",
+      "acepcao": "Verbete público do glossário; vídeo do sinal isolado."
+    }
+  ],
+  "BUG": [
+    {
+      "glosa": "Bug",
+      "id": 2406,
+      "fonte": "https://api-senai-libras.azureedge.net/media/65/67/49/6567499a5ce41463246936.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "defeito, falha ou erro no código de um programa que provoca seu mau funcionamento",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "EQUIPAMENTO": [
+    {
+      "glosa": "Equipamento",
+      "id": 2491,
+      "fonte": "https://api-senai-libras.azureedge.net/media/65/c9/f6/65c9f6e08e38d278414952.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "Itens importantes para o bom funcionamento de uma empresa e todo seu maquinário, garantindo um fluxo rápido e um ambiente mais seguro para os funcionários.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "FUNCIONAMENTO": [
+    {
+      "glosa": "Funcionamento",
+      "id": 2497,
+      "fonte": "https://api-senai-libras.azureedge.net/media/65/c9/f9/65c9f90019f91212469047.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "Situação de um item que está efetuando sua função.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "LAVAGEM": [
+    {
+      "glosa": "Lavagem",
+      "id": 2533,
+      "fonte": "https://api-senai-libras.azureedge.net/media/66/3d/37/663d370471730392383541.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "A higienização das peças é feita em três etapas: lavar, enxaguar e centrifugar.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "PROCESSADOR": [
+    {
+      "glosa": "Processador (CP)",
+      "id": 1804,
+      "fonte": "https://api-senai-libras.azureedge.net/media/63/58/27/6358277f2af98174987391.mp4",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "É a parte de um sistema computacional, que realiza as instruções de um programa de computador, para executar a aritmética básica, lógica, e a entrada e saída de dados.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "AND": [
+    {
+      "glosa": "Lógica E",
+      "id": 1743,
+      "fonte": "https://api-senai-libras.azureedge.net/media/63/2b/65/632b65668a1ae087699298.mp4",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "Em dois significados principais: discute o uso de raciocínio em alguma atividade e é o estudo normativo, filosófico do raciocínio válido.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "OR": [
+    {
+      "glosa": "Lógica OU",
+      "id": 1744,
+      "fonte": "https://api-senai-libras.azureedge.net/media/63/2b/65/632b65ef53a32774402786.mp4",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "São chamadas de operações lógicas. Este tipo de operação segue as regras do chamado cálculo proposicional.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "HIPOTESE": [
+    {
+      "glosa": "HIPOTESE",
+      "id": 153,
+      "fonte": "https://glossario.libras.ufsc.br/media/sinal_videos/153-sinal-2019-09-14-06-53-48.mp4",
+      "pagina": "https://glossario.libras.ufsc.br/sinal/153",
+      "credito": "Glossário Letras Libras — UFSC",
+      "licenca": "Não informada na página consultada; não abrangida automaticamente pela licença Signbank",
+      "acepcao": "Verbete público do glossário; vídeo do sinal isolado."
+    }
+  ]
+}

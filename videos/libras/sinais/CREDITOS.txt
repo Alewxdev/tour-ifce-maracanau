@@ -1,14 +1,35 @@
 SINAIS ISOLADOS EM LIBRAS
 =========================
 
-Fonte: Signbank da Libras — Universidade Federal de Santa Catarina (UFSC)
-Site: https://signbank.libras.ufsc.br/pt
+Signbank da Libras — Universidade Federal de Santa Catarina (UFSC)
+https://signbank.libras.ufsc.br/pt
 Licença: Creative Commons BY-NC-SA 4.0
+API: https://api-signbank.levantelab.com.br/api/tabela_sinais/sinais
 
-Os vídeos foram redimensionados e convertidos de MP4/H.264 para WebM/VP9
-para reprodução no Ren'Py. As URLs individuais e os identificadores dos
-sinais estão registrados em manifesto.json.
+Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil
+https://dicionario.ines.gov.br/
+Catálogo: https://dicionario.ines.gov.br/public/site/js/palavras.js
+Licença de reutilização: não informada no catálogo consultado.
+O material INES não está abrangido pela licença do material UFSC.
 
-Estes são sinais lexicais isolados reproduzidos na ordem da glosa automática
-do VLibras. A sequência não substitui tradução e interpretação humana em
-Libras, especialmente em contexto educacional.
+Glossário Letras Libras — UFSC (Informática)
+https://glossario.libras.ufsc.br/glossario/informatica/
+Licença de reutilização: não informada nas páginas consultadas.
+Os vídeos de sinal isolado foram usados; descrições e exemplos não foram
+incluídos. As páginas de cada verbete estão registradas no manifesto.
+
+SENAI Libras — Serviço Nacional de Aprendizagem Industrial
+https://senai-libras.senai.br/
+API pública: https://api-senai-libras.senai.br/graphql
+Vídeos com avatares 3D, identificados por termo no manifesto.
+Licença de reutilização: não informada no catálogo consultado.
+
+Adaptações: conversão dos vídeos para WebM/VP9 sem áudio, redimensionamento
+para o painel de 400 × 225 e margens para preservar a proporção dos vídeos
+novos. URLs, IDs, fontes e acepções disponíveis estão em manifesto.json.
+
+Algumas formas do português reutilizam o mesmo vídeo lexical, por exemplo
+MÃOS → MÃO; o manifesto registra essas correspondências em forma_base.
+Os vídeos são vocabulário de apoio. A sequência não é tradução integral de
+frases nem substitui tradução e interpretação humana em Libras. A revisão
+linguística por pessoa fluente em Libras permanece pendente.

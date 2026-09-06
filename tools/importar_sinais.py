@@ -12,6 +12,16 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+# Fonte alternativa com acepção conferida no catálogo; não usar homônimos.
+ALTERNATIVOS = {
+    "COMUNICACAO": {
+        "id": 1470, "id_sinais": "COMUNICAÇÃO",
+        "credito": "Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil",
+        "licenca": "Não informada no catálogo consultado; não abrangida pela licença UFSC",
+        "json": {"video": {"url": "https://dicionario.ines.gov.br/public/media/palavras/videos/comunicacaoSm_Prog001.mp4"}},
+    },
+}
+
 API = "https://api-signbank.levantelab.com.br/api/tabela_sinais/sinais"
 SOURCE = Path(__file__).resolve().parents[1] / "acessibilidade.rpy"
 SCRIPT = Path(__file__).resolve().parents[1] / "script.rpy"
@@ -49,7 +59,8 @@ def tokens_do_cache():
     }
 
     roteiro = SCRIPT.read_text(encoding="utf-8")
-    falas = re.findall(r'^\s*[ejm] "([^"]+)"', roteiro, re.M)
+    personagens = re.findall(r'^define (\w+) = Character', roteiro, re.M)
+    falas = re.findall(r'^\s*(?:' + '|'.join(personagens) + r') "([^"]+)"', roteiro, re.M)
     for fala in falas:
         for palavra in re.findall(r"[A-Za-zÀ-ÖØ-öø-ÿ]+", fala):
             if len(palavra) > 2:
@@ -59,26 +70,26 @@ def tokens_do_cache():
 
 
 def buscar_sinal(token):
-    query = urllib.parse.urlencode(
-        {"page": 1, "search": token.lower(), "search_type": "general"}
-    )
-    req = urllib.request.Request(
-        API + "?" + query,
-        headers={
+    alvo = sem_acento(token)
+    pagina = 1
+    while True:
+        query = urllib.parse.urlencode(
+            {"page": pagina, "search": token.lower(), "search_type": "general"}
+        )
+        req = urllib.request.Request(API + "?" + query, headers={
             "User-Agent": "IFCE-Jogo-Libras/1.0",
             "Accept": "application/json",
             "Referer": "https://signbank.libras.ufsc.br/pt/",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=30, context=SSL_CONTEXT) as resposta:
-        itens = json.load(resposta).get("data", [])
-
-    alvo = sem_acento(token)
-    for item in itens:
-        candidatos = [item.get("id_sinais", ""), item.get("sign_lemma", "")]
-        if alvo in {sem_acento(c) for c in candidatos}:
-            return item
-    return None
+        })
+        with urllib.request.urlopen(req, timeout=30, context=SSL_CONTEXT) as resposta:
+            dados = json.load(resposta)
+        for item in dados.get("data", []):
+            candidatos = [item.get("id_sinais") or "", item.get("sign_lemma") or ""]
+            if alvo in {sem_acento(c) for c in candidatos}:
+                return item
+        if pagina >= int(dados.get("last_page", 1)):
+            return None
+        pagina += 1
 
 
 def baixar(url, destino):
@@ -120,7 +131,7 @@ def main():
         webm = OUTPUT / (slug + ".webm")
         print(f"[{numero}] {token}", flush=True)
         try:
-            item = buscar_sinal(token)
+            item = ALTERNATIVOS.get(sem_acento(token)) or buscar_sinal(token)
             video = ((item or {}).get("json") or {}).get("video") or {}
             url = video.get("url")
             if not url:
@@ -132,7 +143,7 @@ def main():
                 subprocess.run(
                     [
                         args.ffmpeg, "-y", "-loglevel", "error", "-i", str(temporario),
-                        "-an", "-vf", "scale=400:225,setsar=1",
+                        "-an", "-vf", "format=yuv444p,scale=400:225:force_original_aspect_ratio=decrease,pad=400:225:(ow-iw)/2:(oh-ih)/2,setsar=1",
                         "-c:v", "libvpx-vp9", "-crf", "38", "-b:v", "0", str(webm),
                     ],
                     check=True,
@@ -145,6 +156,9 @@ def main():
                 "id": item.get("id"),
                 "glosa": item.get("id_sinais"),
             }
+            for campo in ("credito", "licenca"):
+                if campo in item:
+                    dados_sinal[campo] = item[campo]
             return token, dados_sinal, None
         except Exception as erro:
             print(f"  ERRO: {erro}", flush=True)
@@ -159,9 +173,18 @@ def main():
             else:
                 ausentes.append(token)
 
+    # Recalcula as pendências das glosas completas, mesmo numa importação parcial.
+    glosas = re.findall(r'^\s+".*?":\s*"([^"]+)",$', SOURCE.read_text(encoding="utf-8"), re.M)
+    necessarios = {sem_acento(t) for g in glosas for t in g.split()}
+    disponiveis = {
+        sem_acento(t) for t, v in manifesto.items()
+        if (SOURCE.parent / v["arquivo"]).is_file()
+    }
+    ausentes = sorted(necessarios - disponiveis)
     dados = {
         "licenca": "CC BY-NC-SA 4.0",
         "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+        "nota_licenca": "Licença padrão dos sinais UFSC; fontes alternativas possuem metadados por sinal.",
         "url": "https://signbank.libras.ufsc.br/pt",
         "sinais": manifesto,
         "ausentes": sorted(set(ausentes)),

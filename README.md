@@ -88,7 +88,7 @@ Para executar a verificação estática do projeto:
 
 O conteúdo de Libras deste projeto tem finalidade introdutória e educativa. Ele não substitui tradução profissional nem a atuação de intérpretes. Antes de uso institucional, recomenda-se a validação pedagógica final por uma pessoa surda fluente em Libras e pela comunidade envolvida.
 
-Os vídeos de sinais utilizam materiais do Signbank/UFSC conforme os créditos exibidos no próprio jogo, sob licença **CC BY-NC-SA 4.0**. Os demais códigos, imagens e recursos permanecem sujeitos às licenças e autorizações de seus respectivos autores.
+O acervo reúne vídeos do Signbank/UFSC (**CC BY-NC-SA 4.0**), do Dicionário de Libras do INES/Acessibilidade Brasil, do Glossário Letras Libras/UFSC e do SENAI Libras. As fontes alternativas consultadas não informam licença de reutilização; essa condição está registrada por vídeo no manifesto. Consulte `videos/libras/sinais/CREDITOS.txt` e as fontes individuais em `manifesto.json`. Os demais códigos, imagens e recursos permanecem sujeitos às licenças e autorizações de seus respectivos autores.
 
 ## Tecnologias
 

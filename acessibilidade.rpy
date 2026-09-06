@@ -32,7 +32,7 @@ init -1 python:
         for nome, dados in manifesto_sinais.items()
     }
 
-    # Glosas pedagógicas revisáveis. Todas usam somente vídeos presentes no
+    # Glosas pedagógicas revisáveis. A disponibilidade dos vídeos é registrada no
     # manifesto local. A ordem segue uma aproximação visual de sinais-chave.
     libras_glosas = {
         "Campus novo, pessoas novas e muitos corredores. Vamos começar.": "NOVO PESSOA NOVO VAMOS COMEÇAR",
@@ -195,7 +195,7 @@ screen painel_libras(what):
                             action Function(parar_libras)
                     text "Vídeos WebM locais — funciona sem internet.":
                         size 16 color "#d8efe3" xalign 0.5
-                    text "Sinais isolados do Signbank/UFSC. Apoio educativo; não substitui tradução revisada ou intérprete.":
+                    text "Sinais isolados: UFSC, INES e SENAI. Apoio educativo; não substitui tradução revisada ou intérprete.":
                         size 15 color "#ffd166" xalign 0.5
                         text_align 0.5 xmaximum 400
     else:
