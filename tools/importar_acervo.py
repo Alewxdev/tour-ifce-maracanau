@@ -18,6 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'videos/libras/sinais'
+INES_PUBLICO = 'http://www.acessibilidadebrasil.org.br/libras_3/public/'
 
 
 def normalizar(s):
@@ -27,15 +28,18 @@ def normalizar(s):
 
 # Homógrafos ou acepções que exigem seleção por contexto, não só pelo nome.
 IGNORAR = set('A AS C DA DAS DE DO DOS E EM I LA NA NAS NO NOS O OS PELO PELOS POR UM UMA X'.split())
-AMBIGUOS = set('ANDAR ARQUITETURA BANCO CAMPO CHAVE COLA CONTA DADOS FEIRA FUNCAO INSTANTE LACO MEMORIA MODELAR MOVIMENTO PASSAGEM PASSAR PASSO PONTO PRESENTE REPRESENTAR SO FINAL'.split())
+AMBIGUOS = set('ANDAR ARQUITETURA BANCO CAMPO CHAVE COLA CONTA DADOS DEVER FEIRA FUNCAO INSTANTE JUIZ LACO MEMORIA MODELAR MOVIMENTO PASSAGEM PASSAR PASSO PONTO PRESENTE REPRESENTAR SO FINAL FORMAR TRANCA LIBERAR'.split())
 INES_SELECIONADOS = {
+    'ACERTAR': 89, 'APONTAR': 472, 'DEVER': 1900,
+    'EXERCICIO': 2380, 'EXISTIR': 2386,
+    'ANDAR': 360, 'MENOS': 3575, 'QUANDO': 4610, 'QUEM': 4650, 'SO': 5138, 'VEZ': 5703,
     'ACESSO': 91, 'ANTECEDENCIA': 397, 'APARECER': 435, 'ATRAS': 631,
     'CALCULO': 1060, 'CATRACA': 1203, 'CAUDA': 1205, 'COLA': 1392,
     'DEVOLVER': 1904, 'DIZER': 1990, 'DOIS': 2006, 'EDUCACAO': 2051,
     'FICHA': 2521, 'INTERIOR': 3034, 'OBSERVAR': 3842, 'OFICIAL': 3873,
     'OLHAR': 3890, 'PILHA': 4267, 'RECADO': 4738, 'SEM': 5071, 'TESTE': 5328,
 }
-INES_INCOMPATIVEIS = set('BAIXO BOTAO CHAVE COMPLETO CONSTRUIR LIGAR VARIAVEL DIVISAO ENTRADA FONTE FORCA JUIZ METRO PORTUGUES RECEBER RECOLHER RECONHECER RESERVADO SAIDA VIVA VISITA'.split())
+INES_INCOMPATIVEIS = set('BAIXO BOTAO CHAVE COMPLETO CONSTRUIR LIGAR VARIAVEL DIVISAO ENTRADA FONTE FORCA JUIZ METRO PORTUGUES RECEBER RECOLHER RECONHECER RESERVADO SAIDA VIVA VISITA SALGADO'.split())
 
 
 def ler_json(path):
@@ -88,7 +92,7 @@ def candidatos(catalogos, necessarios):
             continue
         resultado[alvo].append({
             'glosa': i['palavra'], 'id': i['id'],
-            'fonte': 'https://dicionario.ines.gov.br/public/media/palavras/videos/' + i['video'],
+            'fonte': INES_PUBLICO + 'media/palavras/videos/' + i['video'],
             'credito': 'Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil',
             'licenca': 'Não informada no catálogo consultado; não abrangida pela licença UFSC',
             'acepcao': i['descricao'],
@@ -144,10 +148,25 @@ def atualizar_catalogos(pasta):
             sinais.extend(pagina['data'])
     salvar(pasta / 'signbank.json', sinais)
     destino = pasta / 'ines.js'
-    subprocess.run(['curl', '-fLSs', '--retry', '2', '--max-time', '40',
-        'https://dicionario.ines.gov.br/public/site/js/palavras.js', '-o', str(destino)], check=True)
-    conteudo = destino.read_text()
-    salvar(pasta / 'ines.json', json.loads(conteudo[conteudo.index('['):].strip().rstrip(';')))
+    try:
+        subprocess.run(['curl', '-fLSs', '--retry', '2', '--max-time', '40',
+            INES_PUBLICO + 'site/js/palavras.js', '-o', str(destino)], check=True)
+        conteudo = destino.read_text()
+        dados = json.loads(conteudo[conteudo.index('['):].strip().rstrip(';'))
+        if not isinstance(dados, list):
+            raise ValueError('Catálogo INES não é uma lista')
+    except (ValueError, subprocess.CalledProcessError):
+        # O endereço antigo pode retornar HTML com status 200.
+        from coletar_ines_publico import coletar
+        contagem, glosas, _ = palavras()
+        formas = ler_json(ROOT / 'tools/dados/formas_libras.json')
+        equivalencias = ler_json(ROOT / 'tools/dados/equivalencias_contextuais.json')
+        alvos = set(contagem) | glosas | {normalizar(k) for k in formas}
+        alvos |= {normalizar(v['base']) for v in equivalencias.values()}
+        print('Catálogo estático INES indisponível; consultando verbetes públicos.', flush=True)
+        coletar(pasta / 'ines.json', alvos)
+    else:
+        salvar(pasta / 'ines.json', dados)
 
 
 def main():
@@ -165,7 +184,9 @@ def main():
     registros = manifesto['sinais']
     contagem, glosas, n_falas = palavras()
     formas = ler_json(ROOT / 'tools/dados/formas_libras.json')
-    alvos = set(contagem) | glosas | {normalizar(k) for k in formas}
+    arquivo_equivalencias = ROOT / 'tools/dados/equivalencias_contextuais.json'
+    equivalencias = ler_json(arquivo_equivalencias) if arquivo_equivalencias.exists() else {}
+    alvos = {normalizar(v['base']) for v in equivalencias.values()} | set(contagem) | glosas | {normalizar(k) for k in formas}
     disponiveis = {normalizar(k): v for k, v in registros.items() if (ROOT / v['arquivo']).is_file() and (ROOT / v['arquivo']).stat().st_size > 1024}
     opcoes = candidatos(args.catalogos, alvos - set(disponiveis))
     if args.tokens is not None:
@@ -204,6 +225,12 @@ def main():
                 disponiveis[token] = dados
                 aliases[token] = base
     log.setdefault('formas_reutilizadas', {}).update(aliases)
+    for token, regra in equivalencias.items():
+        token, base = normalizar(token), normalizar(regra['base'])
+        if token in alvos and token not in disponiveis and base in disponiveis:
+            dados = dict(disponiveis[base], forma_base=base, tipo_correspondencia='equivalência contextual de vocabulário', justificativa=regra['justificativa'])
+            registros[token] = disponiveis[token] = dados
+            log.setdefault('equivalencias_contextuais', {})[token] = regra
     salvar(logpath, log)
     manifesto['ausentes'] = sorted(glosas - set(disponiveis))
     manifesto['ausentes_roteiro'] = sorted(set(contagem) - set(disponiveis))
@@ -220,8 +247,10 @@ def main():
         relatorio += f"| {token} | [{fonte}]({v['fonte']}) | {v['arquivo']} |\n"
     relatorio += "\n## Formas que reutilizam vídeos\n\n| Forma | Base |\n| --- | --- |\n"
     relatorio += ''.join(f"| {t} | {b} |\n" for t, b in sorted(log['formas_reutilizadas'].items()))
+    relatorio += '\n## Equivalências contextuais de vocabulário\n\nNão são flexões automáticas nem tradução de frases; a justificativa de cada correspondência está no manifesto.\n\n| Palavra | Base | Justificativa |\n| --- | --- | --- |\n'
+    relatorio += ''.join(f"| {t} | {v['base']} | {v['justificativa']} |\n" for t, v in sorted(log.get('equivalencias_contextuais', {}).items()))
     relatorio += "\n## Validação e reprodução\n\nTodos os vídeos novos foram convertidos para WebM/VP9 e decodificados integralmente com FFmpeg antes de entrar no manifesto. Não foi feita validação linguística por intérprete nem teste visual dentro do Ren’Py.\n\n"
-    relatorio += "As fontes e acepções constam no manifesto. O INES publica um catálogo de dados JSON/JavaScript, não uma API REST. Sua licença de reutilização não foi informada no catálogo consultado; a licença CC BY-NC-SA 4.0 refere-se aos vídeos Signbank/UFSC. O Glossário Letras Libras/UFSC é uma fonte separada, com condições registradas por vídeo.\n\n"
+    relatorio += "As fontes e acepções constam no manifesto. O INES disponibiliza consultas públicas de verbetes em JSON; o importador usa essas consultas quando o catálogo estático antigo não contém dados válidos. Sua licença de reutilização não foi informada no catálogo consultado; a licença CC BY-NC-SA 4.0 refere-se aos vídeos Signbank/UFSC. O Glossário Letras Libras/UFSC é uma fonte separada, com condições registradas por vídeo.\n\n"
     relatorio += "Para atualizar e retomar a importação: `python3 tools/importar_acervo.py --catalogos /tmp/acervo-libras --atualizar-catalogos --baixar --ffmpeg /caminho/ffmpeg`. Downloads concluídos são preservados; falhas ficam em `tools/dados/resultado_importacao.json`.\n"
     (ROOT / 'RELATORIO_IMPORTACAO.md').write_text(relatorio)
     print(f"Concluído: {len(log['adicionados'])} novos vídeos; {len(log['formas_reutilizadas'])} formas reutilizadas; {len(manifesto['ausentes_roteiro'])} formas pendentes.", flush=True)

@@ -250,5 +250,283 @@
       "licenca": "Não informada na página consultada; não abrangida automaticamente pela licença Signbank",
       "acepcao": "Verbete público do glossário; vídeo do sinal isolado."
     }
+  ],
+  "FIM": [
+    {
+      "glosa": "FIM",
+      "id": 1243,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/FIM.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "fim",
+      "correspondencia": "Aceitação explícita da acepção do catálogo; não exige igualdade com o nome do verbete."
+    }
+  ],
+  "MOVIMENTO": [
+    {
+      "glosa": "MOVIMENTAR",
+      "id": 1933,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/MOVIMENTAR.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "movimentar, movimento",
+      "correspondencia": "Aceitação explícita da acepção do catálogo; não exige igualdade com o nome do verbete."
+    }
+  ],
+  "AVALIACAO": [
+    {
+      "glosa": "AVALIAR",
+      "id": 275,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/AVALIAR.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "avaliar, avaliação",
+      "correspondencia": "Aceitação explícita da acepção do catálogo; não exige igualdade com o nome do verbete."
+    }
+  ],
+  "ADIANTE": [
+    {
+      "glosa": "ALÉM",
+      "id": 100,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ALÉM.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "adiante, além",
+      "correspondencia": "Acepção do catálogo compatível com o vocabulário do roteiro."
+    }
+  ],
+  "LUGAR": [
+    {
+      "glosa": "ONDE",
+      "id": 2053,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ONDE.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "onde, lugar, local",
+      "correspondencia": "Acepção do catálogo compatível com o vocabulário do roteiro."
+    }
+  ],
+  "REPRESENTAR": [
+    {
+      "glosa": "REPRESENTAR",
+      "id": 2453,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/REPRESENTAR.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "representar",
+      "correspondencia": "Acepção do catálogo compatível com o vocabulário do roteiro."
+    }
+  ],
+  "APLICATIVO": [
+    {
+      "glosa": "Aplicativo",
+      "id": "aplicativo",
+      "fonte": "https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2017/10/aplicativo.mp4",
+      "pagina": "https://sistemas.cead.ufv.br/capes/dicionario/?cadastros=aplicativo",
+      "credito": "Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa",
+      "licenca": "Condições específicas de reutilização não informadas na página do verbete; não abrangida pela licença Signbank",
+      "acepcao": ""
+    },
+    {
+      "glosa": "Aplicativo",
+      "id": 909,
+      "fonte": "https://api-senai-libras.azureedge.net/media/60/4f/53/604f53cc65dc9453781350.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "A sigla vem da palavra em inglês Aplicativo, que significa aplicação. O App é um software para dispositivos eletrônicos que auxiliam os usuários a realizar determinadas tarefas.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "BINARIO": [
+    {
+      "glosa": "Binário",
+      "id": 2403,
+      "fonte": "https://api-senai-libras.azureedge.net/media/65/67/47/656747dcdbb89688503481.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "Que tem dois valores, dois elementos ou duas unidades",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "OLHO": [
+    {
+      "glosa": "Olho",
+      "id": "olho",
+      "fonte": "https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2017/10/01168-olho.mp4",
+      "pagina": "https://sistemas.cead.ufv.br/capes/dicionario/?cadastros=olho",
+      "credito": "Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa",
+      "licenca": "Condições específicas de reutilização não informadas na página do verbete; não abrangida pela licença Signbank",
+      "acepcao": "Você tem olhos bonitos."
+    }
+  ],
+  "MILHAO": [
+    {
+      "glosa": "Milhão",
+      "id": "milhao",
+      "fonte": "https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2017/11/1193-milhao.mp4",
+      "pagina": "https://sistemas.cead.ufv.br/capes/dicionario/?cadastros=milhao",
+      "credito": "Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa",
+      "licenca": "Condições específicas de reutilização não informadas na página do verbete; não abrangida pela licença Signbank",
+      "acepcao": "O Rio de Janeiro tem quase 7 milhões de pessoas."
+    }
+  ],
+  "BOMBEIRO": [
+    {
+      "glosa": "Bombeiro",
+      "id": "bombeiro",
+      "fonte": "https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2018/01/01405-Bombeiro.mp4",
+      "pagina": "https://sistemas.cead.ufv.br/capes/dicionario/?cadastros=bombeiro",
+      "credito": "Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa",
+      "licenca": "Condições específicas de reutilização não informadas na página do verbete; não abrangida pela licença Signbank",
+      "acepcao": "Meu vizinho é bombeiro."
+    }
+  ],
+  "APRENDIZAGEM": [
+    {
+      "glosa": "Aprendizagem",
+      "id": "aprendizagem",
+      "fonte": "https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2017/10/aprendizagem.mp4",
+      "pagina": "https://sistemas.cead.ufv.br/capes/dicionario/?cadastros=aprendizagem",
+      "credito": "Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa",
+      "licenca": "Condições específicas de reutilização não informadas na página do verbete; não abrangida pela licença Signbank",
+      "acepcao": ""
+    }
+  ],
+  "ABRIR": [
+    {
+      "glosa": "Abrir",
+      "id": "abrir",
+      "fonte": "https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2018/04/01553-Abrir.mp4",
+      "pagina": "https://sistemas.cead.ufv.br/capes/dicionario/?cadastros=abrir",
+      "credito": "Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa",
+      "licenca": "Condições específicas de reutilização não informadas na página do verbete; não abrangida pela licença Signbank",
+      "acepcao": "Eu abri a porta e encontrei você."
+    }
+  ],
+  "CONSTRUIR": [
+    {
+      "glosa": "Construir",
+      "id": "construir",
+      "fonte": "https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2018/05/01619-Construir.mp4",
+      "pagina": "https://sistemas.cead.ufv.br/capes/dicionario/?cadastros=construir",
+      "credito": "Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa",
+      "licenca": "Condições específicas de reutilização não informadas na página do verbete; não abrangida pela licença Signbank",
+      "acepcao": "A universidade vai construir outro restaurante universitário."
+    }
+  ],
+  "DESAPARECER": [
+    {
+      "glosa": "Desaparecer",
+      "id": "desaparecer",
+      "fonte": "https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2018/09/desaparecer.mp4",
+      "pagina": "https://sistemas.cead.ufv.br/capes/dicionario/?cadastros=desaparecer",
+      "credito": "Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa",
+      "licenca": "Condições específicas de reutilização não informadas na página do verbete; não abrangida pela licença Signbank",
+      "acepcao": "Eu irei desaparecer dessa cidade."
+    }
+  ],
+  "ROTEIRO": [
+    {
+      "glosa": "ROTEIRO",
+      "id": 315,
+      "fonte": "https://glossario.libras.ufsc.br/media/sinal_videos/315-sinal-2019-09-14-19-44-49.mp4",
+      "pagina": "https://glossario.libras.ufsc.br/sinal/315",
+      "credito": "Glossário Letras Libras — UFSC",
+      "licenca": "Não informada na página consultada; não abrangida automaticamente pela licença Signbank",
+      "acepcao": "Roteiro na área de cinema; no jogo, roteiro da história."
+    }
+  ],
+  "DRAMA": [
+    {
+      "glosa": "DRAMA",
+      "id": 437,
+      "fonte": "https://glossario.libras.ufsc.br/media/sinal_videos/437-sinal-2019-09-16-07-46-42.mp4",
+      "pagina": "https://glossario.libras.ufsc.br/sinal/437",
+      "credito": "Glossário Letras Libras — UFSC",
+      "licenca": "Não informada na página consultada; não abrangida automaticamente pela licença Signbank",
+      "acepcao": "Drama na área de cinema; vocabulário de apoio à referência figurada no roteiro."
+    }
+  ],
+  "MEMORIA": [
+    {
+      "glosa": "MEMORIA",
+      "id": 214,
+      "fonte": "https://glossario.libras.ufsc.br/media/sinal_videos/214-sinal-2019-09-14-08-26-09.mp4",
+      "pagina": "https://glossario.libras.ufsc.br/sinal/214",
+      "credito": "Glossário Letras Libras — UFSC",
+      "licenca": "Não informada na página consultada; não abrangida automaticamente pela licença Signbank",
+      "acepcao": "Memória humana; no roteiro, memória visual. Não usar para memórias eletrônicas."
+    }
+  ],
+  "REDE": [
+    {
+      "glosa": "Rede",
+      "id": 2285,
+      "fonte": "https://api-senai-libras.azureedge.net/media/65/57/8f/65578fde1360f214133801.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "é um termo amplo que abrange qualquer tecnologia que permita que dois ou mais dispositivos se conectem e se comuniquem entre si",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "SOMADOR": [
+    {
+      "glosa": "Somador",
+      "id": 1979,
+      "fonte": "https://api-senai-libras.azureedge.net/media/63/5a/93/635a93eb9419d982863810.m4v",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "Ele é utilizado para somar números de pelo menos 2 casas. Isso é possível cascateando um semi-somador com Somadores Completos. As expressões 'X' e 'Y' são os valores de entrada. 'C' é o Carry In (\"vai um\" do bit anterior).",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "MEMORIAS": [
+    {
+      "glosa": "Memória de Dados",
+      "id": 1751,
+      "fonte": "https://api-senai-libras.azureedge.net/media/63/2c/89/632c89a788aa9973587030.mp4",
+      "credito": "SENAI Libras — Serviço Nacional de Aprendizagem Industrial",
+      "licenca": "Não informada no catálogo consultado; não abrangida pela licença Signbank",
+      "acepcao": "São todos os dispositivos que permitem a um computador guardar dados, temporária ou permanentemente. Memória é um termo genérico para designar componentes de um sistema capazes de armazenar dados e programas.",
+      "tipo_video": "avatar 3D",
+      "catalogo": "https://api-senai-libras.senai.br/graphql"
+    }
+  ],
+  "CONFIGURACAO": [
+    {
+      "glosa": "CONFIGURAÇÃO-DE-MÃO",
+      "id": 722,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CONFIGURAÇÃO-DE-MÃO.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "configuração de mão",
+      "justificativa": "Configuração de mão, no contexto dos parâmetros de Libras."
+    }
+  ],
+  "PRESTANDO": [
+    {
+      "glosa": "PRESTAR-ATENÇÃO",
+      "id": 2330,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/PRESTAR-ATENÇÃO.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "prestar-atenção",
+      "justificativa": "Prestando atenção; expressão completa no roteiro."
+    }
+  ],
+  "TERCA": [
+    {
+      "glosa": "TERÇA-FEIRA",
+      "id": 2787,
+      "fonte": "https://videos.nals.cce.ufsc.br/SignBank/Vídeos/TERÇA-FEIRA.mp4",
+      "credito": "Signbank da Libras — Universidade Federal de Santa Catarina",
+      "licenca": "CC BY-NC-SA 4.0",
+      "acepcao": "terça-feira",
+      "justificativa": "Terça-feira, dia da semana."
+    }
   ]
 }

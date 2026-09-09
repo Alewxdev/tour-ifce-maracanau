@@ -1,31 +1,39 @@
 # Importação ampliada do acervo de Libras
 
-333 vídeos novos, 271 formas lexicais reutilizando vídeos e 488 arquivos distintos no acervo.
+389 vídeos novos, 350 formas lexicais reutilizando vídeos e 544 arquivos distintos no acervo.
 
-Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md`. Artigos, nomes próprios, flexões não mapeadas e termos ambíguos estão incluídos nesse número.
+Restam 298 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md`. Artigos, nomes próprios, flexões não mapeadas e termos ambíguos estão incluídos nesse número.
 
 ## Vídeos adicionados
 
 | Termo | Fonte | Arquivo |
 | --- | --- | --- |
+| ABRIR | [Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa](https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2018/04/01553-Abrir.mp4) | videos/libras/sinais/abrir.webm |
 | ACABAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ACABAR2.mp4) | videos/libras/sinais/acabar.webm |
+| ACERTAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/acertar2Sm_Prog001.mp4) | videos/libras/sinais/acertar.webm |
 | ACESSO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/acesso1Sm_Prog001.mp4) | videos/libras/sinais/acesso.webm |
 | ACOMPANHADO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/acompanhadoSm_Prog001.mp4) | videos/libras/sinais/acompanhado.webm |
 | ACONTECER | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ACONTECER.mp4) | videos/libras/sinais/acontecer.webm |
+| ADIANTE | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ALÉM.mp4) | videos/libras/sinais/adiante.webm |
 | AGRADECER | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/AGRADECER.mp4) | videos/libras/sinais/agradecer.webm |
 | AGUA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ÁGUA.mp4) | videos/libras/sinais/agua.webm |
 | AGUARDAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/aguardarSm_Prog001.mp4) | videos/libras/sinais/aguardar.webm |
 | ALGORITMO | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/65/67/46/656746e618ce4914738121.m4v) | videos/libras/sinais/algoritmo.webm |
 | ALGUEM | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/alguemSm_Prog001.mp4) | videos/libras/sinais/alguem.webm |
 | ALMOCAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ALMOÇAR.mp4) | videos/libras/sinais/almocar.webm |
+| AMIZADE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/amizadeSm_Prog001.mp4) | videos/libras/sinais/amizade.webm |
 | ANALISE | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ANÁLISE.mp4) | videos/libras/sinais/analise.webm |
 | AND | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/63/2b/65/632b65668a1ae087699298.mp4) | videos/libras/sinais/and.webm |
+| ANDAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/andar1Sm_Prog001.mp4) | videos/libras/sinais/andar.webm |
 | ANOTAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ANOTAR.mp4) | videos/libras/sinais/anotar.webm |
 | ANTECEDENCIA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/antecedencia2Sm_Prog001.mp4) | videos/libras/sinais/antecedencia.webm |
 | APARECER | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/aparecer3Sm_Prog001.mp4) | videos/libras/sinais/aparecer.webm |
 | APENAS | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/apenasSm_Prog001.mp4) | videos/libras/sinais/apenas.webm |
 | APITAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/APITAR.mp4) | videos/libras/sinais/apitar.webm |
+| APLICATIVO | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/60/4f/53/604f53cc65dc9453781350.m4v) | videos/libras/sinais/aplicativo.webm |
 | APOIAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/APOIAR.mp4) | videos/libras/sinais/apoiar.webm |
+| APONTAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/apontar2Sm_Prog001.mp4) | videos/libras/sinais/apontar.webm |
+| APRENDIZAGEM | [Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa](https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2017/10/aprendizagem.mp4) | videos/libras/sinais/aprendizagem.webm |
 | APRESENTAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/APRESENTAR.mp4) | videos/libras/sinais/apresentar.webm |
 | APROVAR | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/5f/89/85/5f8985db6875f727976771.m4v) | videos/libras/sinais/aprovar.webm |
 | APROXIMAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/APROXIMAR.mp4) | videos/libras/sinais/aproximar.webm |
@@ -45,6 +53,7 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | AUTOR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/autorSm_Prog001.mp4) | videos/libras/sinais/autor.webm |
 | AUTORIZACAO | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/5f/89/87/5f89874acb9cd599443842.m4v) | videos/libras/sinais/autorizacao.webm |
 | AUTORIZAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/autorizarSm_Prog001.mp4) | videos/libras/sinais/autorizar.webm |
+| AVALIACAO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/AVALIAR.mp4) | videos/libras/sinais/avaliacao.webm |
 | AVANCADO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/AVANÇADO.mp4) | videos/libras/sinais/avancado.webm |
 | AVANCAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/AVANÇAR.mp4) | videos/libras/sinais/avancar.webm |
 | AVISAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/AVISAR.mp4) | videos/libras/sinais/avisar.webm |
@@ -53,7 +62,9 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | BANDEIRA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/BANDEIRA.mp4) | videos/libras/sinais/bandeira.webm |
 | BANDEJA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/bandejaSm_Prog001.mp4) | videos/libras/sinais/bandeja.webm |
 | BARULHO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/BARULHO.mp4) | videos/libras/sinais/barulho.webm |
+| BINARIO | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/65/67/47/656747dcdbb89688503481.m4v) | videos/libras/sinais/binario.webm |
 | BOCA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/bocaSm_Prog001.mp4) | videos/libras/sinais/boca.webm |
+| BOMBEIRO | [Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa](https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2018/01/01405-Bombeiro.mp4) | videos/libras/sinais/bombeiro.webm |
 | BUG | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/65/67/49/6567499a5ce41463246936.m4v) | videos/libras/sinais/bug.webm |
 | BUSCAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/buscarSm_Prog001.mp4) | videos/libras/sinais/buscar.webm |
 | CADEIRA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CADEIRA.mp4) | videos/libras/sinais/cadeira.webm |
@@ -62,9 +73,11 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | CALCULO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/calculoSm_Prog001.mp4) | videos/libras/sinais/calculo.webm |
 | CALMA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CALMA.mp4) | videos/libras/sinais/calma.webm |
 | CAMINHO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CAMINHO.mp4) | videos/libras/sinais/caminho.webm |
+| CAPAZ | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/capazSm_Prog001.mp4) | videos/libras/sinais/capaz.webm |
 | CARTAO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CARTÃO.mp4) | videos/libras/sinais/cartao.webm |
 | CARTAZ | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/cartazSm_Prog001.mp4) | videos/libras/sinais/cartaz.webm |
 | CATRACA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/catracaSm_Prog001.mp4) | videos/libras/sinais/catraca.webm |
+| CAUDA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/cauda1Sm_Prog001.mp4) | videos/libras/sinais/cauda.webm |
 | CERTO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CERTO.mp4) | videos/libras/sinais/certo.webm |
 | CHAMAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CHAMAR.mp4) | videos/libras/sinais/chamar.webm |
 | CHAPEU | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CHAPÉU.mp4) | videos/libras/sinais/chapeu.webm |
@@ -83,8 +96,10 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | CONCLUIR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/concluirSm_Prog001.mp4) | videos/libras/sinais/concluir.webm |
 | CONECTAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CONECTAR.mp4) | videos/libras/sinais/conectar.webm |
 | CONFERIR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/conferirSm_Prog001.mp4) | videos/libras/sinais/conferir.webm |
+| CONFIGURACAO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CONFIGURAÇÃO-DE-MÃO.mp4) | videos/libras/sinais/configuracao.webm |
 | CONFIRMAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/confirmarSm_Prog001.mp4) | videos/libras/sinais/confirmar.webm |
 | CONHECIMENTO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CONHECIMENTO.mp4) | videos/libras/sinais/conhecimento.webm |
+| CONSTRUIR | [Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa](https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2018/05/01619-Construir.mp4) | videos/libras/sinais/construir.webm |
 | CONTAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CONTAR.mp4) | videos/libras/sinais/contar.webm |
 | CONTATO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/CONTATO.mp4) | videos/libras/sinais/contato.webm |
 | CONTINUAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/continuarSm_Prog001.mp4) | videos/libras/sinais/continuar.webm |
@@ -108,10 +123,13 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | DEMONSTRAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/demonstrarSm_Prog001.mp4) | videos/libras/sinais/demonstrar.webm |
 | DEPENDE | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/DEPENDE.mp4) | videos/libras/sinais/depende.webm |
 | DESAFIO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/DESAFIO.mp4) | videos/libras/sinais/desafio.webm |
+| DESAPARECER | [Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa](https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2018/09/desaparecer.mp4) | videos/libras/sinais/desaparecer.webm |
+| DESCANSAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/descansarSm_Prog001.mp4) | videos/libras/sinais/descansar.webm |
 | DESCER | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/descerSm_Prog001.mp4) | videos/libras/sinais/descer.webm |
 | DESCOBRIR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/DESCOBRIR.mp4) | videos/libras/sinais/descobrir.webm |
 | DESTRUIR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/DESTRUIR.mp4) | videos/libras/sinais/destruir.webm |
 | DETALHE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/detalheSm_Prog001.mp4) | videos/libras/sinais/detalhe.webm |
+| DEVER | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/dever1Sm_Prog001.mp4) | videos/libras/sinais/dever.webm |
 | DEVOLVER | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/devolver1Sm_Prog001.mp4) | videos/libras/sinais/devolver.webm |
 | DIAS | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/DIAS.mp4) | videos/libras/sinais/dias.webm |
 | DIFICIL | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/DIFÍCIL.mp4) | videos/libras/sinais/dificil.webm |
@@ -120,7 +138,9 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | DISPONIVEL | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/disponivelSm_Prog001.mp4) | videos/libras/sinais/disponivel.webm |
 | DIVISAO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/DIVISÃO.mp4) | videos/libras/sinais/divisao.webm |
 | DIZER | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/dizer1Sm_Prog001.mp4) | videos/libras/sinais/dizer.webm |
+| DOBRAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/dobrarSm_Prog001.mp4) | videos/libras/sinais/dobrar.webm |
 | DOIS | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/dois1Sm_Prog001.mp4) | videos/libras/sinais/dois.webm |
+| DRAMA | [Glossário Letras Libras — UFSC](https://glossario.libras.ufsc.br/media/sinal_videos/437-sinal-2019-09-16-07-46-42.mp4) | videos/libras/sinais/drama.webm |
 | DURANTE | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/DURANTE.mp4) | videos/libras/sinais/durante.webm |
 | DUVIDA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/duvidaSm_Prog001.mp4) | videos/libras/sinais/duvida.webm |
 | EDUCACAO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/educacao2Sm_Prog001.mp4) | videos/libras/sinais/educacao.webm |
@@ -143,13 +163,18 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | ETIQUETA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/etiquetaSm_Prog001.mp4) | videos/libras/sinais/etiqueta.webm |
 | EU | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/euSm_Prog001.mp4) | videos/libras/sinais/eu.webm |
 | EXATO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/exatoSm_Prog001.mp4) | videos/libras/sinais/exato.webm |
+| EXECUTAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/executarSm_Prog001.mp4) | videos/libras/sinais/executar.webm |
+| EXERCICIO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/exercicio1Sm_Prog001.mp4) | videos/libras/sinais/exercicio.webm |
 | EXIGIR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/EXIGIR.mp4) | videos/libras/sinais/exigir.webm |
+| EXISTIR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/existir2Sm_Prog001.mp4) | videos/libras/sinais/existir.webm |
+| FACILITAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/facilitarSm_Prog001.mp4) | videos/libras/sinais/facilitar.webm |
 | FALHAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/FALHAR.mp4) | videos/libras/sinais/falhar.webm |
 | FAROFA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/farofaSm_Prog001.mp4) | videos/libras/sinais/farofa.webm |
 | FECHAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/FECHAR.mp4) | videos/libras/sinais/fechar.webm |
 | FICAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/FICAR.mp4) | videos/libras/sinais/ficar.webm |
 | FICHA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/ficha2Sm_Prog001.mp4) | videos/libras/sinais/ficha.webm |
 | FILA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/FILA.mp4) | videos/libras/sinais/fila.webm |
+| FIM | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/FIM.mp4) | videos/libras/sinais/fim.webm |
 | FINALMENTE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/finalmenteSm_Prog001.mp4) | videos/libras/sinais/finalmente.webm |
 | FISCALIZAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/fiscalizarSm_Prog001.mp4) | videos/libras/sinais/fiscalizar.webm |
 | FISICA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/FÍSICA.mp4) | videos/libras/sinais/fisica.webm |
@@ -163,6 +188,7 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | GAROTA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/garotaSm_Prog001.mp4) | videos/libras/sinais/garota.webm |
 | GENTE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/genteSm_Prog001.mp4) | videos/libras/sinais/gente.webm |
 | GERAL | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/GERAL.mp4) | videos/libras/sinais/geral.webm |
+| GESTO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/GESTO.mp4) | videos/libras/sinais/gesto.webm |
 | GRUPO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/GRUPO.mp4) | videos/libras/sinais/grupo.webm |
 | GUARDANAPO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/guardanapoSm_Prog001.mp4) | videos/libras/sinais/guardanapo.webm |
 | GUARDAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/GUARDAR.mp4) | videos/libras/sinais/guardar.webm |
@@ -181,6 +207,7 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | INTERPRETAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/interpretarSm_Prog001.mp4) | videos/libras/sinais/interpretar.webm |
 | INVISIVEL | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/invisivelSm_Prog001.mp4) | videos/libras/sinais/invisivel.webm |
 | IR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://objetos.sites.ufsc.br/libras/gerais/rJgpCEHWA8GqTFfBXUR6dnRHCl4AlSsbnD8ZwvtU.mp4) | videos/libras/sinais/ir.webm |
+| ISOLADO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/isoladoSm_Prog001.mp4) | videos/libras/sinais/isolado.webm |
 | ISSO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/issoSm_Prog001.mp4) | videos/libras/sinais/isso.webm |
 | JA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/JÁ.mp4) | videos/libras/sinais/ja.webm |
 | JAMAIS | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/jamaisSm_Prog001.mp4) | videos/libras/sinais/jamais.webm |
@@ -191,15 +218,18 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | LABORATORIO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/laboratorioSm_Prog001.mp4) | videos/libras/sinais/laboratorio.webm |
 | LANCHE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/lancheSm_Prog001.mp4) | videos/libras/sinais/lanche.webm |
 | LAVAGEM | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/66/3d/37/663d370471730392383541.m4v) | videos/libras/sinais/lavagem.webm |
+| LEI | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/LEI.mp4) | videos/libras/sinais/lei.webm |
 | LEITURA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/leituraSm_Prog001.mp4) | videos/libras/sinais/leitura.webm |
 | LETRA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/LETRA.mp4) | videos/libras/sinais/letra.webm |
 | LIMITE | [Signbank da Libras — Universidade Federal de Santa Catarina](https://objetos.sites.ufsc.br/libras/gerais/gi5WjK4Iznm4ADLcDKk2Ihm7SATkG18GsUblOJF9.mp4) | videos/libras/sinais/limite.webm |
 | LINGUAGEM | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/LINGUAGEM.mp4) | videos/libras/sinais/linguagem.webm |
 | LIVRE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/livreSm_Prog001.mp4) | videos/libras/sinais/livre.webm |
 | LIVRO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/LIVRO.mp4) | videos/libras/sinais/livro.webm |
+| LOCALIZAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/localizarSm_Prog001.mp4) | videos/libras/sinais/localizar.webm |
 | LOGISTICA | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/5e/94/57/5e945729792b6069982095.m4v) | videos/libras/sinais/logistica.webm |
 | LONGE | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/LONGE.mp4) | videos/libras/sinais/longe.webm |
 | LOUSA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/lousaSm_Prog001.mp4) | videos/libras/sinais/lousa.webm |
+| LUGAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ONDE.mp4) | videos/libras/sinais/lugar.webm |
 | LUZ | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/luzSm_Prog001.mp4) | videos/libras/sinais/luz.webm |
 | MANTER | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/manterSm_Prog001.mp4) | videos/libras/sinais/manter.webm |
 | MAPA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/mapaSm_Prog001.mp4) | videos/libras/sinais/mapa.webm |
@@ -207,12 +237,18 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | MATEMATICA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/MATEMÁTICA.mp4) | videos/libras/sinais/matematica.webm |
 | MATO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/matoSm_Prog001.mp4) | videos/libras/sinais/mato.webm |
 | MELHORAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/MELHORAR.mp4) | videos/libras/sinais/melhorar.webm |
+| MEMORIA | [Glossário Letras Libras — UFSC](https://glossario.libras.ufsc.br/media/sinal_videos/214-sinal-2019-09-14-08-26-09.mp4) | videos/libras/sinais/memoria.webm |
+| MEMORIAS | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/63/2c/89/632c89a788aa9973587030.mp4) | videos/libras/sinais/memorias.webm |
+| MENOS | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/menos2Sm_Prog001.mp4) | videos/libras/sinais/menos.webm |
+| MERGULHAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/mergulharSm_Prog001.mp4) | videos/libras/sinais/mergulhar.webm |
 | MESA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/MESA.mp4) | videos/libras/sinais/mesa.webm |
 | METRO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/METRÔ.mp4) | videos/libras/sinais/metro.webm |
+| MILHAO | [Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa](https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2017/11/1193-milhao.mp4) | videos/libras/sinais/milhao.webm |
 | MIM | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/mimSm_Prog001.mp4) | videos/libras/sinais/mim.webm |
 | MISTERIO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/misterioSm_Prog001.mp4) | videos/libras/sinais/misterio.webm |
 | MOCHILA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/MOCHILA.mp4) | videos/libras/sinais/mochila.webm |
 | MOLHADO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/molhadoSm_Prog001.mp4) | videos/libras/sinais/molhado.webm |
+| MOVIMENTO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/MOVIMENTAR.mp4) | videos/libras/sinais/movimento.webm |
 | MUDAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/MUDAR.mp4) | videos/libras/sinais/mudar.webm |
 | MUNDO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/MUNDO.mp4) | videos/libras/sinais/mundo.webm |
 | NATACAO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/natacaoSm_Prog001.mp4) | videos/libras/sinais/natacao.webm |
@@ -222,11 +258,13 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | NOSSO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/nossoSm_Prog001.mp4) | videos/libras/sinais/nosso.webm |
 | NOTAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/notarSm_Prog001.mp4) | videos/libras/sinais/notar.webm |
 | OBJETIVO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/OBJETIVO.mp4) | videos/libras/sinais/objetivo.webm |
+| OBRIGATORIO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/obrigatorioSm_Prog001.mp4) | videos/libras/sinais/obrigatorio.webm |
 | OBSERVAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/observar1Sm_Prog001.mp4) | videos/libras/sinais/observar.webm |
 | OFICIAL | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/oficial3Sm_Prog001.mp4) | videos/libras/sinais/oficial.webm |
 | OI | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/OI.mp4) | videos/libras/sinais/oi.webm |
 | OLA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/olaSm_Prog001.mp4) | videos/libras/sinais/ola.webm |
 | OLHAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/olharSm_Prog001.mp4) | videos/libras/sinais/olhar.webm |
+| OLHO | [Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa](https://sistemas.cead.ufv.br/capes/dicionario/wp-content/uploads/2017/10/01168-olho.mp4) | videos/libras/sinais/olho.webm |
 | ONDE | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ONDE.mp4) | videos/libras/sinais/onde.webm |
 | OR | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/63/2b/65/632b65ef53a32774402786.mp4) | videos/libras/sinais/or.webm |
 | ORIGEM | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/origemSm_Prog001.mp4) | videos/libras/sinais/origem.webm |
@@ -258,6 +296,7 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | PRATICAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/PRATICAR.mp4) | videos/libras/sinais/praticar.webm |
 | PRATO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/pratoSm_Prog001.mp4) | videos/libras/sinais/prato.webm |
 | PRESSA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/pressaSm_Prog001.mp4) | videos/libras/sinais/pressa.webm |
+| PRESTANDO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/PRESTAR-ATENÇÃO.mp4) | videos/libras/sinais/prestando.webm |
 | PROBLEMA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/PROBLEMA.mp4) | videos/libras/sinais/problema.webm |
 | PROCESSADOR | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/63/58/27/6358277f2af98174987391.mp4) | videos/libras/sinais/processador.webm |
 | PROFISSIONAL | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/PROFISSIONAL.mp4) | videos/libras/sinais/profissional.webm |
@@ -265,20 +304,25 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | PROPRIO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/PRÓPRIO.mp4) | videos/libras/sinais/proprio.webm |
 | PULMAO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/pulmaoSm_Prog001.mp4) | videos/libras/sinais/pulmao.webm |
 | QUADRA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/QUADRA.mp4) | videos/libras/sinais/quadra.webm |
+| QUANDO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/quando1Sm_Prog001.mp4) | videos/libras/sinais/quando.webm |
 | QUANTIDADE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/quantidadeSm_Prog001.mp4) | videos/libras/sinais/quantidade.webm |
+| QUEM | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/quem3Sm_Prog001.mp4) | videos/libras/sinais/quem.webm |
 | QUERER | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/QUERER.mp4) | videos/libras/sinais/querer.webm |
 | QUESTAO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/questaoSm_Prog001.mp4) | videos/libras/sinais/questao.webm |
 | RACIOCINIO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/raciocinioSm_Prog001.mp4) | videos/libras/sinais/raciocinio.webm |
 | RAPIDO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/RÁPIDO.mp4) | videos/libras/sinais/rapido.webm |
 | RARO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/raroSm_Prog001.mp4) | videos/libras/sinais/raro.webm |
+| REALIZAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/realizarSm_Prog001.mp4) | videos/libras/sinais/realizar.webm |
 | RECADO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/recado_1Sm_Prog001.mp4) | videos/libras/sinais/recado.webm |
 | RECEBER | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/RECEBER.mp4) | videos/libras/sinais/receber.webm |
 | RECUPERACAO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/RECUPERAÇÃO.mp4) | videos/libras/sinais/recuperacao.webm |
 | RECUPERAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/recuperarSm_Prog001.mp4) | videos/libras/sinais/recuperar.webm |
+| REDE | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/65/57/8f/65578fde1360f214133801.m4v) | videos/libras/sinais/rede.webm |
 | REFEICAO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/refeicaoSm_Prog001.mp4) | videos/libras/sinais/refeicao.webm |
 | REFRIGERANTE | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/REFRIGERANTE.mp4) | videos/libras/sinais/refrigerante.webm |
 | REPETICAO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/repeticaoSm_Prog001.mp4) | videos/libras/sinais/repeticao.webm |
 | REPETIR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/repetirSm_Prog001.mp4) | videos/libras/sinais/repetir.webm |
+| REPRESENTAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/REPRESENTAR.mp4) | videos/libras/sinais/representar.webm |
 | RESOLVER | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/RESOLVER.mp4) | videos/libras/sinais/resolver.webm |
 | RESPEITAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/respeitarSm_Prog001.mp4) | videos/libras/sinais/respeitar.webm |
 | RESPEITO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/RESPEITO.mp4) | videos/libras/sinais/respeito.webm |
@@ -288,24 +332,32 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | REVISAO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/REVISÃO.mp4) | videos/libras/sinais/revisao.webm |
 | ROBOTICA | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/63/59/1f/63591fa7f2ff0693443272.mp4) | videos/libras/sinais/robotica.webm |
 | ROSTO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ROSTO.mp4) | videos/libras/sinais/rosto.webm |
+| ROTEIRO | [Glossário Letras Libras — UFSC](https://glossario.libras.ufsc.br/media/sinal_videos/315-sinal-2019-09-14-19-44-49.mp4) | videos/libras/sinais/roteiro.webm |
 | ROUBAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ROUBAR.mp4) | videos/libras/sinais/roubar.webm |
 | SABER | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SABER.mp4) | videos/libras/sinais/saber.webm |
 | SAIR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SAIR.mp4) | videos/libras/sinais/sair.webm |
 | SALDO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/saldoSm_Prog001.mp4) | videos/libras/sinais/saldo.webm |
 | SE | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SE.mp4) | videos/libras/sinais/se.webm |
+| SECO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/secoSm_Prog001.mp4) | videos/libras/sinais/seco.webm |
+| SECRETO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/secretoSm_Prog001.mp4) | videos/libras/sinais/secreto.webm |
 | SEGUIR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SEGUIR.mp4) | videos/libras/sinais/seguir.webm |
 | SEGUNDO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SEGUNDO.mp4) | videos/libras/sinais/segundo.webm |
 | SEGURANCA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SEGURANÇA.mp4) | videos/libras/sinais/seguranca.webm |
 | SEM | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/sem3Sm_Prog001.mp4) | videos/libras/sinais/sem.webm |
 | SENTAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SENTAR.mp4) | videos/libras/sinais/sentar.webm |
+| SEPARADO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/separadoSm_Prog001.mp4) | videos/libras/sinais/separado.webm |
 | SER | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SER.mp4) | videos/libras/sinais/ser.webm |
 | SILENCIO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SILÊNCIO.mp4) | videos/libras/sinais/silencio.webm |
 | SIM | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SIM.mp4) | videos/libras/sinais/sim.webm |
+| SIMBOLO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SÍMBOLO.mp4) | videos/libras/sinais/simbolo.webm |
+| SO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/so1Sm_Prog001.mp4) | videos/libras/sinais/so.webm |
 | SOFTWARE | [Glossário Letras Libras — UFSC (Informática)](https://glossario.libras.ufsc.br/media/sinal_videos/520-sinal-2019-09-17-07-52-23.mp4) | videos/libras/sinais/software.webm |
 | SOM | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/somSm_Prog001.mp4) | videos/libras/sinais/som.webm |
+| SOMADOR | [SENAI Libras — Serviço Nacional de Aprendizagem Industrial](https://api-senai-libras.azureedge.net/media/63/5a/93/635a93eb9419d982863810.m4v) | videos/libras/sinais/somador.webm |
 | SOMENTE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/somenteSm_Prog001.mp4) | videos/libras/sinais/somente.webm |
 | SUCO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/SUCO.mp4) | videos/libras/sinais/suco.webm |
 | SURPRESA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/surpresaSm_Prog001.mp4) | videos/libras/sinais/surpresa.webm |
+| SUSPEITAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/suspeitarSm_Prog001.mp4) | videos/libras/sinais/suspeitar.webm |
 | TABELA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/TABELA.mp4) | videos/libras/sinais/tabela.webm |
 | TALENTO | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/talentoSm_Prog001.mp4) | videos/libras/sinais/talento.webm |
 | TARDE | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/TARDE.mp4) | videos/libras/sinais/tarde.webm |
@@ -313,6 +365,7 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | TECLADO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/TECLADO.mp4) | videos/libras/sinais/teclado.webm |
 | TEORIA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/TEORIA.mp4) | videos/libras/sinais/teoria.webm |
 | TER | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/TER.mp4) | videos/libras/sinais/ter.webm |
+| TERCA | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/TERÇA-FEIRA.mp4) | videos/libras/sinais/terca.webm |
 | TERMINAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/terminarSm_Prog001.mp4) | videos/libras/sinais/terminar.webm |
 | TESTE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/jamaisSm_Prog001.mp4) | videos/libras/sinais/teste.webm |
 | TOMARA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/tomaraSm_Prog001.mp4) | videos/libras/sinais/tomara.webm |
@@ -323,16 +376,19 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | TRANSFORMAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/transformarSm_Prog001.mp4) | videos/libras/sinais/transformar.webm |
 | TRANSPORTE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/transporteSm_Prog001.mp4) | videos/libras/sinais/transporte.webm |
 | TRAZER | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/TRAZER.mp4) | videos/libras/sinais/trazer.webm |
+| TROCAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/TROCAR.mp4) | videos/libras/sinais/trocar.webm |
 | TURMA | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/turmaSm_Prog001.mp4) | videos/libras/sinais/turma.webm |
 | ULTIMO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/ÚLTIMO.mp4) | videos/libras/sinais/ultimo.webm |
 | UNIFORME | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/uniformeSm_Prog001.mp4) | videos/libras/sinais/uniforme.webm |
 | USAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/USAR.mp4) | videos/libras/sinais/usar.webm |
 | UTIL | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/utilSm_Prog001.mp4) | videos/libras/sinais/util.webm |
 | VAI | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/VAI.mp4) | videos/libras/sinais/vai.webm |
+| VALOR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/VALOR.mp4) | videos/libras/sinais/valor.webm |
 | VAZIO | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/VAZIO.mp4) | videos/libras/sinais/vazio.webm |
 | VELOCIDADE | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/velocidadeSm_Prog001.mp4) | videos/libras/sinais/velocidade.webm |
 | VER | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/VER.mp4) | videos/libras/sinais/ver.webm |
 | VERIFICAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/verificarSm_Prog001.mp4) | videos/libras/sinais/verificar.webm |
+| VEZ | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/vez2Sm_Prog001.mp4) | videos/libras/sinais/vez.webm |
 | VIR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/VIR-INDICADOR.mp4) | videos/libras/sinais/vir.webm |
 | VIRAR | [Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil](https://dicionario.ines.gov.br/public/media/palavras/videos/virarSm_Prog001.mp4) | videos/libras/sinais/virar.webm |
 | VISITAR | [Signbank da Libras — Universidade Federal de Santa Catarina](https://videos.nals.cce.ufsc.br/SignBank/Vídeos/VISITAR.mp4) | videos/libras/sinais/visitar.webm |
@@ -346,8 +402,11 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 
 | Forma | Base |
 | --- | --- |
+| ABERTA | ABRIR |
+| ABRIU | ABRIR |
 | ACABOU | ACABAR |
 | ACADEMICAS | ACADEMICA |
+| ACERTOU | ACERTAR |
 | ACOMPANHO | ACOMPANHAR |
 | ACONTECEM | ACONTECER |
 | AGRADECE | AGRADECER |
@@ -355,22 +414,28 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | AJUDAM | AJUDAR |
 | ALGORITMOS | ALGORITMO |
 | ALMOCO | ALMOCAR |
+| AMIZADES | AMIZADE |
 | ANOTADA | ANOTAR |
 | ANOTADO | ANOTAR |
 | APARECE | APARECER |
 | APARECEM | APARECER |
 | APARECERAM | APARECER |
 | APARECEU | APARECER |
+| APLICATIVOS | APLICATIVO |
 | APOIAM | APOIAR |
 | APOIO | APOIAR |
+| APONTA | APONTAR |
+| APONTOU | APONTAR |
 | APRENDEMOS | APRENDER |
 | APRENDENDO | APRENDER |
 | APRENDERAO | APRENDER |
+| APRENDIZADO | APRENDIZAGEM |
 | APRESENTA | APRESENTAR |
 | APRESENTADAS | APRESENTAR |
 | APRESENTOU | APRESENTAR |
 | APROVADA | APROVAR |
 | APROXIMAMOS | APROXIMAR |
+| AQUELA | AQUELE |
 | AREAS | AREA |
 | ARTIGOS | ARTIGO |
 | ARVORES | ARVORE |
@@ -383,10 +448,15 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | AVANCAVA | AVANCAR |
 | AZUIS | AZUL |
 | BANDEIRAS | BANDEIRA |
+| BINARIOS | BINARIO |
 | BOAS | BOM |
+| BOMBEIROS | BOMBEIRO |
+| BUSCA | BUSCAR |
 | BUSCAMOS | BUSCAR |
 | CADEIRAS | CADEIRA |
 | CAMINHOS | CAMINHO |
+| CAPAZES | CAPAZ |
+| CAUDAS | CAUDA |
 | CHAMAMOS | CHAMAR |
 | CHAMOU | CHAMAR |
 | CHEGARAM | CHEGAR |
@@ -413,6 +483,8 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | CONHECERAM | CONHECER |
 | CONHECI | CONHECER |
 | CONHECIDO | CONHECER |
+| CONSTRUAM | CONSTRUIR |
+| CONSTRUIDA | CONSTRUIR |
 | CONTAM | CONTAR |
 | CONTINUAMOS | CONTINUAR |
 | CONVERSA | CONVERSAR |
@@ -426,16 +498,29 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | DECISOES | DECISAO |
 | DEIXADO | DEIXAR |
 | DEMONSTRARAM | DEMONSTRAR |
+| DESAPARECA | DESAPARECER |
+| DESAPARECIDA | DESAPARECER |
+| DESAPARECIMENTO | DESAPARECER |
+| DESCANSO | DESCANSAR |
 | DESCEU | DESCER |
 | DESCOBRE | DESCOBRIR |
 | DESCOBRIU | DESCOBRIR |
+| DEVE | DEVER |
+| DEVEM | DEVER |
+| DEVEMOS | DEVER |
+| DEVERIA | DEVER |
 | DEVOLVERAM | DEVOLVER |
 | DIFERENTES | DIFERENTE |
 | DIMINUI | DIMINUIR |
 | DISCIPLINAS | DISCIPLINA |
 | DISPONIVEIS | DISPONIVEL |
 | DIZENDO | DIZER |
+| DOBRADO | DOBRAR |
 | DUVIDAS | DUVIDA |
+| ELA | ELE |
+| ELAS | ELE |
+| ELES | ELE |
+| ENCERRAR | ENCERRA |
 | ENCONTRAM | ENCONTRAR |
 | ENCONTRAMOS | ENCONTRAR |
 | ENCONTRARAM | ENCONTRAR |
@@ -445,6 +530,10 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | ENTENDI | ENTENDER |
 | ENTRA | ENTRAR |
 | ENTREGA | ENTREGAR |
+| ERA | SER |
+| ERAM | SER |
+| ESCOLHA | ESCOLHER |
+| ESCOLHAS | ESCOLHER |
 | ESCONDA | ESCONDER |
 | ESCONDENDO | ESCONDER |
 | ESCREVE | ESCREVER |
@@ -452,16 +541,25 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | ESPERAMOS | ESPERAR |
 | ESPERANDO | ESPERAR |
 | ESPEREM | ESPERAR |
+| ESSA | ESSE |
+| ESSES | ESSE |
 | ESTAVA | ESTAR |
 | ESTEVE | ESTAR |
 | ESTOU | ESTAR |
 | ESTRUTURAS | ESTRUTURA |
 | ESTUDA | ESTUDAR |
 | ESTUDAREMOS | ESTUDAR |
+| ESTUDO | ESTUDAR |
+| ESTUDOS | ESTUDAR |
+| EXECUTAM | EXECUTAR |
+| EXERCICIOS | EXERCICIO |
 | EXIGE | EXIGIR |
+| EXISTE | EXISTIR |
+| EXISTEM | EXISTIR |
 | EXPLICA | EXPLICAR |
 | EXPLIQUEM | EXPLICAR |
 | EXPRESSOES | EXPRESSAO |
+| FACILITARAM | FACILITAR |
 | FALE | FALAR |
 | FAZ | FAZER |
 | FAZEM | FAZER |
@@ -474,7 +572,12 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | FICARAM | FICAR |
 | FISCALIZANDO | FISCALIZAR |
 | FLUXOGRAMAS | FLUXOGRAMA |
+| FOI | SER |
+| FOR | SER |
 | FORTES | FORTE |
+| FUNCIONA | FUNCIONAR |
+| FUNCIONOU | FUNCIONAR |
+| GESTOS | GESTO |
 | GRUPOS | GRUPO |
 | GUARDADO | GUARDAR |
 | GUARDAM | GUARDAR |
@@ -487,34 +590,45 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | INFORMACOES | INFORMACAO |
 | INTEIRA | INTEIRO |
 | INTERVALOS | INTERVALO |
+| ISOLADOS | ISOLADO |
 | JANELAS | JANELA |
 | JUNTAS | JUNTO |
 | LABORATORIOS | LABORATORIO |
+| LEIS | LEI |
 | LEVA | LEVAR |
 | LEVADA | LEVAR |
 | LEVEI | LEVAR |
 | LEVOU | LEVAR |
 | LIMITES | LIMITE |
 | LIVROS | LIVRO |
+| LOCALIZADO | LOCALIZAR |
+| LUGARES | LUGAR |
 | LUZES | LUZ |
 | MANTEM | MANTER |
 | MAOS | MAO |
+| MEDE | MEDIR |
 | MELHORES | MELHOR |
 | MENSAGENS | MENSAGEM |
+| MERGULHO | MERGULHAR |
 | MESAS | MESA |
+| MILHOES | MILHAO |
 | MINHA | MEU |
 | MOSTRA | MOSTRAR |
 | MOSTRAM | MOSTRAR |
 | MOSTROU | MOSTRAR |
+| MOVIMENTOS | MOVIMENTO |
 | MUITOS | MUITO |
 | NENHUMA | NENHUM |
+| NOSSAS | NOSSO |
 | NOTE | NOTAR |
 | NOVA | NOVO |
 | NOVAS | NOVO |
+| OBRIGATORIA | OBRIGATORIO |
 | OBSERVAVA | OBSERVAR |
 | OBSERVE | OBSERVAR |
 | OFICIAIS | OFICIAL |
 | OLHA | OLHAR |
+| OLHOS | OLHO |
 | OLHOU | OLHAR |
 | ORGANIZADA | ORGANIZAR |
 | OUTRA | OUTRO |
@@ -525,8 +639,10 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | PARTICIPEM | PARTICIPAR |
 | PASSEANDO | PASSEAR |
 | PENSANDO | PENSAR |
+| PERCEBE | PERCEBER |
 | PERMITE | PERMITIR |
 | PERTENCE | PERTENCER |
+| PESQUISAS | PESQUISA |
 | PESSOAS | PESSOA |
 | PODE | PODER |
 | PODEM | PODER |
@@ -538,6 +654,7 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | PRATIQUEI | PRATICAR |
 | PRECISA | PRECISAR |
 | PRECISAMOS | PRECISAR |
+| PRESTAR | PRESTANDO |
 | PRIMEIRA | PRIMEIRO |
 | PRIMEIRAS | PRIMEIRO |
 | PROBLEMAS | PROBLEMA |
@@ -553,18 +670,23 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | QUERIAM | QUERER |
 | QUERO | QUERER |
 | RAPIDA | RAPIDO |
+| REALIZA | REALIZAR |
 | RECEBE | RECEBER |
 | RECEBEM | RECEBER |
 | RECUPERADA | RECUPERAR |
+| REDES | REDE |
 | REGRAS | REGRA |
 | REPETE | REPETIR |
 | REPETIA | REPETIR |
 | REPETICOES | REPETICAO |
 | REPITA | REPETIR |
+| REPRESENTADAS | REPRESENTAR |
+| REPRESENTAM | REPRESENTAR |
 | RESOLVE | RESOLVER |
 | RESOLVERAM | RESOLVER |
 | RESOLVIDO | RESOLVER |
 | RESTAVA | RESTAR |
+| REVER | REVEJA |
 | REVISADA | REVISAR |
 | REVISADO | REVISAR |
 | REVISE | REVISAR |
@@ -572,21 +694,32 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | SABE | SABER |
 | SABENDO | SABER |
 | SABIA | SABER |
+| SAIREM | SAIR |
 | SALAS | SALA |
 | SALVAMOS | SALVAR |
 | SALVEI | SALVAR |
 | SAO | SER |
+| SECOS | SECO |
+| SECRETA | SECRETO |
 | SEGUIMOS | SEGUIR |
 | SEGUINDO | SEGUIR |
 | SEGUIRAM | SEGUIR |
 | SEGUIRMOS | SEGUIR |
 | SEGUIU | SEGUIR |
+| SEJAM | SER |
 | SENTADO | SENTAR |
+| SEPARADOS | SEPARADO |
+| SERA | SER |
+| SERAO | SER |
+| SERIA | SER |
+| SIMBOLOS | SIMBOLO |
 | SINAIS | SINAL |
 | SISTEMAS | SISTEMA |
+| SOMADORES | SOMADOR |
 | SOMOS | SER |
 | SOU | SER |
 | SURDA | SURDO |
+| SUSPEITAVA | SUSPEITAR |
 | TABELAS | TABELA |
 | TEM | TER |
 | TEMOS | TER |
@@ -600,11 +733,13 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | TRABALHOS | TRABALHAR |
 | TRANSFORMA | TRANSFORMAR |
 | TRAZ | TRAZER |
+| TROCA | TROCAR |
 | ULTIMA | ULTIMO |
 | USADOS | USAR |
 | USAMOS | USAR |
 | USARAO | USAR |
 | USE | USAR |
+| VALORES | VALOR |
 | VAZIA | VAZIO |
 | VEJA | VER |
 | VEJAM | VER |
@@ -618,31 +753,35 @@ Restam 412 formas textuais sem correspondência; consulte `PALAVRAS_SEM_VIDEO.md
 | VIU | VER |
 | VOLTA | VOLTAR |
 
+## Equivalências contextuais de vocabulário
+
+Não são flexões automáticas nem tradução de frases; a justificativa de cada correspondência está no manifesto.
+
+| Palavra | Base | Justificativa |
+| --- | --- | --- |
+| ACERTOS | ACERTAR | Acertos nas atividades: respostas corretas, no sentido do verbete ACERTAR2 do INES. |
+| AVISO | AVISAR | Aviso como ato de avisar/comunicar uma informação no campus. |
+| AVISOS | AVISAR | Plural de aviso no mesmo sentido de comunicação. |
+| COMECO | COMEÇAR | Começo/início da atividade, correspondente ao verbo começar. |
+| CORRETA | CERTO | Forma feminina de correto, no sentido de resposta certa. |
+| CORRETAS | CERTO | Respostas certas nas atividades do jogo. |
+| CORRETO | CERTO | Resposta certa nas atividades do jogo. |
+| ENCERRA | TERMINAR | Encerrar uma atividade significa terminar essa atividade. |
+| ENCERRADO | TERMINAR | Atividade encerrada/terminada. |
+| ERRO | ERRAR | Vocabulário de erro/acerto; mesma referência usada nas glossas pedagógicas do roteiro. |
+| ESPERA | ESPERAR | Pedido para aguardar na fala do jogo. |
+| ESTUDANTE | ALUNO | Pessoa matriculada e que estuda no campus. |
+| ESTUDANTES | ALUNO | Plural de estudante, no sentido de alunos do campus. |
+| EXATAMENTE | EXATO | Confirmação de uma resposta correta nos diálogos. |
+| FINAL | FIM | No roteiro, final de um projeto significa fim/término, não partida esportiva. |
+| MUDANCA | MUDAR | Mudança no contexto de variação: ato de mudar. |
+| PROGRAMAR | PROGRAMAÇÃO | Ação de escrever programas de computador, conforme acepção SENAI. |
+| REVEJA | REVISAR | Pedido para revisar novamente o sinal no teste final. |
+
 ## Validação e reprodução
 
 Todos os vídeos novos foram convertidos para WebM/VP9 e decodificados integralmente com FFmpeg antes de entrar no manifesto. Não foi feita validação linguística por intérprete nem teste visual dentro do Ren’Py.
 
-As fontes e acepções constam no manifesto. O INES publica um catálogo de dados JSON/JavaScript, não uma API REST. Sua licença de reutilização não foi informada no catálogo consultado; a licença CC BY-NC-SA 4.0 refere-se aos vídeos Signbank/UFSC. O Glossário Letras Libras/UFSC é uma fonte separada, com condições registradas por vídeo.
+As fontes e acepções constam no manifesto. O INES disponibiliza consultas públicas de verbetes em JSON; o importador usa essas consultas quando o catálogo estático antigo não contém dados válidos. Sua licença de reutilização não foi informada no catálogo consultado; a licença CC BY-NC-SA 4.0 refere-se aos vídeos Signbank/UFSC. O Glossário Letras Libras/UFSC é uma fonte separada, com condições registradas por vídeo.
 
 Para atualizar e retomar a importação: `python3 tools/importar_acervo.py --catalogos /tmp/acervo-libras --atualizar-catalogos --baixar --ffmpeg /caminho/ffmpeg`. Downloads concluídos são preservados; falhas ficam em `tools/dados/resultado_importacao.json`.
-
-## Busca complementar e limites
-
-Foram consultados os catálogos públicos completos Signbank (3.113 registros),
-INES, Glossário Letras Libras/UFSC (763 verbetes listados) e SENAI Libras
-(2.691 registros). O SENAI forneceu vídeos de avatares 3D, identificados no
-manifesto. A licença dessa fonte não foi informada no catálogo consultado.
-
-Os links de ABRIR, CAUDA e FACILITAR consultados não puderam ser baixados.
-As outras pendências incluem palavras funcionais do português, nomes próprios,
-flexões ainda sem mapeamento e termos sem correspondência de sentido confirmada.
-Não foram criados vídeos artificiais nem atribuídos homônimos para zerar a lista.
-
-O acervo foi sincronizado nas duas pastas locais do projeto, com comparação
-SHA-256 dos 488 arquivos. A auditoria de pendências e o carregamento de vídeos
-pelo código Python do painel passaram, incluindo formas como MÃOS e PROJETOS.
-Não foi executada uma sessão visual do Ren'Py.
-
-Consulta reproduzível dos verbetes públicos SENAI:
-`python3 tools/coletar_senai.py --saida /tmp/acervo-libras/senai.json`.
-As fontes adicionais selecionadas estão em `tools/dados/fontes_complementares.json`.

@@ -8,7 +8,9 @@ API: https://api-signbank.levantelab.com.br/api/tabela_sinais/sinais
 
 Dicionário da Língua Brasileira de Sinais — INES / Acessibilidade Brasil
 https://dicionario.ines.gov.br/
-Catálogo: https://dicionario.ines.gov.br/public/site/js/palavras.js
+Consulta pública: http://www.acessibilidadebrasil.org.br/libras_3/
+Verbetes: ajax/getWordsByLetter/{letra} e ajax/getWordById/{id}
+Catálogo antigo: https://dicionario.ines.gov.br/public/site/js/palavras.js
 Licença de reutilização: não informada no catálogo consultado.
 O material INES não está abrangido pela licença do material UFSC.
 
@@ -23,6 +25,12 @@ https://senai-libras.senai.br/
 API pública: https://api-senai-libras.senai.br/graphql
 Vídeos com avatares 3D, identificados por termo no manifesto.
 Licença de reutilização: não informada no catálogo consultado.
+
+Dicionário de Libras — Projeto Inovar + / CEAD / Universidade Federal de Viçosa
+https://sistemas.cead.ufv.br/capes/dicionario/
+Condições específicas de reutilização: não informadas nas páginas dos verbetes.
+Não abrangido pela licença Signbank/UFSC. URLs e exemplos em português
+consultados estão registrados no manifesto. Vídeos de conceito não incluídos.
 
 Adaptações: conversão dos vídeos para WebM/VP9 sem áudio, redimensionamento
 para o painel de 400 × 225 e margens para preservar a proporção dos vídeos

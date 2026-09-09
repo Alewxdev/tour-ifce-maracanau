@@ -1,0 +1,74 @@
+{
+  "FINAL": {
+    "base": "FIM",
+    "justificativa": "No roteiro, final de um projeto significa fim/término, não partida esportiva."
+  },
+  "ESTUDANTE": {
+    "base": "ALUNO",
+    "justificativa": "Pessoa matriculada e que estuda no campus."
+  },
+  "ESTUDANTES": {
+    "base": "ALUNO",
+    "justificativa": "Plural de estudante, no sentido de alunos do campus."
+  },
+  "ERRO": {
+    "base": "ERRAR",
+    "justificativa": "Vocabulário de erro/acerto; mesma referência usada nas glossas pedagógicas do roteiro."
+  },
+  "CORRETO": {
+    "base": "CERTO",
+    "justificativa": "Resposta certa nas atividades do jogo."
+  },
+  "CORRETA": {
+    "base": "CERTO",
+    "justificativa": "Forma feminina de correto, no sentido de resposta certa."
+  },
+  "CORRETAS": {
+    "base": "CERTO",
+    "justificativa": "Respostas certas nas atividades do jogo."
+  },
+  "COMECO": {
+    "base": "COMEÇAR",
+    "justificativa": "Começo/início da atividade, correspondente ao verbo começar."
+  },
+  "AVISO": {
+    "base": "AVISAR",
+    "justificativa": "Aviso como ato de avisar/comunicar uma informação no campus."
+  },
+  "AVISOS": {
+    "base": "AVISAR",
+    "justificativa": "Plural de aviso no mesmo sentido de comunicação."
+  },
+  "ESPERA": {
+    "base": "ESPERAR",
+    "justificativa": "Pedido para aguardar na fala do jogo."
+  },
+  "ENCERRA": {
+    "base": "TERMINAR",
+    "justificativa": "Encerrar uma atividade significa terminar essa atividade."
+  },
+  "ENCERRADO": {
+    "base": "TERMINAR",
+    "justificativa": "Atividade encerrada/terminada."
+  },
+  "PROGRAMAR": {
+    "base": "PROGRAMAÇÃO",
+    "justificativa": "Ação de escrever programas de computador, conforme acepção SENAI."
+  },
+  "ACERTOS": {
+    "base": "ACERTAR",
+    "justificativa": "Acertos nas atividades: respostas corretas, no sentido do verbete ACERTAR2 do INES."
+  },
+  "EXATAMENTE": {
+    "base": "EXATO",
+    "justificativa": "Confirmação de uma resposta correta nos diálogos."
+  },
+  "MUDANCA": {
+    "base": "MUDAR",
+    "justificativa": "Mudança no contexto de variação: ato de mudar."
+  },
+  "REVEJA": {
+    "base": "REVISAR",
+    "justificativa": "Pedido para revisar novamente o sinal no teste final."
+  }
+}

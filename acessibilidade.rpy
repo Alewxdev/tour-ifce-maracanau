@@ -148,6 +148,16 @@ init -1 python:
                 caminhos.append(caminho)
         return caminhos
 
+    def sinal_atual_libras(texto):
+        # Consulta o canal real para acompanhar também repetição e parada.
+        caminho = renpy.music.get_playing(channel="libras")
+        if caminho:
+            for token in _tokens_glosa(texto):
+                dados = _indice_sinais.get(token, {})
+                if dados.get("arquivo") == caminho:
+                    return token
+        return None
+
     def reproduzir_libras(texto):
         caminhos = videos_sinais_libras(texto)
         if caminhos:
@@ -161,6 +171,7 @@ image libras_player = Movie(
 )
 
 screen painel_libras(what):
+    default sinal_em_reproducao = None
     zorder 100
     if not renpy.variant("small"):
         textbutton ("Libras: ON" if libras_ativo else "Libras: OFF"):
@@ -169,9 +180,10 @@ screen painel_libras(what):
 
         if libras_ativo:
             on "show" action Function(reproduzir_libras, what)
+            timer 0.1 repeat True action SetLocalVariable("sinal_em_reproducao", sinal_atual_libras(what))
             frame:
                 xalign 0.985 yalign 0.075
-                xsize 440 ysize 590
+                xsize 440 ysize 630
                 padding (18, 14)
                 background Solid("#10251fee")
                 vbox:
@@ -183,6 +195,9 @@ screen painel_libras(what):
                     text glosa_exibida_libras(what):
                         substitute False color "#ffffff" size 20
                         xmaximum 400
+                    text ("Sinal atual: " + sinal_em_reproducao if sinal_em_reproducao else "Nenhum sinal em reprodução"):
+                        substitute False color "#ffd166" size 23 bold True
+                        xalign 0.5 text_align 0.5 xmaximum 400
                     frame:
                         xsize 400 ysize 225 xalign 0.5
                         padding (0, 0) background Solid("#183b31")
